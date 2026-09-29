@@ -1,0 +1,17 @@
+{
+ "files": {"Morty": "audio/Morty_VO.mp3", "Rick": "audio/Rick_VO.mp3"},
+ "lead_in": 0.5,
+ "tail": 1.5,
+ "lines": [
+  {"id": "M1", "char": "Morty", "text": "R-Rick... we've got another lead.", "gap": 0.5, "subs": "R-Rick...|we've got *another*|*lead.*"},
+  {"id": "M2", "char": "Morty", "text": "Aw geez, they're coming from everywhere!", "gap": "recorded", "subs": "Aw geez,|they're coming from|*everywhere!*"},
+  {"id": "R1", "char": "Rick", "text": "You're doing this manually, Morty?", "gap": 0.35, "subs": "You're doing this|*manually,* Morty?"},
+  {"id": "M3", "char": "Morty", "text": "...Yes.", "gap": 0.8},
+  {"id": "R2", "char": "Rick", "text": "The problem isn't the leads, Morty. It's the work between them.", "gap": 0.9, "subs": "The problem isn't|the leads, Morty.|It's the *work*|between them."},
+  {"id": "R3", "char": "Rick", "text": "Let the AI handle it.", "gap": "recorded", "subs": "Let the *AI*|*handle* it."},
+  {"id": "R4", "char": "Rick", "text": "It understands what the person actually wants, qualifies them against your criteria, and gives every enquiry a match score.", "gap": 1.3},
+  {"id": "R5", "char": "Rick", "text": "The good ones rise to the top.", "gap": "recorded", "subs": "The good ones|rise to the *top.*"},
+  {"id": "M4", "char": "Morty", "text": "So I don't have to do all that anymore?", "gap": 0.7},
+  {"id": "R6", "char": "Rick", "text": "That's the whole point, Morty.", "gap": 0.4, "subs": "That's the *whole point,*|Morty."}
+ ]
+}

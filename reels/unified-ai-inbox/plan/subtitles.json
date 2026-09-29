@@ -1,0 +1,522 @@
+[
+ {
+  "seg": "P1",
+  "start": 0.5,
+  "end": 1.18,
+  "text": "Stewie...",
+  "em": [],
+  "out": 1.4
+ },
+ {
+  "seg": "P1",
+  "start": 1.4,
+  "end": 2.3,
+  "text": "we've got another",
+  "em": [
+   "another"
+  ],
+  "out": 2.3
+ },
+ {
+  "seg": "P1",
+  "start": 2.3,
+  "end": 2.64,
+  "text": "lead.",
+  "em": [
+   "lead"
+  ],
+  "out": 3.14
+ },
+ {
+  "seg": "P2",
+  "start": 3.31,
+  "end": 3.73,
+  "text": "Actually,",
+  "em": [],
+  "out": 4.13
+ },
+ {
+  "seg": "P2",
+  "start": 4.13,
+  "end": 4.97,
+  "text": "they're coming from",
+  "em": [],
+  "out": 4.97
+ },
+ {
+  "seg": "P2",
+  "start": 4.97,
+  "end": 5.43,
+  "text": "everywhere.",
+  "em": [
+   "everywhere"
+  ],
+  "out": 5.93
+ },
+ {
+  "seg": "S1",
+  "start": 6.173,
+  "end": 7.013,
+  "text": "And you're handling",
+  "em": [],
+  "out": 7.013
+ },
+ {
+  "seg": "S1",
+  "start": 7.013,
+  "end": 7.773,
+  "text": "all of them",
+  "em": [],
+  "out": 7.773
+ },
+ {
+  "seg": "S1",
+  "start": 7.773,
+  "end": 8.253,
+  "text": "manually?",
+  "em": [
+   "manually"
+  ],
+  "out": 8.753
+ },
+ {
+  "seg": "P3",
+  "start": 8.816,
+  "end": 9.056,
+  "text": "Well,",
+  "em": [],
+  "out": 9.256
+ },
+ {
+  "seg": "P3",
+  "start": 9.256,
+  "end": 9.956,
+  "text": "I have to",
+  "em": [],
+  "out": 9.956
+ },
+ {
+  "seg": "P3",
+  "start": 9.956,
+  "end": 10.976,
+  "text": "qualify them first.",
+  "em": [
+   "qualify"
+  ],
+  "out": 11.476
+ },
+ {
+  "seg": "S2",
+  "start": 11.563,
+  "end": 12.703,
+  "text": "Every single one?",
+  "em": [
+   "single"
+  ],
+  "out": 13.203
+ },
+ {
+  "seg": "P4",
+  "start": 13.415,
+  "end": 13.775,
+  "text": "...Yes.",
+  "em": [],
+  "out": 14.275
+ },
+ {
+  "seg": "S3",
+  "start": 14.858,
+  "end": 15.718,
+  "text": "That's the problem.",
+  "em": [
+   "problem"
+  ],
+  "out": 16.218
+ },
+ {
+  "seg": "S4",
+  "start": 16.458,
+  "end": 16.958,
+  "text": "The problem",
+  "em": [],
+  "out": 16.958
+ },
+ {
+  "seg": "S4",
+  "start": 16.958,
+  "end": 17.958,
+  "text": "isn't the leads.",
+  "em": [
+   "isn't"
+  ],
+  "out": 18.458
+ },
+ {
+  "seg": "S5",
+  "start": 18.784,
+  "end": 19.444,
+  "text": "It's the work",
+  "em": [
+   "work"
+  ],
+  "out": 19.444
+ },
+ {
+  "seg": "S5",
+  "start": 19.444,
+  "end": 20.384,
+  "text": "between them.",
+  "em": [],
+  "out": 20.884
+ },
+ {
+  "seg": "S6",
+  "start": 20.964,
+  "end": 21.484,
+  "text": "Let the AI",
+  "em": [
+   "AI"
+  ],
+  "out": 21.484
+ },
+ {
+  "seg": "S6",
+  "start": 21.484,
+  "end": 22.204,
+  "text": "handle it.",
+  "em": [
+   "handle"
+  ],
+  "out": 22.704
+ },
+ {
+  "seg": "S7",
+  "start": 23.364,
+  "end": 23.984,
+  "text": "It understands",
+  "em": [
+   "understands"
+  ],
+  "out": 23.984
+ },
+ {
+  "seg": "S7",
+  "start": 23.984,
+  "end": 24.604,
+  "text": "what the person",
+  "em": [],
+  "out": 24.604
+ },
+ {
+  "seg": "S7",
+  "start": 24.604,
+  "end": 25.744,
+  "text": "actually wants...",
+  "em": [],
+  "out": 26.224
+ },
+ {
+  "seg": "S8",
+  "start": 26.224,
+  "end": 27.064,
+  "text": "...qualifies them",
+  "em": [],
+  "out": 27.064
+ },
+ {
+  "seg": "S8",
+  "start": 27.064,
+  "end": 28.004,
+  "text": "against your criteria...",
+  "em": [
+   "criteria"
+  ],
+  "out": 28.504
+ },
+ {
+  "seg": "S9",
+  "start": 28.644,
+  "end": 29.164,
+  "text": "...and gives",
+  "em": [],
+  "out": 29.164
+ },
+ {
+  "seg": "S9",
+  "start": 29.164,
+  "end": 30.164,
+  "text": "every enquiry",
+  "em": [],
+  "out": 30.164
+ },
+ {
+  "seg": "S9",
+  "start": 30.164,
+  "end": 31.024,
+  "text": "a match score.",
+  "em": [
+   "match score"
+  ],
+  "out": 31.524
+ },
+ {
+  "seg": "S10",
+  "start": 31.784,
+  "end": 32.624,
+  "text": "So instead of",
+  "em": [],
+  "out": 32.624
+ },
+ {
+  "seg": "S10",
+  "start": 32.624,
+  "end": 33.824,
+  "text": "treating every enquiry",
+  "em": [],
+  "out": 33.824
+ },
+ {
+  "seg": "S10",
+  "start": 33.824,
+  "end": 34.424,
+  "text": "the same...",
+  "em": [
+   "same"
+  ],
+  "out": 34.924
+ },
+ {
+  "seg": "S11",
+  "start": 34.964,
+  "end": 35.384,
+  "text": "...you know",
+  "em": [],
+  "out": 35.384
+ },
+ {
+  "seg": "S11",
+  "start": 35.384,
+  "end": 36.284,
+  "text": "which ones deserve",
+  "em": [],
+  "out": 36.284
+ },
+ {
+  "seg": "S11",
+  "start": 36.284,
+  "end": 36.764,
+  "text": "attention.",
+  "em": [
+   "attention"
+  ],
+  "out": 37.264
+ },
+ {
+  "seg": "S12",
+  "start": 37.541,
+  "end": 38.121,
+  "text": "And it isn't",
+  "em": [],
+  "out": 38.121
+ },
+ {
+  "seg": "S12",
+  "start": 38.121,
+  "end": 38.701,
+  "text": "limited to",
+  "em": [],
+  "out": 38.701
+ },
+ {
+  "seg": "S12",
+  "start": 38.701,
+  "end": 39.441,
+  "text": "one industry.",
+  "em": [
+   "one industry"
+  ],
+  "out": 39.941
+ },
+ {
+  "seg": "S13",
+  "start": 40.141,
+  "end": 40.761,
+  "text": "Your criteria",
+  "em": [
+   "criteria"
+  ],
+  "out": 40.761
+ },
+ {
+  "seg": "S13",
+  "start": 40.761,
+  "end": 41.561,
+  "text": "define what",
+  "em": [],
+  "out": 41.561
+ },
+ {
+  "seg": "S13",
+  "start": 41.561,
+  "end": 42.241,
+  "text": "a good lead",
+  "em": [
+   "good lead"
+  ],
+  "out": 42.241
+ },
+ {
+  "seg": "S13",
+  "start": 42.241,
+  "end": 42.901,
+  "text": "looks like.",
+  "em": [],
+  "out": 43.401
+ },
+ {
+  "seg": "S14",
+  "start": 43.481,
+  "end": 44.041,
+  "text": "It understands",
+  "em": [
+   "understands"
+  ],
+  "out": 44.041
+ },
+ {
+  "seg": "S14",
+  "start": 44.041,
+  "end": 44.721,
+  "text": "the enquiry,",
+  "em": [],
+  "out": 45.101
+ },
+ {
+  "seg": "S14",
+  "start": 45.101,
+  "end": 45.681,
+  "text": "scores it,",
+  "em": [
+   "scores"
+  ],
+  "out": 45.961
+ },
+ {
+  "seg": "S14",
+  "start": 45.961,
+  "end": 46.821,
+  "text": "and helps match it",
+  "em": [
+   "match"
+  ],
+  "out": 46.821
+ },
+ {
+  "seg": "S14",
+  "start": 46.821,
+  "end": 47.661,
+  "text": "with the best fit.",
+  "em": [
+   "best fit"
+  ],
+  "out": 48.161
+ },
+ {
+  "seg": "P5",
+  "start": 48.414,
+  "end": 48.794,
+  "text": "So...",
+  "em": [],
+  "out": 48.794
+ },
+ {
+  "seg": "P5",
+  "start": 48.794,
+  "end": 49.834,
+  "text": "I don't have to",
+  "em": [],
+  "out": 49.834
+ },
+ {
+  "seg": "P5",
+  "start": 49.834,
+  "end": 50.334,
+  "text": "do all that",
+  "em": [
+   "all"
+  ],
+  "out": 50.334
+ },
+ {
+  "seg": "P5",
+  "start": 50.334,
+  "end": 50.554,
+  "text": "anymore?",
+  "em": [],
+  "out": 51.054
+ },
+ {
+  "seg": "S15",
+  "start": 51.206,
+  "end": 51.966,
+  "text": "That's literally",
+  "em": [
+   "literally"
+  ],
+  "out": 51.966
+ },
+ {
+  "seg": "S15",
+  "start": 51.966,
+  "end": 52.546,
+  "text": "the point.",
+  "em": [],
+  "out": 53.036
+ },
+ {
+  "seg": "P6",
+  "start": 53.036,
+  "end": 53.356,
+  "text": "Oh.",
+  "em": [],
+  "out": 53.856
+ },
+ {
+  "seg": "P6",
+  "start": 54.616,
+  "end": 55.156,
+  "text": "That's actually",
+  "em": [],
+  "out": 55.156
+ },
+ {
+  "seg": "P6",
+  "start": 55.156,
+  "end": 55.676,
+  "text": "pretty nice.",
+  "em": [
+   "nice"
+  ],
+  "out": 56.176
+ },
+ {
+  "seg": "S16",
+  "start": 56.775,
+  "end": 57.615,
+  "text": "FiguredOutAI.",
+  "em": [
+   "FiguredOutAI"
+  ],
+  "out": 58.115
+ },
+ {
+  "seg": "S16",
+  "start": 58.675,
+  "end": 59.695,
+  "text": "Unified AI Inbox.",
+  "em": [
+   "AI Inbox"
+  ],
+  "out": 60.195
+ }
+]

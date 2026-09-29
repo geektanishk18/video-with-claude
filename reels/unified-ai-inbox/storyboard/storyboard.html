@@ -1,0 +1,443 @@
+<title>Unified AI Inbox Reel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,700;1,700;1,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: frame-by-frame reel board on the FiguredOutAI ink ground. Header + format rules, then each scene as a row of 9:16 frame tiles. Single dark look by brand. */
+:root{
+  color-scheme: dark;
+  --ink:#030A0E; --panel:#08171D; --teal:#1B6579; --sky:#90C2E7; --peak:#C9E4F5;
+  --paper:#F0EDEF; --amber:#E8A33D; --loss:#D4645A; --ok:#4FA87C;
+  --body:rgba(240,237,239,.72); --label:rgba(240,237,239,.56);
+  --line:rgba(144,194,231,.12); --line2:rgba(144,194,231,.24); --card:rgba(240,237,239,.035);
+  --display:"Poppins",system-ui,sans-serif; --text:"Inter",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{background:var(--ink);color:var(--paper);font:15px/1.6 var(--text);-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(rgba(144,194,231,.04) 1px,transparent 1px);background-size:24px 24px}
+.wrap{max-width:1320px;margin:0 auto;padding-inline:clamp(16px,4vw,56px);padding-block:40px 96px}
+h1,h2,h3{font-family:var(--display);font-weight:700;text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(34px,5.4vw,62px);letter-spacing:-.01em}
+h2{font-size:clamp(22px,2.6vw,30px)}
+h3{font-size:19px}
+p{margin:0}
+.eyebrow{font:500 11px/1 var(--text);letter-spacing:.14em;text-transform:uppercase;color:var(--label)}
+.sky{color:var(--sky)}
+.wordmark{font:300 22px/1 var(--display);letter-spacing:-.01em}
+.wordmark b{font-weight:700;color:var(--sky)}
+.glow{position:absolute;pointer-events:none;border-radius:50%;filter:blur(24px);
+  background:radial-gradient(ellipse at center,rgba(144,194,231,.30) 0%,rgba(27,101,121,.22) 40%,rgba(3,10,14,0) 70%)}
+header{position:relative;display:grid;gap:22px;padding-bottom:40px;border-bottom:1px solid var(--line);overflow:hidden}
+header .glow{width:560px;height:340px;right:-120px;top:-80px}
+header .top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;position:relative}
+.chip{display:inline-flex;align-items:center;gap:6px;font:500 9px/1 var(--text);letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(144,194,231,.72);border:1px solid rgba(144,194,231,.2);border-radius:4px;padding:6px 8px}
+.lede{max-width:66ch;color:var(--body);font-size:17px;position:relative}
+.specs{display:flex;flex-wrap:wrap;gap:8px 28px;position:relative}
+.specs div{display:grid;gap:4px}
+.specs b{font:600 18px/1.2 var(--display);font-variant-numeric:tabular-nums}
+
+section{padding-top:56px;display:grid;gap:22px}
+.sec-head{display:grid;gap:10px;max-width:72ch}
+.sec-head p{color:var(--body)}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;gap:12px;align-content:start;min-width:0}
+.card p,.card li{color:var(--body);font-size:14px}
+.card ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.cast{display:grid;grid-template-columns:130px 1fr;gap:18px;align-items:center}
+.cast svg{width:130px;height:130px;background:var(--panel);border-radius:16px;border:1px solid var(--line)}
+.capdemo{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.capdemo .n{font:700 26px/1 var(--display)}
+.capdemo .e{font:italic 800 26px/1 var(--display);text-transform:uppercase;color:var(--sky);text-shadow:0 0 16px rgba(144,194,231,.45)}
+
+.toolbar{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;
+  background:rgba(3,10,14,.92);backdrop-filter:blur(8px);padding:12px 0;border-bottom:1px solid var(--line)}
+.toggle{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--body);cursor:pointer;user-select:none}
+.toggle input{accent-color:var(--sky);width:16px;height:16px}
+.jump{display:flex;flex-wrap:wrap;gap:6px}
+.jump a{font:500 11px/1 var(--mono);color:var(--peak);text-decoration:none;border:1px solid var(--line2);border-radius:999px;padding:6px 9px}
+.jump a:hover,.jump a:focus-visible{background:rgba(144,194,231,.1);outline:none}
+body:not(.safe-on) .safe{display:none}
+body.compact .fmeta .fd,body.compact .fmeta .fx{display:none}
+
+.scene{display:grid;gap:14px;padding-top:34px;scroll-margin-top:70px}
+.shead{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px}
+.shead .tc{font:500 13px/1 var(--mono);color:var(--sky)}
+.shead .act{font:500 10px/1 var(--text);letter-spacing:.16em;text-transform:uppercase;padding:5px 8px;border-radius:4px;border:1px solid}
+.snote{color:var(--body);font-size:14px;max-width:80ch}
+.frames{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:14px}
+.tile{display:grid;gap:8px;min-width:0}
+.tile svg{width:100%;height:auto;aspect-ratio:9/16;display:block;border-radius:12px;border:1px solid var(--line2);background:var(--ink)}
+.fmeta{display:grid;gap:4px;font-size:12px;line-height:1.45}
+.fmeta .fh{display:flex;justify-content:space-between;font:500 11px/1.3 var(--mono);color:var(--label);font-variant-numeric:tabular-nums}
+.fmeta .fh b{color:var(--paper);font-weight:500}
+.fmeta .fd{color:var(--body)}
+.fmeta .fc{font:500 11px/1.4 var(--mono);color:var(--peak)}
+.fmeta .fx{font:500 11px/1.4 var(--mono);color:var(--amber)}
+.qs{display:grid;gap:12px}
+.qs li{color:var(--body)} .qs li b{color:var(--paper);font-weight:600}
+footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--label);font-size:12px}
+a:focus-visible,input:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+@media (max-width:560px){.frames{grid-template-columns:repeat(2,minmax(0,1fr))}.cast{grid-template-columns:96px 1fr}.cast svg{width:96px;height:96px}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="glow"><stop offset="0" stop-color="#90C2E7" stop-opacity=".30"/><stop offset=".4" stop-color="#1B6579" stop-opacity=".22"/><stop offset=".7" stop-color="#030A0E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="leak" cx=".3" cy=".35" r=".8"><stop offset="0" stop-color="#FFF6E0" stop-opacity=".95"/><stop offset=".35" stop-color="#C9E4F5" stop-opacity=".75"/><stop offset=".7" stop-color="#90C2E7" stop-opacity=".35"/><stop offset="1" stop-color="#030A0E" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1.2" fill="#90C2E7" fill-opacity=".06"/></pattern>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E2630"/><stop offset="1" stop-color="#081820"/></linearGradient>
+    <clipPath id="cardclip"><rect x="0" y="0" width="1080" height="896" rx="50"/></clipPath>
+  </defs>
+</svg>
+
+<div class="wrap">
+<header>
+  <div class="glow"></div>
+  <div class="top"><span class="wordmark">figured<b>out.ai</b></span><span class="chip">Frame board v3 · awaiting voiceover</span></div>
+  <div style="display:grid;gap:14px;position:relative">
+    <span class="eyebrow">Launch reel · Instagram 9:16 · every frame</span>
+    <h1>Unified AI <span class="sky">Inbox</span></h1>
+  </div>
+  <p class="lede">Every cut in the reel, in order. Each tile is one frame of the edit with its on-screen caption, what moves, the camera and the sound. Caption timing is a placeholder until your voiceover lands; the cuts will then snap to your words.</p>
+  <div class="specs">
+    <div><span class="eyebrow">Canvas</span><b>1080 × 1920</b></div>
+    <div><span class="eyebrow">Runtime</span><b>64 s</b></div>
+    <div><span class="eyebrow">Frames on board</span><b id="frameCount">58</b></div>
+    <div><span class="eyebrow">Average cut</span><b id="avgCut">1.1 s</b></div>
+    <div><span class="eyebrow">Built with</span><b>Remotion, code only</b></div>
+  </div>
+</header>
+
+<section id="format">
+  <div class="sec-head">
+    <span class="eyebrow">Format</span>
+    <h2>Taken from your reference reels</h2>
+    <p>The tracker, scene card and word-by-word captions come from the illustrated agent reel. The fast cut-ins, italic emphasis words and light-leak flash come from the talking-head reel. Colours and type stay FiguredOutAI.</p>
+  </div>
+  <div class="grid3">
+    <div class="card">
+      <span class="eyebrow">Frame anatomy</span>
+      <ul>
+        <li><b style="color:var(--paper)">Tracker</b>, y 250–330: five stations, Understand → Qualify → Score → Match → Route. Stewie's head rides the bar. Empty during the chaos, fills during the demo.</li>
+        <li><b style="color:var(--paper)">Scene card</b>, y 370–1150: rounded illustrated window, like the reference's pixel rooms.</li>
+        <li><b style="color:var(--paper)">Caption</b>, y 1260–1420: 1–3 words at a time, never in Instagram's bottom UI.</li>
+        <li><b style="color:var(--paper)">Cut-ins</b>: full-frame graphics for UI, big numbers and the flash.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="eyebrow">Captions</span>
+      <div class="capdemo"><span class="n">they're coming</span><span class="n">from</span><span class="e">everywhere.</span></div>
+      <ul>
+        <li>Normal words: Poppins 700, sentence case, paper white</li>
+        <li>Emphasis words: Poppins 800 italic, uppercase, sky with glow</li>
+        <li>Each word springs in on its syllable once the voiceover is in</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="eyebrow">Camera and sound keys</span>
+      <ul>
+        <li><b style="color:var(--peak)">HYPER</b> 1.0→2.6× in 6 frames · <b style="color:var(--peak)">SNAP</b> 1.0→1.25× in 4 frames + flash</li>
+        <li><b style="color:var(--peak)">PUSH</b> slow 1.0→1.08× · <b style="color:var(--peak)">WHIP</b> 12-frame smear · <b style="color:var(--peak)">PULL</b> 2.0→1.0× · <b style="color:var(--peak)">SHAKE</b> ±6 px</li>
+        <li>Sounds are synthesised in code: ding, click, whoosh, drop, confirm, stamp, sip</li>
+      </ul>
+      <label class="toggle"><input type="checkbox" id="safeToggle"> Show Instagram safe zones</label>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="card cast">
+      <svg viewBox="0 0 260 260" id="castDad" role="img" aria-label="Peter"></svg>
+      <div style="display:grid;gap:8px"><h3>Peter</h3><p>The overloaded owner. White shirt, green trousers, round glasses, big chin, one notification behind. Poses: calm, glance, panic, slump, happy.</p></div>
+    </div>
+    <div class="card cast">
+      <svg viewBox="0 0 260 260" id="castBaby" role="img" aria-label="Stewie"></svg>
+      <div style="display:grid;gap:8px"><h3>Stewie</h3><p>Already figured it out. Football head, half-lidded smug eyes, red overalls over a yellow shirt, arms folded. Poses: stare, tap, look-to-camera.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="board">
+  <div class="toolbar">
+    <label class="toggle"><input type="checkbox" id="compactToggle"> Compact view</label>
+    <nav class="jump" id="jump" aria-label="Jump to scene"></nav>
+  </div>
+  <div id="scenes"></div>
+</section>
+
+<section id="open">
+  <div class="sec-head"><span class="eyebrow">Next</span><h2>What happens when the voiceover arrives</h2></div>
+  <ol class="qs">
+    <li><b>Timing.</b> I transcribe your takes with word timestamps, then every caption and cut on this board snaps to the spoken word. Frames stretch or shrink; the order stays.</li>
+    
+    <li><b>Runtime.</b> The board runs 64 s. Frames 44–47 (industries) and 51–54 (payoff) are the easiest trims to reach 60 s.</li>
+    <li><b>Build.</b> Remotion needs one npm install, which you asked to approve first.</li>
+  </ol>
+</section>
+
+<footer><span class="wordmark" style="font-size:16px">figured<b>out.ai</b></span><span>Unified AI Inbox · frame board v3 · palette and type from the FiguredOutAI visual system</span></footer>
+</div>
+
+<script>
+(() => {
+const C = {ink:'#030A0E',panel:'#08171D',teal:'#1B6579',sky:'#90C2E7',peak:'#C9E4F5',paper:'#F0EDEF',amber:'#E8A33D',loss:'#D4645A',ok:'#4FA87C'};
+const FONT = 'Poppins, Inter, system-ui, sans-serif', UI = 'Inter, system-ui, sans-serif';
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const T = (x,y,s,o={}) => `<text x="${x}" y="${y}" fill="${o.fill||C.paper}" font-family="${o.font||FONT}" font-weight="${o.w||700}" font-size="${o.size||56}" text-anchor="${o.anchor||'middle'}"${o.it?' font-style="italic"':''}${o.ls?` letter-spacing="${o.ls}"`:''} opacity="${o.op??1}">${esc(s)}</text>`;
+const glow = (cx,cy,rx,ry) => `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="url(#glow)"/>`;
+const DOT = {WhatsApp:C.ok,Instagram:C.loss,Website:C.sky,Email:C.amber,Chat:C.peak,Call:C.amber};
+
+/* ---------- Characters (original designs) ---------- */
+function dad(x,y,s=1,mood='calm',o={}){ // Peter
+  const skin='#F7CBA6', line=C.ink;
+  const mouth={calm:'M-50,62 Q0,96 50,62',panic:'M-34,70 Q0,40 34,70 Q0,104 -34,70',slump:'M-40,80 Q0,62 40,80',happy:'M-56,56 Q0,112 56,56',flat:'M-36,74 L36,74'}[mood];
+  const brow= mood==='panic'?'M-82,-66 L-34,-50 M34,-50 L82,-66': mood==='slump'?'M-82,-50 L-34,-58 M34,-58 L82,-50':'M-80,-60 L-36,-64 M36,-64 L80,-60';
+  const pup = mood==='slump'? 6 : 0;
+  return `<g transform="translate(${x},${y}) scale(${s})">
+   <path d="M-120,390 L120,390 L130,470 L-130,470Z" fill="#3F7D3A"/>
+   <path d="M-176,300 Q-190,150 -104,118 L104,118 Q190,150 176,300 Q170,392 0,396 Q-170,392 -176,300Z" fill="#FBFBF7" stroke="${line}" stroke-width="6"/>
+   <path d="M-60,118 L0,176 L60,118" fill="#FBFBF7" stroke="${line}" stroke-width="6"/>
+   <path d="M0,176 L0,380" stroke="${line}" stroke-width="4"/><circle cx="-10" cy="220" r="5" fill="${line}"/><circle cx="-10" cy="280" r="5" fill="${line}"/><circle cx="-10" cy="340" r="5" fill="${line}"/>
+   <rect x="-150" y="372" width="300" height="30" fill="#1b1b1b"/><rect x="-22" y="368" width="44" height="38" rx="6" fill="#E8B23A" stroke="${line}" stroke-width="4"/>
+   <path d="M-104,-10 Q-112,-160 0,-160 Q112,-160 104,-10 L106,40 Q134,150 30,178 Q0,184 -30,178 Q-134,150 -106,40Z" fill="${skin}" stroke="${line}" stroke-width="6"/>
+   <path d="M-6,150 Q0,168 6,150" stroke="${line}" stroke-width="5" fill="none"/>
+   <path d="M-86,-118 Q-66,-172 0,-166 Q70,-174 90,-116 Q62,-140 20,-136 Q30,-150 -6,-146 Q-50,-146 -86,-118Z" fill="#5A3A22" stroke="${line}" stroke-width="5"/>
+   <g fill="#fff" stroke="${line}" stroke-width="5"><ellipse cx="-42" cy="-18" rx="34" ry="38"/><ellipse cx="42" cy="-18" rx="34" ry="38"/></g>
+   <circle cx="${-38+pup}" cy="${-14+pup}" r="8" fill="${line}"/><circle cx="${38-pup}" cy="${-14+pup}" r="8" fill="${line}"/>
+   <path d="M-76,-18 L-104,-26 M76,-18 L104,-26 M-8,-24 L8,-24" stroke="${line}" stroke-width="5"/>
+   <ellipse cx="0" cy="24" rx="24" ry="20" fill="${skin}" stroke="${line}" stroke-width="5"/>
+   <path d="${brow}" stroke="#5A3A22" stroke-width="7" stroke-linecap="round" fill="none"/>
+   <path d="${mouth}" stroke="${line}" stroke-width="7" stroke-linecap="round" fill="${mood==='panic'?'#7a2e28':'none'}"/>
+   ${mood==='panic'?`<path d="M120,-70 q14,26 0,38 q-14,-12 0,-38z" fill="${C.sky}"/>`:''}
+   ${o.mug?`<g transform="translate(170,210)"><rect x="-36" y="-42" width="72" height="82" rx="10" fill="${C.paper}" stroke="${line}" stroke-width="4"/><path d="M36,-24 q30,0 30,22 q0,22 -30,22" stroke="${C.paper}" stroke-width="10" fill="none"/><rect x="-28" y="-30" width="56" height="12" fill="${C.teal}"/>${o.steam?`<path d="M-12,-58 q-10,-20 4,-34 M12,-58 q-10,-20 4,-34" stroke="${C.peak}" stroke-width="5" fill="none" opacity=".6"/>`:''}</g>`:''}
+   ${o.phone?`<g transform="translate(-180,170) rotate(-12)"><rect x="-34" y="-62" width="68" height="124" rx="14" fill="${C.ink}" stroke="${C.sky}" stroke-width="4"/><rect x="-24" y="-44" width="48" height="20" rx="5" fill="${C.ok}"/></g>`:''}
+  </g>`;
+}
+function stewieHead(look='side',lid=true){
+  const px = look==='camera'?0:(look==='left'?-9:9), line=C.ink, skin='#F8D9B9';
+  return `<path d="M-196,-34 Q-150,-150 0,-150 Q150,-150 196,-34 Q146,104 0,108 Q-146,104 -196,-34Z" fill="${skin}" stroke="${line}" stroke-width="6"/>
+   <path d="M-20,-126 q10,-18 26,-6" stroke="${line}" stroke-width="5" fill="none"/>
+   <path d="M-112,-6 q-14,10 -4,24 M112,-6 q14,10 4,24" stroke="${line}" stroke-width="4" fill="none"/>
+   <g fill="#fff" stroke="${line}" stroke-width="5"><ellipse cx="-46" cy="-18" rx="36" ry="32"/><ellipse cx="46" cy="-18" rx="36" ry="32"/></g>
+   <circle cx="${-40+px}" cy="-8" r="9" fill="${line}"/><circle cx="${40+px}" cy="-8" r="9" fill="${line}"/>
+   ${lid?`<path d="M-82,-18 Q-46,-54 -10,-18 L-10,-52 L-82,-52Z M10,-18 Q46,-54 82,-18 L82,-52 L10,-52Z" fill="${skin}"/><path d="M-84,-16 L-8,-16 M8,-16 L84,-16" stroke="${line}" stroke-width="6" stroke-linecap="round"/>`:''}
+   <path d="M-26,52 Q8,62 40,38" stroke="${line}" stroke-width="6" stroke-linecap="round" fill="none"/>`;
+}
+function baby(x,y,s=1,look='side',o={}){ // Stewie
+  const line=C.ink, skin='#F8D9B9';
+  const arms = o.tap
+    ? `<path d="M50,130 Q140,100 160,30" stroke="#F2C94C" stroke-width="36" stroke-linecap="round" fill="none"/><circle cx="160" cy="26" r="20" fill="${skin}" stroke="${line}" stroke-width="4"/><path d="M-60,140 Q-90,190 -60,220" stroke="#F2C94C" stroke-width="34" stroke-linecap="round" fill="none"/>`
+    : `<path d="M-74,150 Q0,190 70,146" stroke="#F2C94C" stroke-width="38" stroke-linecap="round" fill="none"/><path d="M76,162 Q0,206 -70,158" stroke="#E9BE3C" stroke-width="38" stroke-linecap="round" fill="none"/><circle cx="72" cy="150" r="16" fill="${skin}"/><circle cx="-70" cy="160" r="16" fill="${skin}"/>`;
+  return `<g transform="translate(${x},${y}) scale(${s})">
+   <path d="M-70,110 Q-70,90 -40,90 L40,90 Q70,90 70,110 L78,250 L-78,250Z" fill="#F2C94C" stroke="${line}" stroke-width="5"/>
+   <path d="M-62,150 L62,150 L74,250 L-74,250Z" fill="#D8322B" stroke="${line}" stroke-width="5"/>
+   <path d="M-50,150 L-40,96 M50,150 L40,96" stroke="#D8322B" stroke-width="16"/><circle cx="-44" cy="150" r="6" fill="#F2C94C"/><circle cx="44" cy="150" r="6" fill="#F2C94C"/>
+   <path d="M-74,250 L-6,250 L-6,286 L-78,286Z M6,250 L74,250 L78,286 L6,286Z" fill="#D8322B" stroke="${line}" stroke-width="5"/>
+   <ellipse cx="-44" cy="296" rx="42" ry="18" fill="#A9D2EE" stroke="${line}" stroke-width="4"/><ellipse cx="44" cy="296" rx="42" ry="18" fill="#A9D2EE" stroke="${line}" stroke-width="4"/>
+   ${arms}
+   ${o.cup?`<g transform="translate(-130,150)"><rect x="-26" y="-50" width="52" height="84" rx="16" fill="${C.teal}" stroke="${line}" stroke-width="4"/><rect x="-14" y="-72" width="28" height="26" rx="8" fill="${C.sky}"/></g>`:''}
+   <g transform="translate(0,-14)">${stewieHead(look)}</g>
+  </g>`;
+}
+
+/* ---------- Frame parts ---------- */
+const STATIONS = ['UNDERSTAND','QUALIFY','SCORE','MATCH','ROUTE'];
+function tracker(k){ // k = stations completed (0..5), fractional = in progress
+  const x0=150,x1=930,y=290, px = x0 + (x1-x0)*Math.min(k,5)/4.0;
+  const fillX = Math.min(x1, x0 + (x1-x0)*Math.max(0,k-0.5)/4);
+  let g=`<rect x="${x0}" y="${y-5}" width="${x1-x0}" height="10" rx="5" fill="rgba(144,194,231,.14)"/>`;
+  if(k>0) g+=`<rect x="${x0}" y="${y-5}" width="${Math.max(0,fillX-x0)}" height="10" rx="5" fill="${C.sky}"/>`;
+  STATIONS.forEach((s,i)=>{ const x=x0+(x1-x0)*i/4, done=k>=i+1, cur=k>i&&k<i+1;
+    g+=`<circle cx="${x}" cy="${y}" r="20" fill="${done?C.ok:(cur?C.sky:C.panel)}" stroke="${done||cur?'none':'rgba(144,194,231,.4)'}" stroke-width="3"/>`;
+    if(done) g+=`<path d="M${x-8},${y} l6,7 l11,-13" stroke="${C.ink}" stroke-width="4" fill="none"/>`;
+    g+=T(x,y+52,s,{size:17,w:600,font:UI,ls:2,fill:(done||cur)?C.peak:'rgba(240,237,239,.4)'}); });
+  const mx = k===0? x0 : Math.min(x1, x0+(x1-x0)*Math.min(4,Math.max(0,k-0.5))/4);
+  g+=`<g transform="translate(${mx},${y-40}) scale(.25)">${stewieHead('camera')}</g>`;
+  return g;
+}
+function room(night=true){
+  let g=`<rect width="1080" height="896" fill="url(#wall)"/>`;
+  g+=`<rect x="620" y="90" width="320" height="260" rx="14" fill="${night?'#0A1B33':'#16384A'}" stroke="#1E4452" stroke-width="10"/>`;
+  if(night){ g+=`<circle cx="870" cy="150" r="30" fill="#E8E0C8" opacity=".85"/>`; [[660,300,40,50],[710,270,34,80],[760,290,44,60],[820,260,40,90],[880,300,40,50]].forEach(r=>g+=`<rect x="${r[0]}" y="${r[1]}" width="${r[2]}" height="${r[3]}" fill="#0F2440"/>`); }
+  for(let i=0;i<5;i++) g+=`<polygon points="${-100+i*260},896 ${40+i*260},896 ${420+i*260},0 ${280+i*260},0" fill="#fff" opacity=".035"/>`;
+  g+=`<rect y="690" width="1080" height="206" fill="#06131A"/>`;
+  return g;
+}
+const deskL = (y=660) => `<rect x="60" y="${y}" width="960" height="26" rx="8" fill="#1A3C48"/><rect x="100" y="${y+26}" width="18" height="190" fill="#12303A"/><rect x="962" y="${y+26}" width="18" height="190" fill="#12303A"/>`;
+const laptop = (x,y,clean=false) => `<g transform="translate(${x},${y})"><path d="M0,0 L230,0 L210,-150 L20,-150Z" fill="#23434F"/><rect x="36" y="-136" width="158" height="112" rx="4" fill="${C.panel}" stroke="${C.sky}" stroke-opacity=".4"/>${clean?`<rect x="60" y="-110" width="110" height="10" rx="5" fill="${C.sky}" opacity=".7"/><rect x="60" y="-88" width="80" height="10" rx="5" fill="${C.ok}" opacity=".7"/>`:`<rect x="50" y="-120" width="60" height="20" rx="5" fill="${C.loss}" opacity=".8"/><rect x="118" y="-120" width="60" height="20" rx="5" fill="${C.amber}" opacity=".8"/><rect x="50" y="-92" width="128" height="20" rx="5" fill="${C.ok}" opacity=".6"/>`}<rect x="-20" y="0" width="270" height="12" rx="4" fill="#2C5A68"/></g>`;
+function notif(x,y,label,sub='New enquiry',s=1,op=1,grey=false){
+  const c = grey?'#4a5a60':(DOT[label]||C.sky);
+  return `<g transform="translate(${x},${y}) scale(${s})" opacity="${op}"><rect width="340" height="96" rx="24" fill="${C.panel}" stroke="${c}" stroke-opacity=".7" stroke-width="3"/><circle cx="46" cy="48" r="19" fill="${c}"/>${T(80,42,label.toUpperCase(),{anchor:'start',size:22,w:600,ls:3,fill:grey?'#6b7a80':C.peak,font:UI})}${T(80,74,sub,{anchor:'start',size:22,w:400,fill:grey?'#5b6a70':'rgba(240,237,239,.72)',font:UI})}</g>`;
+}
+function card(inner){ return `<rect x="66" y="366" width="948" height="788" rx="48" fill="${C.panel}" stroke="rgba(144,194,231,.32)" stroke-width="4"/><g transform="translate(70,370) scale(.8704)"><g clip-path="url(#cardclip)">${inner}</g></g>`; }
+function uiWin(x,y,w,h,title){
+  return `<g transform="translate(${x},${y})"><rect width="${w}" height="${h}" rx="30" fill="${C.panel}" stroke="${C.sky}" stroke-opacity=".3" stroke-width="3"/><path d="M0,30 a30,30 0 0 1 30,-30 h${w-60} a30,30 0 0 1 30,30 v44 h-${w} z" fill="#0C2129"/>
+  <circle cx="38" cy="37" r="9" fill="${C.loss}" opacity=".85"/><circle cx="66" cy="37" r="9" fill="${C.amber}" opacity=".85"/><circle cx="94" cy="37" r="9" fill="${C.ok}" opacity=".85"/>${title?T(w/2,47,title,{size:24,w:600,ls:3,fill:C.peak,font:UI}):''}</g>`;
+}
+function row(x,y,k,v,{tick=false,col=C.paper,hl=false}={}){
+  return `${hl?`<rect x="${x-24}" y="${y-58}" width="700" height="84" rx="16" fill="rgba(144,194,231,.14)" stroke="${C.sky}" stroke-width="3"/>`:''}${T(x,y,k,{anchor:'start',size:26,w:500,fill:'rgba(240,237,239,.56)',font:UI,ls:3})}${T(x+560,y,v,{anchor:'end',size:34,w:700,fill:col})}${tick?`<circle cx="${x+614}" cy="${y-11}" r="22" fill="${C.ok}"/><path d="M${x+603},${y-11} l7,9 l15,-17" stroke="${C.ink}" stroke-width="5" fill="none"/>`:''}`;
+}
+function cursor(x,y,click=false){ return `${click?`<circle cx="${x+4}" cy="${y+4}" r="36" fill="none" stroke="${C.sky}" stroke-width="5" opacity=".7"/>`:''}<path transform="translate(${x},${y})" d="M0,0 L0,68 L17,53 L30,80 L43,74 L30,49 L52,49Z" fill="${C.paper}" stroke="${C.ink}" stroke-width="4"/>`; }
+function caption(text, em){
+  if(!text) return '';
+  const lines = text.split('|'); let g='';
+  const size = lines.length>1 ? 66 : (text.length>18?66:84);
+  lines.forEach((ln,i)=>{ const y = 1350 + (i-(lines.length-1)/2)*(size*1.12);
+    g += em ? `<text x="540" y="${y}" text-anchor="middle" font-family="${FONT}" font-weight="800" font-style="italic" font-size="${size}" fill="${C.sky}" style="text-transform:uppercase">${esc(ln.toUpperCase())}</text>`
+            : T(540,y,ln,{size}); });
+  return (em?glow(540,1340,420,110):'') + g;
+}
+function safe(){
+  return `<g class="safe"><rect width="1080" height="220" fill="${C.loss}" opacity=".16"/><rect y="1480" width="1080" height="440" fill="${C.loss}" opacity=".16"/><rect x="940" y="960" width="140" height="520" fill="${C.loss}" opacity=".16"/><rect x="60" y="220" width="880" height="1260" fill="none" stroke="${C.loss}" stroke-dasharray="14 12" stroke-width="4" opacity=".6"/></g>`;
+}
+const frame = (inner, bg=C.ink) => `<svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="1080" height="1920" fill="${bg}"/><rect width="1080" height="1920" fill="url(#dots)"/>${inner}${safe()}</svg>`;
+
+/* ---------- Visual library ---------- */
+const V = {
+  black:()=>'',
+  chip:()=>glow(540,780,520,380)+notif(268,700,'WhatsApp','New lead',1.6),
+  desk:(mood,chips=[],o={})=>card(room()+deskL()+laptop(620,660,o.clean)+dad(380,420,1,mood,o)+chips.map(c=>notif(c[0],c[1],c[2],c[3]||'New enquiry',c[4]||.9,c[5]??1)).join('')+(o.baby?baby(o.baby[0],o.baby[1],o.baby[2]||.85,o.look||'side',{cup:true}):'')),
+  babyC:(look,o={})=>card(room()+`<rect y="690" width="1080" height="206" fill="#06131A"/>`+baby(540,420,1.35,look,o)),
+  phone:()=>glow(540,760,360,380)+`<g transform="translate(540,760) rotate(-6)"><rect x="-190" y="-340" width="380" height="680" rx="52" fill="${C.ink}" stroke="${C.sky}" stroke-width="8"/><rect x="-60" y="-316" width="120" height="16" rx="8" fill="#1a3a45"/></g>`+notif(380,560,'WhatsApp','New lead',1)+notif(390,680,'Instagram','New DM',.95)+notif(400,800,'Email','New enquiry',.9)+notif(410,920,'Website','Form submitted',.85,.8),
+  tabs:()=>[0,1,2].map(i=>uiWin(150+i*40,440+i*110,780-i*80,560,['WHATSAPP WEB','INBOX (37)','FORM RESPONSES'][i])).join('')+notif(560,1000,'Chat','Visitor waiting',.9),
+  channels:()=>{ const L=['WHATSAPP','INSTAGRAM','WEBSITE','EMAIL','CHAT','CALLS']; let g=''; L.forEach((l,i)=>{ const x=i%2?760:320, y=500+Math.floor(i/2)*200; const c=Object.values(DOT)[i]; g+=`<rect x="${x-200}" y="${y-60}" width="400" height="110" rx="55" fill="${C.panel}" stroke="${c}" stroke-width="4"/>`+T(x,y+14,l,{size:36,w:700,font:UI,ls:4,fill:C.peak}); }); return g; },
+  checklist:(focus=-1,newChip=false)=>{ const F=[['NAME','Priya S.',1],['BUDGET','?'],['LOCATION','?'],['INTENT','?'],['TIMELINE','?'],['NEEDS','?'],['FOLLOW-UP','?']]; let g=uiWin(120,400,840,760,'QUALIFY LEAD — MANUAL');
+    F.forEach((f,i)=>g+=row(190,540+i*88,f[0],f[1],{tick:!!f[2],col:f[2]?C.paper:C.amber,hl:i===focus})); if(newChip) g+=notif(380,380,'Instagram','New DM',1); return g; },
+  freeze:()=>notif(90,480,'WhatsApp','New lead',1,.95,true)+notif(620,600,'Email','New enquiry',.9,.9,true)+notif(140,860,'Website','Form submitted',.95,.85,true)+notif(600,980,'Chat','Visitor waiting',.9,.8,true)+`<path d="M260,620 l0,60 M800,720 l0,70 M330,1000 l0,60 M770,1110 l0,60" stroke="#6b7a80" stroke-width="6" stroke-linecap="round" opacity=".6"/>`,
+  insight:()=>glow(540,760,420,420)+baby(540,720,1.4,'camera'),
+  tap:()=>card(room()+baby(460,420,1.25,'camera',{tap:true})+`<circle cx="${460+150*1.25}" cy="${420+40*1.25}" r="70" fill="none" stroke="${C.sky}" stroke-width="8"/><circle cx="${460+150*1.25}" cy="${420+40*1.25}" r="130" fill="none" stroke="${C.sky}" stroke-width="5" opacity=".5"/>`),
+  flash:()=>`<rect width="1080" height="1920" fill="url(#leak)"/>`,
+  flow:(p=1,glowNode=false)=>{ const ch=['WhatsApp','Instagram','Website','Email','Chat']; let g=glow(760,780,glowNode?360:260,glowNode?300:220);
+    ch.forEach((c,i)=>{ const y=520+i*110; g+=`<path d="M300,${y} C520,${y} 520,780 690,780" stroke="${DOT[c]}" stroke-width="6" fill="none" stroke-dasharray="${600*p} 600"/>`+T(280,y+12,c.toUpperCase(),{anchor:'end',size:28,w:600,font:UI,ls:3,fill:C.peak}); });
+    return g+`<rect x="690" y="700" width="260" height="160" rx="30" fill="${C.panel}" stroke="${C.sky}" stroke-width="${glowNode?6:3}"/>`+T(820,768,'AI',{size:44,fill:C.sky})+T(820,818,'INBOX',{size:34}); },
+  msg:(hl=0,fields=0)=>{ let g=uiWin(90,380,900,780,'CONVERSATION · NEW');
+    const parts=[["Hi, I'm looking for a ",'3BHK'],['in ','Gurgaon'],['Budget around ','₹30L'],['Moving in ','2 months']];
+    g+=`<rect x="130" y="480" width="700" height="260" rx="28" fill="#CFE3E8"/>`;
+    parts.forEach((p,i)=>{ const y=540+i*56; g+=`<text x="164" y="${y}" font-family="${UI}" font-size="34" font-weight="500" fill="${C.ink}">${esc(p[0])}<tspan font-weight="700" ${hl>i?`fill="${C.teal}" text-decoration="underline"`:''}>${esc(p[1])}</tspan></text>`; });
+    const Fd=[['INTENT','HIGH',C.ok],['LOCATION','GURGAON'],['BUDGET','₹30L'],['TIMELINE','2 MONTHS']];
+    Fd.forEach((f,i)=>{ if(i<fields) g+=row(160,830+i*80,f[0],f[1],{col:f[2]||C.paper,hl:i===fields-1}); else g+=`<rect x="136" y="${780+i*80}" width="700" height="64" rx="14" fill="rgba(240,237,239,.035)" stroke="rgba(144,194,231,.12)"/>`; });
+    return g; },
+  zoomField:()=>glow(540,780,420,300)+`<rect x="140" y="640" width="800" height="280" rx="36" fill="${C.panel}" stroke="${C.sky}" stroke-width="5"/>`+T(200,730,'BUDGET',{anchor:'start',size:40,w:500,font:UI,ls:6,fill:'rgba(240,237,239,.56)'})+T(540,870,'₹30L',{size:150,fill:C.sky}),
+  qual:(n)=>{ const F=['INTENT','BUDGET','LOCATION','TIMELINE','REQUIREMENT']; let g=uiWin(120,400,840,760,'QUALIFICATION · AI');
+    F.forEach((f,i)=>g+=row(190,560+i*112,f,i===0?'HIGH':'MATCH',{tick:i<n,col:i===0?C.ok:C.paper,hl:i===n-1})); return g+(n===5?glow(540,780,520,440):''); },
+  ring:(pct,label)=>{ const r=250,cx=540,cy=820,L=2*Math.PI*r; return T(540,470,'MATCH SCORE',{size:40,w:600,font:UI,ls:10,fill:C.peak})+glow(cx,cy,r*1.6,r*1.6)+`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(144,194,231,.14)" stroke-width="28"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${C.sky}" stroke-width="28" stroke-linecap="round" stroke-dasharray="${L*pct} ${L}" transform="rotate(-90 ${cx} ${cy})"/>`+T(cx,cy+54,label,{size:170}); },
+  list:(order,stamp=false,zoomTop=false)=>{ const D={A:['Lead A','92%',C.ok],B:['Lead B','87%',C.ok],C:['Lead C','61%',C.amber],D:['Lead D','38%',C.loss]}; let g=uiWin(110,400,860,720,'INBOX · SORT BY MATCH ↓');
+    order.forEach((k,i)=>{ const r=D[k], y=560+i*140, top=stamp&&i===0; g+=`<rect x="150" y="${y-68}" width="780" height="114" rx="22" fill="${top?'rgba(144,194,231,.14)':'rgba(240,237,239,.035)'}" stroke="${top?C.sky:'rgba(144,194,231,.14)'}" stroke-width="${top?4:2}"/>`+T(200,y+8,r[0],{anchor:'start',size:40,w:600})+T(890,y+10,r[1],{anchor:'end',size:46,fill:r[2]}); });
+    if(stamp) g+=`<g transform="translate(660,452) rotate(-6)"><rect x="-150" y="-30" width="300" height="60" rx="12" fill="${C.sky}"/>${T(0,11,'HIGH PRIORITY',{size:26,w:700,font:UI,ls:3,fill:C.ink})}</g>`;
+    return (zoomTop?glow(540,560,520,200):'')+g; },
+  industry:(label)=>card(room(false)+`<rect x="240" y="170" width="600" height="420" rx="36" fill="${C.panel}" stroke="${C.sky}" stroke-width="5"/>`+T(540,300,'NEW ENQUIRY',{size:28,w:600,font:UI,ls:6,fill:'rgba(240,237,239,.56)'})+T(540,410,label,{size:62})+`<rect x="400" y="470" width="280" height="64" rx="32" fill="${C.ok}"/>`+T(540,512,'92% MATCH',{size:30,w:700,font:UI,fill:C.ink})),
+  orbit:(rules=false)=>{ const L=['REAL ESTATE','RECRUITMENT','HOME SERVICES','AGENCIES','EDUCATION','HEALTHCARE']; let g=glow(540,800,380,300)+`<rect x="330" y="680" width="420" height="240" rx="32" fill="${C.panel}" stroke="${C.sky}" stroke-width="4"/>`+T(540,790,'AI INBOX',{size:48})+(rules?T(540,850,'your criteria',{size:30,w:500,font:UI,fill:C.sky}):'');
+    L.forEach((l,i)=>{ const a=(i/L.length)*Math.PI*2-Math.PI/2, x=540+Math.cos(a)*360, y=800+Math.sin(a)*330; g+=`<rect x="${x-150}" y="${y-36}" width="300" height="68" rx="34" fill="rgba(240,237,239,.04)" stroke="rgba(144,194,231,.4)" stroke-width="3"/>`+T(x,y+9,l,{size:23,w:600,font:UI,ls:3,fill:C.peak}); }); return g; },
+  pipe:(stage,assigned=false)=>{ const st=['ENQUIRY','AI','QUALIFIED','92% MATCH','BEST FIT']; let g='';
+    st.forEach((s,i)=>{ const y=380+i*150, on=i<=stage; g+=`<rect x="320" y="${y}" width="440" height="100" rx="26" fill="${i===stage?'rgba(144,194,231,.16)':C.panel}" stroke="${on?C.sky:'rgba(144,194,231,.2)'}" stroke-width="${i===stage?5:3}"/>`+T(540,y+64,s,{size:38,fill:on?(i===3?C.sky:C.paper):'rgba(240,237,239,.4)'}); if(i<4) g+=`<path d="M540,${y+104} L540,${y+146}" stroke="${i<stage?C.sky:'rgba(144,194,231,.25)'}" stroke-width="5"/>`; });
+    if(assigned) g+=`<g transform="translate(540,1130)"><rect x="-220" y="-50" width="440" height="100" rx="24" fill="${C.ok}"/>${T(0,14,'Assigned to Sales ✓',{size:36,w:700,font:UI,fill:C.ink})}</g>`;
+    return glow(540,380+stage*150+50,380,160)+g; },
+  big:(lines,skyIdx=-1)=>glow(540,760,460,360)+lines.map((l,i)=>T(540,640+i*110-(lines.length-1)*30,l,{size:88,fill:i===skyIdx?C.sky:C.paper})).join(''),
+  wordmark:()=>glow(540,800,460,360)+`<text x="540" y="820" text-anchor="middle" font-family="${FONT}" font-size="104" fill="${C.paper}"><tspan font-weight="300">figured</tspan><tspan font-weight="700" fill="${C.sky}">out.ai</tspan></text>`+T(540,920,'UNIFIED AI INBOX',{size:32,w:500,font:UI,ls:12,fill:'rgba(240,237,239,.72)'}),
+  mug:()=>glow(540,760,380,380)+`<g transform="translate(540,760) scale(3.2)"><rect x="-34" y="-40" width="68" height="78" rx="10" fill="${C.paper}"/><path d="M34,-24 q30,0 30,22 q0,22 -30,22" stroke="${C.paper}" stroke-width="10" fill="none"/><rect x="-26" y="-30" width="52" height="10" fill="${C.teal}"/><path d="M-12,-56 q-10,-20 4,-34 M12,-56 q-10,-20 4,-34" stroke="${C.peak}" stroke-width="4" fill="none" opacity=".6"/></g>`
+};
+
+/* ---------- Scenes and frames ---------- */
+const ACT = {comedy:['Comedy',C.amber],chaos:['Chaos',C.loss],pause:['Pause · insight',C.peak],product:['Product reveal',C.sky],mech:['Mechanism',C.teal],proof:['Proof',C.ok],brand:['Brand',C.paper]};
+const SC = [
+ ['hook','The hook','comedy','One glowing chip on black is the thumb-stop. Everything after it escalates.'],
+ ['problem','The real problem','chaos','Chips multiply, tabs whip, Stewie arrives unnoticed.'],
+ ['manual','The manual work','chaos','The comically tall checklist. Ends on 300 ms of silence and a stare into camera.'],
+ ['insight','The insight','pause','First rest beat. Music out, no word-pop: whole sentences fade in.'],
+ ['reveal','Product reveal','product','Stewie taps, light-leak flash, chaos compresses into one line. The tracker appears for the first time.'],
+ ['understand','It understands','mech','Whip into real-looking software. Words physically travel from the message into fields.'],
+ ['qualify','It qualifies','mech','The same fields as the manual checklist, now ticked by the AI in seconds.'],
+ ['score','It scores','mech','Stepped counter 0 → 92. Hold on 92% for at least 600 ms.'],
+ ['prioritise','It knows who fits','proof','Rows physically swap places. 200 ms pause before the stamp.'],
+ ['industries','Any industry','proof','Pull out, card morphs through industries, labels settle in orbit. Easiest trim.'],
+ ['route','Match and route','proof','The lead travels down the pipeline; the tracker completes.'],
+ ['payoff','Character payoff','comedy','Mirror of frame 02 minus the chaos.'],
+ ['brand','Brand frame','brand','Three lines, wordmark, cut to black.']
+];
+const Tk=(k,inner)=>tracker(k)+inner;
+// [scene, t0, t1, caption, em, visual, what moves, camera, sound, trackerK(null = hidden)]
+const FR = [
+ [0,0.0,0.5,'DING.',1,()=>V.chip(),'One chip pops on black','SNAP','ding',null],
+ [0,0.5,1.3,'Stewie...',0,()=>V.desk('calm',[],{mug:true,steam:true}),'Peter at his desk, calm, coffee','PUSH','room tone',0],
+ [0,1.3,2.0,"we've got",0,()=>V.desk('calm',[[30,60,'WhatsApp','New lead'],[640,40,'Instagram','New DM',.85],[40,230,'Website','Form submitted',.8]],{mug:true}),'Five chips burst in, 3 frames apart','SHAKE','ding ×5 rising',0],
+ [0,2.0,2.8,'ANOTHER',1,()=>V.phone(),'Phone fills frame, chips stack','HYPER','whoosh',0],
+ [0,2.8,4.0,'lead.',0,()=>V.desk('flat',[[30,60,'WhatsApp','New lead'],[640,40,'Instagram','New DM',.85],[40,230,'Website','Form submitted',.8],[660,220,'Email','',.8]],{mug:true}),'Peter glances, smile gone','HYPER to eyes','ding',0],
+ [1,4.0,4.8,'Actually...',0,()=>V.desk('flat',[[30,40,'WhatsApp'],[640,30,'Instagram','New DM',.85],[40,200,'Website','',.8],[660,190,'Email','',.8],[330,-10,'Chat','',.75]],{phone:true}),'Chips ring around him, he reaches for one','SHAKE','ding ×3',0],
+ [1,4.8,5.6,"they're coming",0,()=>V.tabs(),'Tabs swap every 4 frames','WHIP','tab click ×3',0],
+ [1,5.6,6.4,'from',0,()=>V.channels(),'Channel labels pop in','PUSH','pop ×6',0],
+ [1,6.4,7.2,'EVERYWHERE.',1,()=>V.desk('panic',[[20,30,'WhatsApp'],[650,20,'Instagram','',.85],[30,190,'Website','',.8],[670,180,'Email','',.8],[340,-20,'Chat','',.75],[640,340,'Call','Missed call',.8]],{phone:true}),'Full panic, sweat drop','SHAKE','dings detune',0],
+ [1,7.2,8.0,"And you're handling",0,()=>V.desk('panic',[[650,20,'Instagram','',.8],[670,180,'Email','',.75]],{phone:true,baby:[900,440,.8],look:'left'}),'Stewie is suddenly there, frame right','PUSH to Stewie','silence under line',0],
+ [1,8.0,9.0,'all of them|MANUALLY?',1,()=>V.babyC('camera',{cup:true}),'Close on Stewie, deadpan','PUSH','sippy slurp',0],
+ [2,9.0,9.8,'Well...',0,()=>V.checklist(-1),'Checklist unrolls down the screen','HYPER in','paper unroll',0],
+ [2,9.8,10.6,'I have to',0,()=>V.checklist(1),'Budget row highlights, empty','PUSH','click ×3',0],
+ [2,10.6,11.4,'QUALIFY',1,()=>V.desk('slump',[],{}),'Peter typing, one finger','PUSH','click click click',0],
+ [2,11.4,12.0,'them first.',0,()=>V.checklist(1,true),'New chip slams over the form','SNAP','ding',0],
+ [2,12.0,12.8,'Every single one?',0,()=>V.babyC('side',{cup:true}),'Stewie, flat delivery','locked','',0],
+ [2,12.8,13.4,'...Yes.',0,()=>V.desk('slump',[],{baby:[900,440,.8],look:'left'}),'Peter slowly turns to Stewie','PUSH','',0],
+ [2,13.4,14.0,'',0,()=>V.babyC('camera',{cup:true}),'300 ms stillness, stare into camera','locked','all sound cut',0],
+ [3,14.0,14.4,'',0,()=>V.freeze(),'Freeze; chips drain grey and fall','freeze','music out',null],
+ [3,14.4,16.0,"The problem isn't|the leads.",0,()=>V.insight(),'Stewie steps into one soft glow','PUSH 1.06','room tone',null],
+ [3,16.0,18.0,"It's the work|between them.",1,()=>V.insight(),'Line swaps, nothing else moves','locked','room tone',null],
+ [4,18.0,18.6,'Let the AI',0,()=>V.tap(),'Stewie taps the air, ripple','SNAP','tap',null],
+ [4,18.6,19.2,'HANDLE IT.',1,()=>V.flash(),'Light-leak flash','flash','drop',null],
+ [4,19.2,20.6,'One AI inbox.',0,()=>Tk(0,V.flow(.6)),'Channel lines draw and merge','HYPER out','whoosh',0],
+ [4,20.6,22.0,'EVERY ENQUIRY.',1,()=>Tk(0.5,V.flow(1,true)),'Node glows, tracker slides in on top','PUSH','music returns',0.5],
+ [5,22.0,22.8,'It understands',0,()=>Tk(0.5,V.msg(0,0)),'Whip into browser, message types in','WHIP','type ticks',0.5],
+ [5,22.8,24.0,'what the person',0,()=>Tk(0.6,V.msg(2,1)),'Key phrases underline in teal','PUSH','',0.6],
+ [5,24.0,25.2,'ACTUALLY',1,()=>Tk(0.7,V.zoomField()),'₹30L flies into the Budget field','HYPER','whoosh',0.7],
+ [5,25.2,26.6,'wants...',0,()=>Tk(0.8,V.msg(4,3)),'Fields fill one by one','PUSH','whoosh ×2',0.8],
+ [5,26.6,28.0,'UNDERSTOOD.',1,()=>Tk(1,V.msg(4,4)),'All four fields filled; station 1 ticks','SNAP','confirm',1],
+ [6,28.0,29.2,'...qualifies them',0,()=>Tk(1.3,V.qual(0)),'Fields slide into Qualification panel','slide','card slide',1.3],
+ [6,29.2,30.6,'against',0,()=>Tk(1.5,V.qual(2)),'Ticks land 0.7 s apart','micro SNAP','tick ×2',1.5],
+ [6,30.6,32.2,'YOUR CRITERIA',1,()=>Tk(1.8,V.qual(4)),'Ticks 3 and 4','micro SNAP','tick ×2',1.8],
+ [6,32.2,34.0,'Qualified.',0,()=>Tk(2,V.qual(5)),'Last tick, panel glows; station 2 ticks','hold','tick · confirm',2],
+ [7,34.0,35.0,'and gives',0,()=>Tk(2.3,V.ring(0,'0%')),'Everything collapses into the ring','HYPER in','whoosh',2.3],
+ [7,35.0,36.2,'every enquiry',0,()=>Tk(2.5,V.ring(.47,'47%')),'Counter 0 → 47','PUSH','counter ticks',2.5],
+ [7,36.2,37.2,'a match score.',0,()=>Tk(2.7,V.ring(.81,'81%')),'Counter → 81','PUSH','counter ticks',2.7],
+ [7,37.2,39.0,'92%',1,()=>Tk(3,V.ring(.92,'92%')),'Lands on 92, holds 600 ms+; station 3 ticks','locked','confirm chord',3],
+ [8,39.0,40.2,'So instead of',0,()=>Tk(3.1,V.list(['C','A','D','B'])),'Unsorted list','PULL','',3.1],
+ [8,40.2,41.4,'treating every enquiry',0,()=>Tk(3.3,V.list(['A','C','B','D'])),'Rows swap mid-move','SNAP','card slide ×4',3.3],
+ [8,41.4,42.2,'THE SAME...',1,()=>Tk(3.4,V.list(['A','B','C','D'])),'Sorted; 200 ms pause','locked','',3.4],
+ [8,42.2,43.6,'you know which ones',0,()=>Tk(3.5,V.list(['A','B','C','D'],true)),'HIGH PRIORITY stamps on','SNAP','stamp',3.5],
+ [8,43.6,45.0,'DESERVE ATTENTION.',1,()=>Tk(3.6,V.list(['A','B','C','D'],true,true)),'Top row glows','PUSH','',3.6],
+ [9,45.0,45.8,"And it isn't",0,()=>Tk(3.7,V.industry('REAL ESTATE')),'Card shows an industry','PULL','whoosh',3.7],
+ [9,45.8,46.6,'limited to',0,()=>Tk(3.8,V.industry('HEALTHCARE')),'Morphs every 6 frames','PULL','whoosh ×4',3.8],
+ [9,46.6,47.6,'ONE INDUSTRY.',1,()=>Tk(3.9,V.orbit()),'Labels settle in orbit','rotate 4°','',3.9],
+ [9,47.6,50.0,'Your rules.|Your match.',0,()=>Tk(4,V.orbit(true)),'"your criteria" under the inbox; station 4 ticks','hold','confirm',4],
+ [10,50.0,51.6,'It understands the enquiry,',0,()=>Tk(4.2,V.pipe(1)),'Lead travels down the pipeline','track down','pulse',4.2],
+ [10,51.6,53.0,'scores it,',0,()=>Tk(4.5,V.pipe(3)),'92% MATCH stage lights','track down','pulse',4.5],
+ [10,53.0,55.0,'BEST FIT.',1,()=>Tk(5,V.pipe(4,true)),'Assigned to Sales; tracker completes','SNAP','confirm',5],
+ [11,55.0,56.4,"So... I don't have to",0,()=>V.desk('happy',[],{mug:true,clean:true}),'Clean desk, silent phone, coffee','PUSH','music softens',5],
+ [11,56.4,57.2,'do all that anymore?',0,()=>V.desk('calm',[],{mug:true,clean:true,baby:[900,440,.8],look:'left'}),'Stewie walks past','locked','',5],
+ [11,57.2,58.2,"That's LITERALLY|the point.",1,()=>V.babyC('camera',{cup:true}),'Stewie, not looking up','locked','',5],
+ [11,58.2,59.0,'*sip*',0,()=>V.mug(),'Peter sips','HYPER to mug','sip',5],
+ [12,59.0,60.2,'',0,()=>V.big(['ONE INBOX.']),'Line one','locked','chord',null],
+ [12,60.2,61.4,'',0,()=>V.big(['ONE INBOX.','EVERY ENQUIRY.']),'Line two','locked','',null],
+ [12,61.4,62.6,'',0,()=>V.big(['ONE INBOX.','EVERY ENQUIRY.','ALREADY UNDERSTOOD.'],2),'Line three in sky','micro SNAP','',null],
+ [12,62.6,64.0,'',0,()=>V.wordmark(),'Wordmark, then hard cut to black','PUSH → cut','click to black',null]
+];
+
+/* ---------- Render ---------- */
+const fmt = t => { const m=Math.floor(t/60), s=(t%60).toFixed(1).padStart(4,'0'); return `${m}:${s}`; };
+document.getElementById('frameCount').textContent = FR.length;
+document.getElementById('avgCut').textContent = (64/FR.length).toFixed(1)+' s';
+document.getElementById('jump').innerHTML = SC.map((s,i)=>`<a href="#${s[0]}">${String(i+1).padStart(2,'0')} ${s[1]}</a>`).join('');
+let n=0;
+document.getElementById('scenes').innerHTML = SC.map((s,si)=>{
+  const fr = FR.filter(f=>f[0]===si), a=ACT[s[2]];
+  return `<div class="scene" id="${s[0]}">
+    <div class="shead"><span class="tc">${fmt(fr[0][1])}–${fmt(fr[fr.length-1][2])}</span><h3>${String(si+1).padStart(2,'0')} · ${s[1]}</h3><span class="act" style="color:${a[1]};border-color:${a[1]}66">${a[0]}</span></div>
+    <p class="snote">${s[3]}</p>
+    <div class="frames">${fr.map(f=>{ n++; const trk = f[9]===null||f[5].toString().includes('Tk(') ? '' : tracker(f[9]);
+      return `<figure class="tile" style="margin:0">${frame(trk + f[5]() + caption(f[3],f[4]))}
+      <figcaption class="fmeta"><span class="fh"><b>F${String(n).padStart(2,'0')}</b><span>${f[1].toFixed(1)}–${f[2].toFixed(1)}s</span></span>
+      <span class="fd">${f[6]}</span><span class="fc">${f[7]}</span>${f[8]?`<span class="fx">♪ ${f[8]}</span>`:''}</figcaption></figure>`; }).join('')}</div></div>`;
+}).join('');
+
+document.getElementById('castDad').innerHTML = dad(130,150,.5,'calm',{mug:true});
+document.getElementById('castBaby').innerHTML = baby(130,140,.7,'camera');
+
+const bind = (id, cls, key) => { const el=document.getElementById(id); try{ const v=localStorage.getItem(key); if(v!==null) el.checked=v==='1'; }catch(e){}
+  const ap=()=>document.body.classList.toggle(cls, el.checked); ap(); el.addEventListener('change',()=>{ap(); try{localStorage.setItem(key, el.checked?'1':'0');}catch(e){}}); };
+bind('safeToggle','safe-on','reel-safe2'); bind('compactToggle','compact','reel-compact');
+})();
+</script>

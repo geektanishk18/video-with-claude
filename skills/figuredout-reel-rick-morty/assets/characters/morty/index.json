@@ -1,0 +1,18 @@
+{
+ "poses": [
+  "scared",
+  "sweat",
+  "phone",
+  "relieved"
+ ],
+ "looks": [
+  "classic",
+  "evil",
+  "tech",
+  "space"
+ ],
+ "canvas": [
+  390,
+  728
+ ]
+}

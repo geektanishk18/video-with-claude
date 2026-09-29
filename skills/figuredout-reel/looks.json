@@ -1,0 +1,14 @@
+{
+ "cast": "family-guy",
+ "characters": {
+  "peter":  {"poses": {"p01-p15": "see references/visual-direction.md pose map"}, "looks": {"classic": "white shirt, green trousers (only look available — add art for others)"}},
+  "stewie": {"poses": {"single": "arms folded"}, "looks": {"smug": "as drawn", "geek": "black-rim glasses with tape", "geek_headset": "glasses + teal headset", "geek_laptop": "glasses + headset + FiguredOutAI laptop"}}
+ },
+ "sets": {
+  "reveal-transform": {"peter": "classic", "stewie": "smug", "transform": "stewie:smug->geek_headset@ai", "fits": "APPROVED v3 default: Stewie becomes the tech geek on the AI line"},
+  "geek-throughout":  {"peter": "classic", "stewie": "geek_headset", "fits": "pure product demos, tutorials"},
+  "smug-throughout":  {"peter": "classic", "stewie": "smug", "fits": "pure comedy / objection-handling reels with little UI"}
+ },
+ "art_needed": {"peter-variants": "Peter get-ups (suit, pyjamas, chicken fight) need their own art", "stewie-poses": "more Stewie poses (pointing, walking) need a pose sheet"},
+ "rules": ["Pick ONE set per reel at storyboard stage (scripts/lock_cast.py) and keep it for every frame.", "One scripted transformation per reel at most, declared in the set or with --transform.", "Rotate sets across reels; lock_cast skips the last 3 unless asked."]
+}

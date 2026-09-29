@@ -1,0 +1,1117 @@
+{
+ "total": 62.185,
+ "segments": [
+  {
+   "id": "P1",
+   "char": "Peter",
+   "file": "peter",
+   "src": [
+    0.0,
+    2.287
+   ],
+   "start": 0.5,
+   "end": 2.787,
+   "dur": 2.287,
+   "gap_before": 0.5,
+   "gap_why": "lead-in",
+   "text": "Stewie... we've got another lead.",
+   "words": [
+    [
+     0.5,
+     1.18,
+     "Stewie,"
+    ],
+    [
+     1.4,
+     1.84,
+     "we've"
+    ],
+    [
+     1.84,
+     2.0,
+     "got"
+    ],
+    [
+     2.0,
+     2.3,
+     "another"
+    ],
+    [
+     2.3,
+     2.64,
+     "lead."
+    ]
+   ],
+   "wps": 2.19,
+   "gap_after": 0.752
+  },
+  {
+   "id": "PR",
+   "char": "Peter",
+   "file": "peter",
+   "src": [
+    3.039,
+    3.5
+   ],
+   "start": 3.539,
+   "end": 4.0,
+   "dur": 0.461,
+   "gap_before": 0.752,
+   "gap_why": "recorded (dings fill it)",
+   "text": "Really?",
+   "words": [
+    [
+     3.6,
+     3.82,
+     "Really?"
+    ]
+   ],
+   "wps": 2.17,
+   "gap_after": 0.347
+  },
+  {
+   "id": "P2",
+   "char": "Peter",
+   "file": "peter",
+   "src": [
+    3.847,
+    6.283
+   ],
+   "start": 4.347,
+   "end": 6.783,
+   "dur": 2.436,
+   "gap_before": 0.347,
+   "gap_why": "recorded",
+   "text": "Actually... they're coming from everywhere.",
+   "words": [
+    [
+     4.32,
+     4.74,
+     "Actually,"
+    ],
+    [
+     5.14,
+     5.5,
+     "they're"
+    ],
+    [
+     5.5,
+     5.7,
+     "coming"
+    ],
+    [
+     5.7,
+     5.98,
+     "from"
+    ],
+    [
+     5.98,
+     6.44,
+     "everywhere."
+    ]
+   ],
+   "wps": 2.05,
+   "gap_after": 0.4
+  },
+  {
+   "id": "S1",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    0.0,
+    2.241
+   ],
+   "start": 7.183,
+   "end": 9.424,
+   "dur": 2.241,
+   "gap_before": 0.4,
+   "gap_why": "turn",
+   "text": "And you're handling all of them manually?",
+   "words": [
+    [
+     7.183,
+     7.483,
+     "and"
+    ],
+    [
+     7.483,
+     7.743,
+     "you're"
+    ],
+    [
+     7.743,
+     8.023,
+     "handling"
+    ],
+    [
+     8.023,
+     8.463,
+     "all"
+    ],
+    [
+     8.463,
+     8.623,
+     "of"
+    ],
+    [
+     8.623,
+     8.783,
+     "them"
+    ],
+    [
+     8.783,
+     9.263,
+     "manually,"
+    ]
+   ],
+   "wps": 3.12,
+   "gap_after": 0.45
+  },
+  {
+   "id": "P3",
+   "char": "Peter",
+   "file": "peter",
+   "src": [
+    6.848,
+    9.186
+   ],
+   "start": 9.874,
+   "end": 12.212,
+   "dur": 2.338,
+   "gap_before": 0.45,
+   "gap_why": "turn",
+   "text": "Well... I have to qualify them first.",
+   "words": [
+    [
+     9.826,
+     10.066,
+     "Well,"
+    ],
+    [
+     10.266,
+     10.666,
+     "I"
+    ],
+    [
+     10.666,
+     10.806,
+     "have"
+    ],
+    [
+     10.806,
+     10.966,
+     "to"
+    ],
+    [
+     10.966,
+     11.286,
+     "qualify"
+    ],
+    [
+     11.286,
+     11.646,
+     "them"
+    ],
+    [
+     11.646,
+     11.986,
+     "first."
+    ]
+   ],
+   "wps": 2.99,
+   "gap_after": 0.35
+  },
+  {
+   "id": "S2",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    3.169,
+    4.369
+   ],
+   "start": 12.562,
+   "end": 13.762,
+   "dur": 1.2,
+   "gap_before": 0.35,
+   "gap_why": "turn",
+   "text": "Every single one?",
+   "words": [
+    [
+     12.573,
+     12.873,
+     "every"
+    ],
+    [
+     12.873,
+     13.273,
+     "single"
+    ],
+    [
+     13.273,
+     13.713,
+     "one?"
+    ]
+   ],
+   "wps": 2.5,
+   "gap_after": 0.8
+  },
+  {
+   "id": "P4",
+   "char": "Peter",
+   "file": "peter",
+   "src": [
+    9.737,
+    10.279
+   ],
+   "start": 14.562,
+   "end": 15.104,
+   "dur": 0.542,
+   "gap_before": 0.8,
+   "gap_why": "comedic",
+   "text": "...Yes.",
+   "words": [
+    [
+     14.425,
+     14.785,
+     "Yes."
+    ]
+   ],
+   "wps": 1.85,
+   "gap_after": 0.9
+  },
+  {
+   "id": "S3",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    5.316,
+    6.172
+   ],
+   "start": 16.004,
+   "end": 16.86,
+   "dur": 0.856,
+   "gap_before": 0.9,
+   "gap_why": "comedic",
+   "text": "That's the problem.",
+   "words": [
+    [
+     15.868,
+     16.288,
+     "That's"
+    ],
+    [
+     16.288,
+     16.368,
+     "the"
+    ],
+    [
+     16.368,
+     16.728,
+     "problem."
+    ]
+   ],
+   "wps": 3.5,
+   "gap_after": 0.655
+  },
+  {
+   "id": "S4",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    6.827,
+    8.525
+   ],
+   "start": 17.515,
+   "end": 19.213,
+   "dur": 1.698,
+   "gap_before": 0.655,
+   "gap_why": "recorded",
+   "text": "The problem isn't the leads.",
+   "words": [
+    [
+     17.468,
+     17.588,
+     "The"
+    ],
+    [
+     17.588,
+     17.968,
+     "problem"
+    ],
+    [
+     17.968,
+     18.488,
+     "isn't"
+    ],
+    [
+     18.488,
+     18.648,
+     "the"
+    ],
+    [
+     18.648,
+     18.968,
+     "leads."
+    ]
+   ],
+   "wps": 2.94,
+   "gap_after": 0.632
+  },
+  {
+   "id": "S5",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    9.151,
+    10.619
+   ],
+   "start": 19.845,
+   "end": 21.313,
+   "dur": 1.468,
+   "gap_before": 0.632,
+   "gap_why": "recorded",
+   "text": "It's the work between them.",
+   "words": [
+    [
+     19.794,
+     19.994,
+     "It's"
+    ],
+    [
+     19.994,
+     20.154,
+     "the"
+    ],
+    [
+     20.154,
+     20.454,
+     "work"
+    ],
+    [
+     20.454,
+     20.934,
+     "between"
+    ],
+    [
+     20.934,
+     21.394,
+     "them."
+    ]
+   ],
+   "wps": 3.41,
+   "gap_after": 0.652
+  },
+  {
+   "id": "S6",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    11.271,
+    12.317
+   ],
+   "start": 21.965,
+   "end": 23.011,
+   "dur": 1.046,
+   "gap_before": 0.652,
+   "gap_why": "recorded",
+   "text": "Let the AI handle it.",
+   "words": [
+    [
+     21.974,
+     22.094,
+     "Let"
+    ],
+    [
+     22.094,
+     22.274,
+     "the"
+    ],
+    [
+     22.274,
+     22.494,
+     "AI"
+    ],
+    [
+     22.494,
+     22.854,
+     "handle"
+    ],
+    [
+     22.854,
+     23.214,
+     "it."
+    ]
+   ],
+   "wps": 4.78,
+   "gap_after": 1.462
+  },
+  {
+   "id": "S7",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    12.879,
+    15.277
+   ],
+   "start": 24.473,
+   "end": 26.871,
+   "dur": 2.398,
+   "gap_before": 1.462,
+   "gap_why": "reveal hold",
+   "text": "It understands what the person actually wants...",
+   "words": [
+    [
+     24.374,
+     24.554,
+     "It"
+    ],
+    [
+     24.554,
+     24.994,
+     "understands"
+    ],
+    [
+     24.994,
+     25.234,
+     "what"
+    ],
+    [
+     25.234,
+     25.374,
+     "the"
+    ],
+    [
+     25.374,
+     25.614,
+     "person"
+    ],
+    [
+     25.614,
+     26.154,
+     "actually"
+    ],
+    [
+     26.154,
+     26.754,
+     "wants,"
+    ]
+   ],
+   "wps": 2.92,
+   "gap_after": 0.509
+  },
+  {
+   "id": "S8",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    15.786,
+    17.697
+   ],
+   "start": 27.38,
+   "end": 29.291,
+   "dur": 1.911,
+   "gap_before": 0.509,
+   "gap_why": "recorded",
+   "text": "...qualifies them against your criteria...",
+   "words": [
+    [
+     27.234,
+     27.774,
+     "qualifies"
+    ],
+    [
+     27.774,
+     28.074,
+     "them"
+    ],
+    [
+     28.074,
+     28.314,
+     "against"
+    ],
+    [
+     28.314,
+     28.514,
+     "your"
+    ],
+    [
+     28.514,
+     29.014,
+     "criteria,"
+    ]
+   ],
+   "wps": 2.62,
+   "gap_after": 0.605
+  },
+  {
+   "id": "S9",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    18.302,
+    20.542
+   ],
+   "start": 29.896,
+   "end": 32.136,
+   "dur": 2.24,
+   "gap_before": 0.605,
+   "gap_why": "recorded",
+   "text": "...and gives every enquiry a match score.",
+   "words": [
+    [
+     29.654,
+     29.994,
+     "and"
+    ],
+    [
+     29.994,
+     30.174,
+     "gives"
+    ],
+    [
+     30.174,
+     30.654,
+     "every"
+    ],
+    [
+     30.654,
+     31.174,
+     "inquiry"
+    ],
+    [
+     31.174,
+     31.534,
+     "a"
+    ],
+    [
+     31.534,
+     31.734,
+     "match"
+    ],
+    [
+     31.734,
+     32.034,
+     "score."
+    ]
+   ],
+   "wps": 3.12,
+   "gap_after": 0.675
+  },
+  {
+   "id": "S10",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    21.217,
+    23.966
+   ],
+   "start": 32.811,
+   "end": 35.56,
+   "dur": 2.749,
+   "gap_before": 0.675,
+   "gap_why": "recorded",
+   "text": "So instead of treating every enquiry the same...",
+   "words": [
+    [
+     32.794,
+     33.034,
+     "So,"
+    ],
+    [
+     33.154,
+     33.494,
+     "instead"
+    ],
+    [
+     33.494,
+     33.634,
+     "of"
+    ],
+    [
+     33.634,
+     33.914,
+     "treating"
+    ],
+    [
+     33.914,
+     34.374,
+     "every"
+    ],
+    [
+     34.374,
+     34.834,
+     "inquiry"
+    ],
+    [
+     34.834,
+     35.014,
+     "the"
+    ],
+    [
+     35.014,
+     35.434,
+     "same,"
+    ]
+   ],
+   "wps": 2.91,
+   "gap_after": 0.479
+  },
+  {
+   "id": "S11",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    24.445,
+    26.284
+   ],
+   "start": 36.039,
+   "end": 37.878,
+   "dur": 1.839,
+   "gap_before": 0.479,
+   "gap_why": "recorded",
+   "text": "...you know which ones deserve attention.",
+   "words": [
+    [
+     35.974,
+     36.194,
+     "you"
+    ],
+    [
+     36.194,
+     36.394,
+     "know"
+    ],
+    [
+     36.394,
+     36.654,
+     "which"
+    ],
+    [
+     36.654,
+     36.994,
+     "ones"
+    ],
+    [
+     36.994,
+     37.294,
+     "deserve"
+    ],
+    [
+     37.294,
+     37.774,
+     "attention."
+    ]
+   ],
+   "wps": 3.26,
+   "gap_after": 0.659
+  },
+  {
+   "id": "S12",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    29.426,
+    31.426
+   ],
+   "start": 38.537,
+   "end": 40.537,
+   "dur": 2.0,
+   "gap_before": 0.659,
+   "gap_why": "recorded",
+   "text": "And it isn't limited to one industry.",
+   "words": [
+    [
+     38.551,
+     38.631,
+     "And"
+    ],
+    [
+     38.631,
+     38.771,
+     "it"
+    ],
+    [
+     38.771,
+     39.131,
+     "isn't"
+    ],
+    [
+     39.131,
+     39.471,
+     "limited"
+    ],
+    [
+     39.471,
+     39.711,
+     "to"
+    ],
+    [
+     39.711,
+     39.951,
+     "one"
+    ],
+    [
+     39.951,
+     40.451,
+     "industry."
+    ]
+   ],
+   "wps": 3.5,
+   "gap_after": 0.575
+  },
+  {
+   "id": "S13",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    32.001,
+    34.807
+   ],
+   "start": 41.112,
+   "end": 43.918,
+   "dur": 2.806,
+   "gap_before": 0.575,
+   "gap_why": "recorded",
+   "text": "Your criteria define what a good lead looks like.",
+   "words": [
+    [
+     41.151,
+     41.291,
+     "Your"
+    ],
+    [
+     41.291,
+     41.771,
+     "criteria"
+    ],
+    [
+     41.771,
+     42.331,
+     "define"
+    ],
+    [
+     42.331,
+     42.571,
+     "what"
+    ],
+    [
+     42.571,
+     42.671,
+     "a"
+    ],
+    [
+     42.671,
+     42.971,
+     "good"
+    ],
+    [
+     42.971,
+     43.251,
+     "lead"
+    ],
+    [
+     43.251,
+     43.531,
+     "looks"
+    ],
+    [
+     43.531,
+     43.911,
+     "like."
+    ]
+   ],
+   "wps": 3.21,
+   "gap_after": 0.619
+  },
+  {
+   "id": "S14",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    35.426,
+    39.699
+   ],
+   "start": 44.537,
+   "end": 48.81,
+   "dur": 4.273,
+   "gap_before": 0.619,
+   "gap_why": "recorded",
+   "text": "It understands the enquiry, scores it, and helps match it with the best fit.",
+   "words": [
+    [
+     44.491,
+     44.631,
+     "It"
+    ],
+    [
+     44.631,
+     45.051,
+     "understands"
+    ],
+    [
+     45.051,
+     45.271,
+     "the"
+    ],
+    [
+     45.271,
+     45.731,
+     "inquiry,"
+    ],
+    [
+     46.111,
+     46.371,
+     "scores"
+    ],
+    [
+     46.371,
+     46.691,
+     "it,"
+    ],
+    [
+     46.971,
+     47.051,
+     "and"
+    ],
+    [
+     47.051,
+     47.311,
+     "helps"
+    ],
+    [
+     47.311,
+     47.591,
+     "match"
+    ],
+    [
+     47.591,
+     47.831,
+     "it"
+    ],
+    [
+     47.831,
+     47.931,
+     "with"
+    ],
+    [
+     47.931,
+     48.111,
+     "the"
+    ],
+    [
+     48.111,
+     48.371,
+     "best"
+    ],
+    [
+     48.371,
+     48.671,
+     "fit."
+    ]
+   ],
+   "wps": 3.28,
+   "gap_after": 0.7
+  },
+  {
+   "id": "P5",
+   "char": "Peter",
+   "file": "peter",
+   "src": [
+    10.786,
+    13.1
+   ],
+   "start": 49.51,
+   "end": 51.824,
+   "dur": 2.314,
+   "gap_before": 0.7,
+   "gap_why": "scene change",
+   "text": "So... I don't have to do all that anymore?",
+   "words": [
+    [
+     49.424,
+     49.804,
+     "So"
+    ],
+    [
+     49.804,
+     50.384,
+     "I"
+    ],
+    [
+     50.384,
+     50.564,
+     "don't"
+    ],
+    [
+     50.564,
+     50.684,
+     "have"
+    ],
+    [
+     50.684,
+     50.844,
+     "to"
+    ],
+    [
+     50.844,
+     50.984,
+     "do"
+    ],
+    [
+     50.984,
+     51.164,
+     "all"
+    ],
+    [
+     51.164,
+     51.344,
+     "that"
+    ],
+    [
+     51.344,
+     51.564,
+     "anymore?"
+    ]
+   ],
+   "wps": 3.89,
+   "gap_after": 0.4
+  },
+  {
+   "id": "S15",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    40.528,
+    41.992
+   ],
+   "start": 52.224,
+   "end": 53.688,
+   "dur": 1.464,
+   "gap_before": 0.4,
+   "gap_why": "turn",
+   "text": "That's literally the point.",
+   "words": [
+    [
+     52.216,
+     52.536,
+     "That's"
+    ],
+    [
+     52.536,
+     52.976,
+     "literally"
+    ],
+    [
+     52.976,
+     53.276,
+     "the"
+    ],
+    [
+     53.276,
+     53.556,
+     "point."
+    ]
+   ],
+   "wps": 2.73,
+   "gap_after": 0.45
+  },
+  {
+   "id": "P6",
+   "char": "Peter",
+   "file": "peter",
+   "src": [
+    13.592,
+    16.25
+   ],
+   "start": 54.138,
+   "end": 56.796,
+   "dur": 2.658,
+   "gap_before": 0.45,
+   "gap_why": "turn",
+   "text": "Oh. That's actually pretty nice.",
+   "words": [
+    [
+     54.046,
+     54.366,
+     "Oh,"
+    ],
+    [
+     54.826,
+     55.626,
+     "that's..."
+    ],
+    [
+     55.626,
+     55.906,
+     "that's"
+    ],
+    [
+     55.906,
+     56.166,
+     "actually"
+    ],
+    [
+     56.166,
+     56.386,
+     "pretty"
+    ],
+    [
+     56.386,
+     56.686,
+     "nice."
+    ]
+   ],
+   "wps": 2.26,
+   "gap_after": 0.8
+  },
+  {
+   "id": "S16",
+   "char": "Stewie",
+   "file": "stewie",
+   "src": [
+    42.711,
+    46.0
+   ],
+   "start": 57.596,
+   "end": 60.885,
+   "dur": 3.289,
+   "gap_before": 0.8,
+   "gap_why": "brand",
+   "text": "FiguredOutAI. Unified AI Inbox.",
+   "words": [
+    [
+     57.785,
+     57.945,
+     "Figured"
+    ],
+    [
+     57.945,
+     58.145,
+     "out"
+    ],
+    [
+     58.145,
+     58.625,
+     "AI."
+    ],
+    [
+     59.685,
+     59.685,
+     "Unified"
+    ],
+    [
+     59.685,
+     60.265,
+     "AI"
+    ],
+    [
+     60.265,
+     60.705,
+     "Inbox."
+    ]
+   ],
+   "wps": 1.82,
+   "gap_after": 1.3
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "poses": [
+  "fist",
+  "gun",
+  "flask"
+ ],
+ "looks": [
+  "classic",
+  "lab",
+  "tech",
+  "space"
+ ],
+ "canvas": [
+  588,
+  1288
+ ]
+}

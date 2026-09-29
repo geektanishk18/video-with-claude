@@ -1,0 +1,171 @@
+{
+ "files": {
+  "Peter": "audio/Peter_VO.mp3",
+  "Stewie": "audio/Stewie_VO.mp3"
+ },
+ "lead_in": 0.5,
+ "tail": 1.3,
+ "lines": [
+  {
+   "id": "P1",
+   "char": "Peter",
+   "text": "Stewie... we've got another lead.",
+   "gap": 0.5,
+   "subs": "Stewie...|we've got *another*|*lead.*"
+  },
+  {
+   "id": "PR",
+   "char": "Peter",
+   "text": "Really?",
+   "gap": 0.752,
+   "subs": "*Really?*"
+  },
+  {
+   "id": "P2",
+   "char": "Peter",
+   "text": "Actually... they're coming from everywhere.",
+   "gap": 0.347,
+   "subs": "Actually,|they're coming from|*everywhere.*"
+  },
+  {
+   "id": "S1",
+   "char": "Stewie",
+   "text": "And you're handling all of them manually?",
+   "gap": 0.4,
+   "subs": "And you're handling|all of them|*manually?*"
+  },
+  {
+   "id": "P3",
+   "char": "Peter",
+   "text": "Well... I have to qualify them first.",
+   "gap": 0.45,
+   "subs": "Well,|I have to|*qualify* them first."
+  },
+  {
+   "id": "S2",
+   "char": "Stewie",
+   "text": "Every single one?",
+   "gap": 0.35,
+   "subs": "Every *single* one?"
+  },
+  {
+   "id": "P4",
+   "char": "Peter",
+   "text": "...Yes.",
+   "gap": 0.8,
+   "subs": "...Yes."
+  },
+  {
+   "id": "S3",
+   "char": "Stewie",
+   "text": "That's the problem.",
+   "gap": 0.9,
+   "subs": "That's the *problem.*"
+  },
+  {
+   "id": "S4",
+   "char": "Stewie",
+   "text": "The problem isn't the leads.",
+   "gap": "recorded",
+   "subs": "The problem|*isn't* the leads."
+  },
+  {
+   "id": "S5",
+   "char": "Stewie",
+   "text": "It's the work between them.",
+   "gap": "recorded",
+   "subs": "It's the *work*|between them."
+  },
+  {
+   "id": "S6",
+   "char": "Stewie",
+   "text": "Let the AI handle it.",
+   "gap": "recorded",
+   "subs": "Let the *AI*|*handle* it."
+  },
+  {
+   "id": "S7",
+   "char": "Stewie",
+   "text": "It understands what the person actually wants...",
+   "gap": 1.462,
+   "subs": "It *understands*|what the person|actually wants..."
+  },
+  {
+   "id": "S8",
+   "char": "Stewie",
+   "text": "...qualifies them against your criteria...",
+   "gap": "recorded",
+   "subs": "...qualifies them|against your *criteria...*"
+  },
+  {
+   "id": "S9",
+   "char": "Stewie",
+   "text": "...and gives every enquiry a match score.",
+   "gap": "recorded",
+   "subs": "...and gives|every enquiry|a *match score.*"
+  },
+  {
+   "id": "S10",
+   "char": "Stewie",
+   "text": "So instead of treating every enquiry the same...",
+   "gap": "recorded",
+   "subs": "So instead of|treating every enquiry|the *same...*"
+  },
+  {
+   "id": "S11",
+   "char": "Stewie",
+   "text": "...you know which ones deserve attention.",
+   "gap": "recorded",
+   "subs": "...you know|which ones deserve|*attention.*"
+  },
+  {
+   "id": "S12",
+   "char": "Stewie",
+   "text": "And it isn't limited to one industry.",
+   "gap": "recorded",
+   "subs": "And it isn't|limited to|*one industry.*"
+  },
+  {
+   "id": "S13",
+   "char": "Stewie",
+   "text": "Your criteria define what a good lead looks like.",
+   "gap": "recorded",
+   "subs": "Your *criteria*|define what|a *good lead*|looks like."
+  },
+  {
+   "id": "S14",
+   "char": "Stewie",
+   "text": "It understands the enquiry, scores it, and helps match it with the best fit.",
+   "gap": "recorded",
+   "subs": "It *understands*|the enquiry,|*scores* it,|and helps *match* it|with the *best fit.*"
+  },
+  {
+   "id": "P5",
+   "char": "Peter",
+   "text": "So... I don't have to do all that anymore?",
+   "gap": 0.7,
+   "subs": "So...|I don't have to|do *all* that|anymore?"
+  },
+  {
+   "id": "S15",
+   "char": "Stewie",
+   "text": "That's literally the point.",
+   "gap": 0.4,
+   "subs": "That's *literally*|the point."
+  },
+  {
+   "id": "P6",
+   "char": "Peter",
+   "text": "Oh. That's actually pretty nice.",
+   "gap": 0.45,
+   "subs": "Oh.|That's actually|pretty *nice.*"
+  },
+  {
+   "id": "S16",
+   "char": "Stewie",
+   "text": "FiguredOutAI. Unified AI Inbox.",
+   "gap": 0.8,
+   "subs": "*FiguredOutAI.*|Unified *AI Inbox.*"
+  }
+ ]
+}

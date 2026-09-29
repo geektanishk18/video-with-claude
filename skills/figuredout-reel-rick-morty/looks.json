@@ -1,0 +1,78 @@
+{
+ "cast": "rick-morty",
+ "characters": {
+  "rick": {
+   "poses": {
+    "fist": "raised fist, explaining / making a point",
+    "gun": "portal gun raised: the reveal",
+    "flask": "flask raised: pauses, burps, smug beats"
+   },
+   "looks": {
+    "classic": "lab coat as drawn",
+    "lab": "green welding goggles pushed up on the forehead",
+    "tech": "sky-blue VR visor over the eyes",
+    "space": "glass space-helmet bubble + collar ring"
+   }
+  },
+  "morty": {
+   "poses": {
+    "scared": "wide eyes, mouth open: chaos, admissions",
+    "sweat": "scared + sweat drops: peak stress",
+    "phone": "buzzing phone in hand: notifications",
+    "relieved": "smiling: payoff"
+   },
+   "looks": {
+    "classic": "yellow tee as drawn",
+    "evil": "Evil Morty eye patch",
+    "tech": "sky-blue VR visor",
+    "space": "glass space-helmet bubble + collar ring"
+   }
+  }
+ },
+ "sets": {
+  "garage-classic": {
+   "rick": "classic",
+   "morty": "classic",
+   "setting": "Rick's garage lab",
+   "fits": "default; any product story",
+   "portal_reveal": true
+  },
+  "lab-day": {
+   "rick": "lab",
+   "morty": "classic",
+   "setting": "garage lab, workbench lit, sparks",
+   "fits": "building / automation / 'we engineered it' stories"
+  },
+  "tech-launch": {
+   "rick": "tech",
+   "morty": "tech",
+   "setting": "dark garage with holo-screens",
+   "fits": "AI, dashboards, data, analytics"
+  },
+  "space-mission": {
+   "rick": "space",
+   "morty": "space",
+   "setting": "spaceship cockpit / starfield",
+   "fits": "scale, growth, 'launch', multi-market stories"
+  },
+  "evil-twin": {
+   "rick": "classic",
+   "morty": "evil",
+   "setting": "garage lab, low red-amber key light",
+   "fits": "competitor / 'the old way is the villain' stories, myth-busting"
+  }
+ },
+ "art_needed": {
+  "pickle-rick": "Rick as a pickle: needs its own art (supply a pose sheet, add as a new base in kits/rick.json)",
+  "tiny-rick": "Tiny Rick: needs its own art",
+  "toxic-rick": "Toxic Rick / Toxic Morty: needs its own art",
+  "cronenberg": "Cronenberg world versions: needs its own art (keep it PG)",
+  "space-cruiser": "Rick's spaceship prop: needs art for the space-mission set's hero shot"
+ },
+ "rules": [
+  "Pick ONE set per reel at the storyboard stage and lock it (scripts/lock_cast.py). Every frame of that reel uses the locked looks.",
+  "Poses change freely within a reel; looks never do \u2014 except one scripted transformation beat (e.g. Rick puts the VR visor on at the reveal), declared in the lock as 'transform'.",
+  "Rotate sets between reels: lock_cast.py skips sets used in the last 3 reels unless the user asks for one.",
+  "New transformations from the series need art first: add them to art_needed, never fake them with overlays that change the character's body."
+ ]
+}

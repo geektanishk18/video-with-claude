@@ -1,0 +1,7 @@
+{"sfx":[["ding","0",0,1.0],["ding","P1.another",0,0.55,{"repeat":5,"every":0.1,"pitch_step":2}],["ding","P1.lead",9,0.6],
+ ["whoosh","P2.start-0.05",0,0.8],["pop","P2.coming",0,0.6,{"repeat":6,"every":0.08,"pitch_step":1}],["whoosh","S1.start-0.1",0,0.7],
+ ["key","P3.qualify",0,0.9,{"repeat":7,"every":0.11}],["stamp","P3.first",0,0.5],["thud","S3.start",0,0.8],["scribble","S5.work-0.1",0,0.8],
+ ["tap","S6.start",0,0.8],["riser","S6.handle-1.2",0,0.6],["drop","S6.handle",0,1.0],["confirm","S9.score",0,0.9],["stamp","S11.attention",0,0.9],
+ ["confirm","S14.best+0.25",0,0.9],["sip","P6.nice-0.15",0,1.0]],
+ "bed":[{"from":"0.5","to":"P4.start","drums":true},{"from":"S6.handle","to":"P5.start","drums":true},{"from":"P5.start","to":"P6.end+0.2","drums":false}],
+ "end_chord":"P6.end+0.25","room_tone":[["P4.start","S6.handle"]]}

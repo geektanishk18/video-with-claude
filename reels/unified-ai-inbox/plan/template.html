@@ -1,0 +1,298 @@
+<title>Reel Master Timeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,700;1,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: audio-first production plan. Sticky player + live subtitle preview on top, then ten numbered sections in delivery order. Single dark look by brand. */
+:root{color-scheme:dark;--ink:#030A0E;--panel:#08171D;--teal:#1B6579;--sky:#90C2E7;--peak:#C9E4F5;--paper:#F0EDEF;--amber:#E8A33D;--loss:#D4645A;--ok:#4FA87C;
+--body:rgba(240,237,239,.72);--label:rgba(240,237,239,.56);--line:rgba(144,194,231,.12);--line2:rgba(144,194,231,.24);--card:rgba(240,237,239,.035);
+--display:"Poppins",system-ui,sans-serif;--text:"Inter",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+*{box-sizing:border-box}
+body{background:var(--ink);color:var(--paper);font:15px/1.6 var(--text);-webkit-font-smoothing:antialiased;background-image:radial-gradient(rgba(144,194,231,.04) 1px,transparent 1px);background-size:24px 24px}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:clamp(16px,4vw,56px);padding-block:36px 96px}
+h1,h2,h3{font-family:var(--display);font-weight:700;margin:0;line-height:1.12;text-wrap:balance}
+h1{font-size:clamp(32px,5vw,56px)} h2{font-size:clamp(22px,2.6vw,30px)} h3{font-size:17px}
+p{margin:0} .m{font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums} .r{text-align:right} .sky{color:var(--sky)} .peak{color:var(--peak)}
+.eyebrow{font:500 11px/1 var(--text);letter-spacing:.14em;text-transform:uppercase;color:var(--label)}
+.wordmark{font:300 20px/1 var(--display)} .wordmark b{font-weight:700;color:var(--sky)}
+header.top{display:grid;gap:18px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.lede{max-width:68ch;color:var(--body);font-size:17px}
+.player{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(3,10,14,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 0;display:grid;gap:10px}
+.prow{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+button.play{font:600 13px/1 var(--text);color:var(--ink);background:var(--sky);border:0;border-radius:999px;padding:10px 18px;cursor:pointer}
+button.play:focus-visible{outline:2px solid var(--peak);outline-offset:2px}
+.clock{font:500 14px/1 var(--mono);color:var(--peak);min-width:96px}
+.live{flex:1;min-width:220px;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.live .who{font:600 11px/1 var(--text);letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;border-radius:4px;border:1px solid var(--line2);color:var(--label)}
+.live .who.peter{color:var(--amber);border-color:rgba(232,163,61,.5)} .live .who.stewie{color:var(--loss);border-color:rgba(212,100,90,.5)}
+.live .cap{font:700 20px/1.2 var(--display)} .live .cap i{font-style:italic;font-weight:800;color:var(--sky);text-transform:uppercase}
+.track{position:relative;height:70px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);cursor:pointer}
+.track img{position:absolute;inset:0;width:100%;height:100%;opacity:.55;object-fit:fill}
+.track .seg{position:absolute;bottom:0;height:18px;display:flex;align-items:center;justify-content:center;text-decoration:none;font:500 9px/1 var(--mono);overflow:hidden;border-radius:3px}
+.track .seg span{white-space:nowrap}
+.seg.peter{background:rgba(232,163,61,.35);color:var(--paper)} .seg.stewie{background:rgba(212,100,90,.35);color:var(--paper)}
+.track .head{position:absolute;top:0;bottom:0;width:2px;background:var(--paper);left:0;pointer-events:none}
+section{padding-top:52px;display:grid;gap:18px}
+.sh{display:grid;gap:8px;max-width:74ch} .sh p{color:var(--body)}
+.num{font:500 12px/1 var(--mono);color:var(--sky)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;display:grid;gap:10px;align-content:start;min-width:0}
+.card p,.card li{color:var(--body);font-size:14px}
+.card ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.stat{display:grid;gap:4px} .stat b{font:600 22px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.flag{border-color:rgba(232,163,61,.45)} .flag .eyebrow{color:var(--amber)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:13.5px}
+th,td{text-align:left;padding:9px 12px;border-top:1px solid var(--line);vertical-align:top}
+th{font:500 11px/1.4 var(--text);letter-spacing:.1em;text-transform:uppercase;color:var(--label);border-top:0;background:var(--panel)}
+td{color:var(--body)} td.cap{font:700 14px/1.3 var(--display);color:var(--paper)} td.cap i{font-style:italic;font-weight:800;color:var(--sky);text-transform:uppercase}
+.pill{display:inline-block;font:500 10px/1 var(--text);letter-spacing:.12em;text-transform:uppercase;padding:5px 8px;border-radius:4px;border:1px solid var(--line2);color:var(--label)}
+ol.chron{list-style:none;margin:0;padding:0;display:grid;gap:2px;border:1px solid var(--line);border-radius:14px;padding:10px 14px;max-height:560px;overflow:auto}
+ol.chron li{display:flex;gap:12px;font-size:14px;padding:4px 0;color:var(--paper)} ol.chron li .m{color:var(--label);flex:none;min-width:190px}
+ol.chron li.gap{color:var(--label);font-size:12.5px} ol.chron li.peter b{color:var(--amber)} ol.chron li.stewie b{color:var(--loss)}
+.phases{display:grid;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.ph{display:grid;grid-template-columns:150px 130px 1fr;gap:14px;padding:12px 14px;border-top:1px solid var(--line);align-items:start}
+.ph:first-child{border-top:0} .ph b{font:600 13px/1.3 var(--display);letter-spacing:.06em}
+.ph p{color:var(--body);font-size:14px}
+.sbgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:14px}
+.sb{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:grid;gap:10px;align-content:start;scroll-margin-top:190px}
+.sb header{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
+.sb .quote{font:600 15px/1.4 var(--display);color:var(--paper)}
+.sb dl{display:grid;grid-template-columns:86px 1fr;gap:5px 12px;margin:0;font-size:13px}
+.sb dt{color:var(--label);font:500 10.5px/1.9 var(--text);letter-spacing:.1em;text-transform:uppercase} .sb dd{margin:0;color:var(--body)}
+.sb.now{border-color:var(--sky);box-shadow:0 0 0 1px var(--sky)}
+ol.steps{margin:0;padding:0;list-style:none;display:grid;gap:8px} ol.steps li{display:grid;grid-template-columns:130px 1fr;gap:10px;font-size:13.5px}
+code{font-family:var(--mono);font-size:12.5px;color:var(--peak)}
+pre{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;overflow-x:auto;font:12.5px/1.6 var(--mono);color:var(--body)}
+.decide{display:grid;gap:12px;counter-reset:d;padding:0;margin:0;list-style:none}
+.decide li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;color:var(--body);font-size:14px;display:grid;gap:4px}
+.decide li b{color:var(--paper);font-weight:600}
+.decide li .rec{color:var(--ok);font:500 12px/1.4 var(--text)}
+footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--label);font-size:12px}
+@media (max-width:640px){.ph{grid-template-columns:1fr}ol.steps li{grid-template-columns:1fr}ol.chron li{flex-direction:column;gap:0}ol.chron li .m{min-width:0}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><span class="wordmark">figured<b>out.ai</b></span><span class="pill">Pre-production · awaiting approval</span></div>
+  <span class="eyebrow">Unified AI Inbox reel · audio-first plan</span>
+  <h1>Master <span class="sky">timeline</span></h1>
+  <p class="lede">Built from the two recordings, not from the script. Every line below was located in the audio with word-level timestamps and silence detection. The assembled voiceover runs {{TOTAL}} s. Press play to hear it with the subtitles running.</p>
+</header>
+
+<div class="player">
+  <div class="prow">
+    <button class="play" id="playBtn" type="button">Play voiceover</button>
+    <span class="clock" id="clock">00:00.00</span>
+    <div class="live"><span class="who" id="who">—</span><span class="cap" id="cap">&nbsp;</span></div>
+  </div>
+  <div class="track" id="track" aria-label="Master timeline"><img src="wave.png" alt="">{{BAR}}<div class="head" id="head"></div></div>
+  <audio id="vo" src="master_vo.mp3" preload="auto"></audio>
+</div>
+
+<section id="s1">
+  <div class="sh"><span class="num">01</span><h2>Audio analysis</h2><p>Transcribed locally with Whisper (word timestamps) and cross-checked against ffmpeg silence detection at −38 dB. Line edges use the silence boundaries; word positions use the transcription. Emphasis is measured loudness of each word against the speaker's median.</p></div>
+  <div class="grid">
+    <div class="card"><span class="eyebrow">Peter_VO.mp3</span><div class="grid" style="grid-template-columns:repeat(3,1fr);gap:8px"><div class="stat"><span class="eyebrow">Length</span><b>16.51 s</b></div><div class="stat"><span class="eyebrow">Lines</span><b>6</b></div><div class="stat"><span class="eyebrow">Avg rate</span><b>2.9 w/s</b></div></div><p>Mono, 44.1 kHz, 128 kbps. Mean −21.5 dB, peak −2.8 dB. Clean, no clipping.</p></div>
+    <div class="card"><span class="eyebrow">Stewie_VO.mp3</span><div class="grid" style="grid-template-columns:repeat(3,1fr);gap:8px"><div class="stat"><span class="eyebrow">Length</span><b>46.21 s</b></div><div class="stat"><span class="eyebrow">Lines</span><b>16</b></div><div class="stat"><span class="eyebrow">Avg rate</span><b>3.1 w/s</b></div></div><p>Mono, 44.1 kHz, 128 kbps. Mean −19.3 dB, peak −1.0 dB. About 2 dB louder than Peter; I level both to −16 LUFS in the mix.</p></div>
+    <div class="card flag"><span class="eyebrow">Not in the approved transcript</span>
+      <ul>
+        <li><b style="color:var(--paper)">Peter says "Really?"</b> at 3.04–3.50 s in his file, between line 1 and line 2. Cut from the timeline.</li>
+        <li><b style="color:var(--paper)">Stewie says "Introducing the broader capability."</b> at 26.94–28.87 s in his file, between lines 11 and 12. It reads like a script heading that was voiced. Cut from the timeline.</li>
+      </ul></div>
+    <div class="card"><span class="eyebrow">Other observations</span>
+      <ul>
+        <li>Peter line 6 has a real stumble: "Oh, that's… that's actually pretty nice." It is kept in the audio because it plays as comedy. The subtitle shows the clean line.</li>
+        <li>Peter's "Stewie…" pause is only 0.24 s, shorter than the ellipsis suggests. Kept as recorded.</li>
+        <li>Stewie recorded lines 7–9 as one run with 0.5–0.6 s breaths. Kept, so the demo flows as one thought.</li>
+        <li>Line 14 has two natural breaths (0.20 s and 0.31 s) that split it into "understands / scores it / match it with the best fit". Each breath is a UI step.</li>
+        <li>Whisper hears "inquiry"; subtitles use the brand spelling "enquiry". "Figured out AI" is set as "FiguredOutAI".</li>
+      </ul></div>
+  </div>
+  <div class="tw"><table><thead><tr><th>ID</th><th>Character</th><th>Dialogue</th><th class="r">Start</th><th class="r">End</th><th class="r">Duration</th><th class="r">Pause after</th><th class="r">Words/s</th><th>Delivery</th></tr></thead><tbody>{{ROWS_TL}}</tbody></table></div>
+  <p class="m" style="color:var(--label)">Times are seconds on the master timeline. Delivery notes come from measured loudness and speech rate, not from listening, so treat them as a starting point.</p>
+</section>
+
+<section id="s2">
+  <div class="sh"><span class="num">02</span><h2>Complete dialogue timeline</h2><p>Peter and Stewie interleaved in script order. Silence between lines is either kept from the recording or chosen for turn-taking and comedy; the pause map says which.</p></div>
+  <ol class="chron">{{CHRON}}</ol>
+</section>
+
+<section id="s3">
+  <div class="sh"><span class="num">03</span><h2>Pause map</h2><p>Recorded pauses inside Stewie's run are kept exactly. Pauses where the two files meet were set by me, because the recordings are separate and have no shared timing. The two comedic pauses and the reveal hold are the ones to check by ear.</p></div>
+  <div class="tw"><table><thead><tr><th>Between</th><th class="r">Silence</th><th>Type</th><th>Why</th></tr></thead><tbody>{{PAUSES}}</tbody></table></div>
+</section>
+
+<section id="s4">
+  <div class="sh"><span class="num">04</span><h2>Emotional and intent map</h2><p>The rhythm you asked for, placed on the real audio: fast, escalation, pause, reveal, demonstration, payoff, rest, CTA. Dense shots are always followed by a lighter one.</p></div>
+  <div class="phases">
+    <div class="ph"><b style="color:var(--amber)">FAST</b><span class="m">00.00–05.77</span><p>P1, P2. The hook. Notifications land on the words "another" and "everywhere". Peter goes from calm to panic in two lines.</p></div>
+    <div class="ph"><b style="color:var(--loss)">ESCALATION</b><span class="m">06.17–12.75</span><p>S1, P3, S2. Stewie cuts in dry; the manual form is the densest cartoon shot; "Every single one?" drops to stillness.</p></div>
+    <div class="ph"><b style="color:var(--peak)">PAUSE</b><span class="m">12.75–15.85</span><p>0.80 s turn, "…Yes.", 0.90 s stare, "That's the problem." Music out, everything freezes. The biggest silence in the video.</p></div>
+    <div class="ph"><b style="color:var(--peak)">INSIGHT</b><span class="m">16.50–20.30</span><p>S4, S5. Low density: Stewie in one glow, sentence-style captions, tangled lines for "the work between them".</p></div>
+    <div class="ph"><b style="color:var(--sky)">REVEAL</b><span class="m">20.95–23.46</span><p>S6 plus a 0.90 s hold. The fastest line in the recording, then the drop, the flash and the chaos compressing into one inbox.</p></div>
+    <div class="ph"><b style="color:var(--teal)">DEMONSTRATION</b><span class="m">23.46–47.80</span><p>S7–S14. Alternates dense and light: extract (H) → qualify (H) → score (M, holds) → sort (M) → reorder (M) → industries (H) → criteria (M) → pipeline (M).</p></div>
+    <div class="ph"><b style="color:var(--amber)">PAYOFF</b><span class="m">48.50–55.79</span><p>P5, S15, P6. Back to the room, now quiet. "That's literally the point." is the button; Peter's stumble and sip land the warmth.</p></div>
+    <div class="ph"><b style="color:var(--paper)">CTA</b><span class="m">56.59–61.18</span><p>S16. Slowest read in the file. Wordmark on "FiguredOutAI", product name on "Unified AI Inbox", tagline in the tail, cut to black.</p></div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sh"><span class="num">05</span><h2>Subtitle map</h2><p>{{NSUB}} chunks cut by meaning, 1–4 words each, timed to the first and last word. Each stays up until the next one starts, for at most 0.5 s past the last word. Sky italic caps mark emphasis. Position: centred, y 1260–1420, inside the Instagram safe area. The S16 brand line shows as the end card, not as a subtitle.</p></div>
+  <div class="tw"><table><thead><tr><th>Line</th><th class="r">In</th><th class="r">Out</th><th>Subtitle</th></tr></thead><tbody>{{SUBS}}</tbody></table></div>
+</section>
+
+<section id="s6">
+  <div class="sh"><span class="num">06</span><h2>Complete visual storyboard</h2><p>One card per line. The card for the line that's playing highlights while the voiceover runs.</p></div>
+  <div class="sbgrid">{{STORY}}</div>
+</section>
+
+<section id="s7">
+  <div class="sh"><span class="num">07</span><h2>UI interaction storyboard</h2><p>Every UI change has a visible cause: a cursor action, a spoken word, or the output of the step before. Word cues are the spoken word the action lands on.</p></div>
+  <div class="grid">{{UI}}</div>
+  <div class="card"><span class="eyebrow">Cursor physics</span><ul>
+    <li>Paths are gentle arcs (quadratic Bézier, control point offset 12% of the distance), never straight lines</li>
+    <li>Move duration = 180 ms + 0.35 ms per pixel, eased in-out cubic; 3-frame settle before any click</li>
+    <li>Hover: target brightens 8% two frames before the click. Click: cursor scales to 0.9 for 3 frames, 36 px ring expands and fades over 8 frames</li>
+    <li>Typing: 40 characters per second with ±15% jitter; caret blinks at 530 ms</li>
+    <li>The cursor never moves while a subtitle emphasis word is popping, so the eye has one target at a time</li>
+  </ul></div>
+</section>
+
+<section id="s8">
+  <div class="sh"><span class="num">08</span><h2>Animation timing specification</h2></div>
+  <div class="grid">
+    <div class="card"><span class="eyebrow">Global</span><ul>
+      <li>1080 × 1920, 30 fps, {{FRAMES}} frames ({{TOTAL}} s)</li>
+      <li>All cues are computed from <code>timeline.json</code> and <code>subtitles.json</code>, so re-recording a line re-times the video automatically</li>
+      <li>Cuts land 2 frames before the first word of a line (the eye leads the ear)</li>
+      <li>Emphasis animations start on the stressed word's first frame</li>
+    </ul></div>
+    <div class="card"><span class="eyebrow">Motion curves</span><ul>
+      <li>Word-pop: spring (mass 0.6, stiffness 220, damping 14): scale 0.4 → 1.12 → 1 in about 7 frames</li>
+      <li>Subtitle exit: 5-frame fade + scale to 0.96</li>
+      <li>HYPER zoom: 1.0 → 2.6× in 6 frames, ease-in expo, 4-frame motion blur</li>
+      <li>SNAP push: 1.0 → 1.25× in 4 frames, 2-frame white flash at 12%</li>
+      <li>Slow push: 1.00 → 1.06× linear across the shot</li>
+      <li>Whip: 12 frames, 60 px directional blur at the midpoint</li>
+      <li>UI panels: ease-out cubic 12 frames; list reorder spring (stiffness 180, damping 18)</li>
+    </ul></div>
+    <div class="card"><span class="eyebrow">Stillness rules</span><ul>
+      <li>During the 0.80 s turn and 0.90 s stare, the only thing moving is Peter's head</li>
+      <li>From "That's the problem." to "between them." nothing animates except the caption and one slow push</li>
+      <li>Score holds 92% with no motion for the full 0.68 s after "score."</li>
+      <li>After each high-density shot, the next shot starts with at least 8 frames of hold</li>
+    </ul></div>
+    <div class="card"><span class="eyebrow">Sound design cues</span><ul>
+      <li>DING at 0.00; ding cluster from "another" (1.40) and on "everywhere." (4.97)</li>
+      <li>Music bed 112 BPM from 0.50, ducks under Stewie, out on "…Yes." (13.55)</li>
+      <li>Room tone only 13.55 → 21.48; DROP on "handle" (21.48), bed returns full</li>
+      <li>Confirm chord on "score." (30.72) and on "best fit." (47.10)</li>
+      <li>Sip on "nice." (55.38); final chord at 56.59; click to black at 61.18</li>
+      <li>Voice at −16 LUFS, music −28 LUFS under speech, SFX peaks −10 dBFS</li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="sh"><span class="num">09</span><h2>Asset requirements</h2></div>
+  <div class="grid">
+    <div class="card flag"><span class="eyebrow">Peter and Stewie art · action needed</span>
+      <p>The two images you sent are 186 × 271 and 260 × 329 JPEGs on white. On a 1080 × 1920 frame the characters stand about 600–900 px tall, which means a 3× upscale: soft edges and visible JPEG blocks.</p>
+      <ul>
+        <li><b style="color:var(--paper)">Best:</b> PNGs with transparent backgrounds, at least 1200 px tall</li>
+        <li><b style="color:var(--paper)">Better still:</b> a few poses each. Peter: neutral, panicked, slumped, happy with coffee. Stewie: arms folded, pointing, walking.</li>
+        <li><b style="color:var(--paper)">Fallback I can do now:</b> trace your two images to vector so they stay sharp at any size, and cut out the white. They stay single poses, animated by bob, lean, squash and slide.</li>
+      </ul>
+      <p>Static art has no mouth movement. I'll show who's talking with a subtle bounce on each loud syllable, taken from the voiceover's loudness.</p></div>
+    <div class="card"><span class="eyebrow">Ready</span><ul>
+      <li>Master voiceover, assembled ({{TOTAL}} s)</li>
+      <li>Word timestamps and subtitle chunks</li>
+      <li>Poppins and Inter font files, installed locally</li>
+      <li>FiguredOutAI palette and glow rule from your Drive</li>
+      <li>Wordmark: drawn as live text (thin "figured", bold sky "out.ai"); <code>wordmark-light.png</code> in Drive if you prefer the file</li>
+      <li>58 approved frame designs: room, desk, chips, UI screens, tracker</li>
+    </ul></div>
+    <div class="card"><span class="eyebrow">I'll generate in code</span><ul>
+      <li>SFX: ding, pop, click, key tick, whoosh, drop, confirm chord, stamp, sip, footsteps, pencil scribble, room tone</li>
+      <li>Music: a minimal 112 BPM pulse bed with a drop at 21.48 s. You can send your own track instead and I'll cut it to the same markers.</li>
+      <li>Light-leak, glow, grain and motion-blur passes</li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="sh"><span class="num">10</span><h2>Remotion implementation plan</h2><p>Remotion, not HyperFrames: it's React, renders headless here, and reads the timing JSON directly.</p></div>
+  <div class="grid">
+    <div class="card"><span class="eyebrow">Project structure</span>
+<pre>inbox-reel/video/
+  src/Root.tsx          composition 1080×1920 @30, {{FRAMES}} frames
+  src/Reel.tsx          scenes placed by timeline.json
+  src/data/             timeline.json, subtitles.json
+  src/scenes/           Hook, Chaos, Manual, Insight, Reveal,
+                        Understand, Qualify, Score, Sort,
+                        Industries, Criteria, Route, Payoff, Brand
+  src/components/       Character, Chip, WordPop, Camera,
+                        Browser, Cursor, ScoreRing, SortList,
+                        Tracker, FlowLines, LightLeak
+  public/audio/         master_vo.wav, sfx/*.wav, bed.wav
+  public/chars/         peter.svg, stewie.svg</pre></div>
+    <div class="card"><span class="eyebrow">Build order</span><ol class="steps">
+      <li><span class="m peak">1</span><span>Install Remotion (one npm install) and point it at the local Chromium</span></li>
+      <li><span class="m peak">2</span><span>Prepare the character art (your higher-res files, or vector traces)</span></li>
+      <li><span class="m peak">3</span><span>Synthesise SFX and the music bed; mix the stems under the voiceover</span></li>
+      <li><span class="m peak">4</span><span>Build the shared components, then scenes in order</span></li>
+      <li><span class="m peak">5</span><span>Render a still at the start of every line and every subtitle; I check them against the safe zones before a full render</span></li>
+      <li><span class="m peak">6</span><span>Render a low-res preview MP4 for your review, then the final</span></li>
+    </ol></div>
+    <div class="card"><span class="eyebrow">Output</span><ul>
+      <li>H.264 MP4, 1080 × 1920, 30 fps, CRF 18, yuv420p, AAC 320 kbps</li>
+      <li>Loudness −14 LUFS integrated, true peak −1 dBTP (Instagram's target)</li>
+      <li>Also: a subtitle-free version and an SRT file, in case you want Instagram's own captions</li>
+      <li>Pushed to a GitHub repo so nothing is lost when this container closes</li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="decide">
+  <div class="sh"><span class="eyebrow">Before I start building</span><h2>Decisions for you</h2></div>
+  <ol class="decide">
+    <li><b>1. Peter's extra "Really?"</b> Cut, per the approved transcript. It could also play well right after the notification flood if you want it back.<span class="rec">Recommended: cut</span></li>
+    <li><b>2. Stewie's "Introducing the broader capability."</b> Cut. It isn't in the transcript and it breaks the conversation.<span class="rec">Recommended: cut</span></li>
+    <li><b>3. Reveal hold.</b> Stewie recorded only 0.56 s between "handle it." and "It understands". I added 0.90 s for the drop and the chaos collapsing.<span class="rec">Recommended: keep the added 0.90 s</span></li>
+    <li><b>4. Peter's "that's… that's" stumble</b> in the last line. Kept in the audio, clean in the subtitles.<span class="rec">Recommended: keep</span></li>
+    <li><b>5. Character art.</b> Send higher-res transparent PNGs, ideally with extra poses, or I trace the two images you sent.<span class="rec">Recommended: send higher-res art if you have it</span></li>
+    <li><b>6. Music.</b> I synthesise a bed, or you send a track.</li>
+    <li><b>7. GitHub repo</b> to keep the project and renders.</li>
+  </ol>
+</section>
+
+<footer><span class="wordmark" style="font-size:15px">figured<b>out.ai</b></span><span>Unified AI Inbox reel · master timeline · built from Peter_VO and Stewie_VO</span></footer>
+</div>
+
+<script>
+(() => {
+const D = {{DATA}};
+const vo = document.getElementById('vo'), btn = document.getElementById('playBtn'), clock = document.getElementById('clock'),
+      who = document.getElementById('who'), cap = document.getElementById('cap'), head = document.getElementById('head'), track = document.getElementById('track');
+const f = t => { const m = Math.floor(t/60), s = (t%60).toFixed(2).padStart(5,'0'); return `${String(m).padStart(2,'0')}:${s}`; };
+const escH = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+let lastSeg = null;
+function render(t){
+  clock.textContent = f(t);
+  head.style.left = (t / D.total * 100) + '%';
+  const sg = D.seg.find(s => t >= s.a - 0.05 && t <= s.b + 0.05);
+  who.textContent = sg ? sg.c : '—'; who.className = 'who ' + (sg ? sg.c.toLowerCase() : '');
+  const sb = D.sub.find(s => t >= s.a && t < s.b);
+  cap.innerHTML = sb ? sb.t.split(' ').map(w => sb.em.some(x => x.toLowerCase().split(' ').includes(w.replace(/[.,?!…]/g,'').toLowerCase())) ? `<i>${escH(w)}</i>` : escH(w)).join(' ') : '&nbsp;';
+  const id = sg ? sg.id : null;
+  if (id !== lastSeg) { document.querySelectorAll('.sb.now').forEach(x => x.classList.remove('now')); if (id) document.getElementById('sb-'+id)?.classList.add('now'); lastSeg = id; }
+}
+function loop(){ render(vo.currentTime); if (!vo.paused) requestAnimationFrame(loop); }
+btn.addEventListener('click', () => { if (vo.paused) { vo.play().then(()=>{ btn.textContent='Pause'; loop(); }).catch(()=>{ btn.textContent='Audio unavailable'; }); } else { vo.pause(); btn.textContent='Play voiceover'; } });
+vo.addEventListener('ended', () => { btn.textContent = 'Play voiceover'; });
+track.addEventListener('click', ev => { if (ev.target.closest('a')) return; const r = track.getBoundingClientRect(); vo.currentTime = (ev.clientX - r.left) / r.width * D.total; render(vo.currentTime); });
+document.querySelectorAll('.track .seg').forEach(a => a.addEventListener('click', ev => { const s = D.seg.find(x => x.id === a.textContent.trim()); if (s) { vo.currentTime = s.a; render(s.a); } }));
+render(0);
+})();
+</script>

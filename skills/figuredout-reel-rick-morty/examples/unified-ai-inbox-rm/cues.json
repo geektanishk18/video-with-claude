@@ -1,0 +1,25 @@
+{
+ "bed_style": "synth",
+ "room_tone_style": "lab",
+ "sfx": [
+  ["ding", "0", 0, 1.0],
+  ["ding", "M1.another", 0, 0.55, {"repeat": 5, "every": 0.1, "pitch_step": 2}],
+  ["pop", "M2.coming", 0, 0.6, {"repeat": 6, "every": 0.08, "pitch_step": 1}],
+  ["whoosh", "R1.start-0.1", 0, 0.7],
+  ["thud", "R2.start", 0, 0.8],
+  ["gun", "R3.ai", 0, 0.8],
+  ["portal", "R3.handle", 0, 1.0],
+  ["blips", "R4.start", 0, 0.5],
+  ["tick", "R4.criteria", 0, 0.8, {"repeat": 5, "every": 0.17, "pitch_step": 2}],
+  ["confirm", "R4.score", 0, 0.9],
+  ["stamp", "R5.top", 0, 0.8],
+  ["portalclose", "M4.start-0.25", 0, 0.8]
+ ],
+ "bed": [
+  {"from": "0.5", "to": "M3.start", "drums": true},
+  {"from": "R3.handle", "to": "M4.start", "drums": true},
+  {"from": "M4.start", "to": "R6.end+0.2", "drums": false}
+ ],
+ "end_chord": "R6.end+0.25",
+ "room_tone": [["M3.start", "R3.handle"]]
+}
