@@ -1,0 +1,5 @@
+# Python 3.10+ packages for the reel pipeline
+faster-whisper>=1.0      # align_vo.py: word-level voiceover transcription (downloads the small.en model, ~480 MB, on first run)
+numpy>=1.24              # all audio/image scripts
+scipy>=1.10              # slice_pose_sheet.py, character_kit.py (shape detection)
+pillow>=10.0             # slice_pose_sheet.py, character_kit.py (image editing)

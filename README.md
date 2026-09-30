@@ -15,6 +15,10 @@ FiguredOutAI animated reels, built in code with Claude Code (Remotion + Python +
 | `reels/unified-ai-inbox/assets/` | Brand fonts, Peter pose cut-outs, Stewie variants, source images |
 | `character-art/rick-morty/` | Rick & Morty source cut-outs, kits and all 28 generated variants |
 
+## Setup (new machine)
+Windows: `powershell -ExecutionPolicy Bypass -File setup\setup-windows.ps1` · macOS/Linux: `bash setup/setup.sh` · verify: `python setup/check.py`.
+The full dependency list and every script in order: [`setup/WORKFLOW.md`](setup/WORKFLOW.md).
+
 ## Pipeline (per reel)
 1. Script → frame storyboard → approval
 2. Voiceover → `align_vo.py` → master timeline + subtitles
