@@ -1,0 +1,945 @@
+{
+ "agent": "F",
+ "segment": "Instagram comment-to-DM funnel mechanics",
+ "date": "2026-10-01",
+ "tools": [
+  {
+   "name": "ManyChat",
+   "url": "https://manychat.com/pricing",
+   "features": {
+    "comment_trigger": true,
+    "keyword_match_modes": "is / contains / contains full word / begins with / any",
+    "auto_public_reply": true,
+    "dm_flows": "multi-step, buttons, conditions",
+    "questions_data_collection": true,
+    "email_phone_capture": "yes (phone quick reply only pre-fills if on IG profile)",
+    "follow_gate": "'Is a Follower' condition exists (compliance grey area)",
+    "integrations": "Calendly integration (official blog); Sheets/webhooks/Zapier tier placement NOT verified (official pages 403)",
+    "whatsapp": "separate channel, paid"
+   },
+   "pricing": "Since 2 Mar 2026 (per third-party reports, official page blocked): Free 25 active contacts, Essential $14/mo (250), Pro $29/mo (2,500), Business $69 (7,500), Advanced $139 (25,000). USD only, +18% GST and forex markup for Indian cards.",
+   "india_notes": "USD billing only, needs international card; 18% GST on imported software; WhatsApp per-conversation fees extra. Free tier (25 contacts) is now a trial only: one reel can exhaust it.",
+   "evidence": [
+    {
+     "claim": "Comments trigger supports public reply + private DM + keyword modes",
+     "url": "https://help.manychat.com/hc/en-us/articles/14281316989724-Instagram-Post-and-Reel-Comments-trigger",
+     "excerpt": "send a public reply directly under the comment ... follow up with a private DM",
+     "kind": "verified (via search snippet; page 403 to fetch)",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Free plan cut to 25 contacts in March 2026",
+     "url": "https://postengage.ai/blog/manychat-free-plan-2026",
+     "excerpt": "On March 2, 2026, ManyChat cut its free tier from 1,000 contacts to 25",
+     "kind": "weak (third-party)",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Five tiers with prices and contact caps",
+     "url": "https://www.replyrush.com/post/manychat-price-increase-2026",
+     "excerpt": "Free, Essential, Pro, Business, and Advanced ... $0, $14/mo, $29/mo, $69/mo, and $139/mo",
+     "kind": "weak (competitor blog)",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AI features start on Pro",
+     "url": "https://www.replyrush.com/post/manychat-price-increase-2026",
+     "excerpt": "AI-powered conversation features...are included starting on the Pro plan",
+     "kind": "weak (competitor blog)",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "India: USD only, needs international card, GST",
+     "url": "https://www.sociahive.com/blog/manychat-pricing-india",
+     "excerpt": "ManyChat bills in USD only. You will need an international credit or debit card.",
+     "kind": "medium",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Calendly integration for booking inside DM flow; keep questions minimal",
+     "url": "https://manychat.com/blog/book-more-demos-instagram/",
+     "excerpt": "prospects to book a demo right inside the bot conversation",
+     "kind": "verified (vendor)",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "SuperProfile AutoDM",
+   "url": "https://superprofile.bio/in/auto-dm",
+   "features": {
+    "comment_trigger": true,
+    "keyword": true,
+    "story_live_triggers": "paid",
+    "auto_public_reply": "not verified",
+    "dm_flows": "single trigger per post, no multi-step flows (per review)",
+    "questions_data_collection": "email capture on paid plan",
+    "follow_gate": "'Ask for a Follow to Get DM' on paid plan",
+    "integrations": "not verified; bundled with SuperProfile store/payments/bookings",
+    "whatsapp": "not verified"
+   },
+   "pricing": "Free plan with unlimited comment AutoDM (per SuperProfile blog snippet); paid ~$29/mo for follow-ask, email capture, story/live. Store plans: Premium Rs 11,999/yr, Pro Rs 49,999/yr (third-party, unverified). Official pages rate-limited (429).",
+   "india_notes": "Indian company, INR pricing and Indian payments; cheapest way to start. Weak for multi-question qualification flows.",
+   "evidence": [
+    {
+     "claim": "Free plan unlimited comment AutoDM; follow-ask and email capture are paid",
+     "url": "https://superprofile.bio/blog/best-instagram-dm-automation-tools-for-creators-and-brands",
+     "excerpt": "\"Ask for a Follow to Get DM\", and \"Email capture\" are available on their paid plan at just $29/month",
+     "kind": "verified (vendor, via search snippet)",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AutoDM is shallow: one trigger per post, no multi-step",
+     "url": "https://creatorlanehq.com/learn/superprofile",
+     "excerpt": "The AutoDM is the shallow corner of the bundle. Single trigger per post. No multi-step flows.",
+     "kind": "medium (independent review)",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Competitor states SuperProfile multi-step flows are limited, one IG account per subscription",
+     "url": "https://creatorflow.so/vs/superprofile",
+     "excerpt": "Each Superprofile subscription supports one Instagram account",
+     "kind": "weak (competitor)",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "LinkPlease",
+   "url": "https://linkplease.co/",
+   "features": {
+    "comment_trigger": true,
+    "auto_public_reply": true,
+    "follow_gate": "Ask For Follow",
+    "lead_collection": true,
+    "retrigger_7_days": true,
+    "story_live": true,
+    "integrations": "not stated on homepage"
+   },
+   "pricing": "Free-forever plan; paid from ~Rs 499/mo (third-party listing, unverified on official pricing page)",
+   "india_notes": "INR-priced Indian tool; good for simple link + contact capture.",
+   "evidence": [
+    {
+     "claim": "Comment reply + DM, ask for follow, lead collection",
+     "url": "https://linkplease.co/",
+     "excerpt": "Ask users to follow you before sending the message.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Re-trigger for comments from last 7 days",
+     "url": "https://linkplease.co/",
+     "excerpt": "Runs automations retroactively for comments from the previous 7 days",
+     "kind": "verified (paraphrase from fetch tool)",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Starts at Rs 499/mo",
+     "url": "https://www.kwikzy.com/blogs/instagram-automation-tools-india-under-1000",
+     "excerpt": "LinkPlease starts at ₹499/month for a single account",
+     "kind": "weak",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "CreatorFlow",
+   "url": "https://creatorflow.so/vs/superprofile",
+   "features": {
+    "comment_trigger": true,
+    "multi_step_flows": true,
+    "email_capture": "paid plans",
+    "story_reply": true,
+    "integrations": "not verified"
+   },
+   "pricing": "Free 500 DMs/month; Pro $15/mo; Growth $30/mo",
+   "india_notes": "USD pricing; inferred same GST/card issues as ManyChat.",
+   "evidence": [
+    {
+     "claim": "Free 500 DMs/mo; Pro $15/mo",
+     "url": "https://creatorflow.so/vs/superprofile",
+     "excerpt": "500 DMs/month (all triggers)",
+     "kind": "verified (vendor)",
+     "date": "2026-10-01"
+    }
+   ]
+  }
+ ],
+ "platform_rules": [
+  {
+   "rule": "Private reply to a comment: only ONE message, within 7 days of the comment",
+   "implication_for_flow": "The first DM must carry the hook + a button/question that makes the user reply; you cannot send a second automated message unless they respond. Process comments within 7 days (old reels go stale for automation).",
+   "url": "https://developers.facebook.com/docs/instagram-platform/private-replies/",
+   "excerpt": "Only one message can be sent to the commenter ... within 7 days of the comment was made on the post or reel"
+  },
+  {
+   "rule": "Follow-ups only after the user responds, and within 24h of that response",
+   "implication_for_flow": "Ask questions as buttons/quick replies to keep the 24h window open; reminders/nudges must happen within 24h of the last user message; after that, move the lead to WhatsApp/email.",
+   "url": "https://developers.facebook.com/docs/instagram-platform/private-replies/",
+   "excerpt": "Follow-up messages can only be sent if the recipient responds, and must be sent within 24 hours of the response"
+  },
+  {
+   "rule": "24-hour standard messaging window; Human Agent tag is Messenger-only (not IG Messaging API)",
+   "implication_for_flow": "Founder must reply manually to DMs well inside 24h; no 7-day human-agent extension on Instagram (per policy page).",
+   "url": "https://developers.facebook.com/docs/messenger-platform/policy/policy-overview/",
+   "excerpt": "Businesses have up to 24 hours to respond to a user. Messages sent within the 24-hour window may contain promotional content."
+  },
+  {
+   "rule": "Disclose automation",
+   "implication_for_flow": "Open the DM with a light disclosure (e.g. 'quick auto-reply from FiguredOutAI, Tanishk will follow up personally').",
+   "url": "https://developers.facebook.com/docs/messenger-platform/policy/policy-overview/",
+   "excerpt": "Automated chat experiences must disclose that a person is interacting with an automated service"
+  },
+  {
+   "rule": "Rate limits: 750 private replies/hour per IG account for posts/reels; Send API 100 calls/s",
+   "implication_for_flow": "Not a constraint at current volume; third-party claims of a 200 DMs/hour cap could not be confirmed in official docs (weak).",
+   "url": "https://developers.facebook.com/docs/graph-api/overview/rate-limiting/",
+   "excerpt": "750 calls per hour per Instagram professional account for private replies to comments on Instagram posts and reels"
+  },
+  {
+   "rule": "Like/follow-gating is listed as spam",
+   "implication_for_flow": "Do NOT require a follow to get the audit link; ask softly at most. Follow-gating adds friction and policy risk for a B2B offer.",
+   "url": "https://transparency.meta.com/policies/community-standards/spam/",
+   "excerpt": "Requiring users to engage (in the form of likes, shares, follows, or any other public-facing form of engagement) to gain access to specific, exclusive content"
+  },
+  {
+   "rule": "Phone capture via quick reply only pre-fills from profile; hidden if profile has no phone; max 13 quick replies x 20 chars",
+   "implication_for_flow": "Collect WhatsApp number via the booking form (Cal.com) or free-text, not relying on the IG phone quick reply. Keep button labels under 20 chars.",
+   "url": "https://developers.facebook.com/documentation/business-messaging/instagram-messaging/features/quick-replies",
+   "excerpt": "If the user's profile does not have a phone number, Instagram does not show the quick reply."
+  },
+  {
+   "rule": "Messaging only after the user initiates; one customer per conversation",
+   "implication_for_flow": "Comment or DM keyword is the required opt-in; no cold outbound automation.",
+   "url": "https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/messaging-api/",
+   "excerpt": "Only after an Instagram user has sent your app user a message can your app send a message to the Instagram user"
+  }
+ ],
+ "scheduling": [
+  {
+   "name": "Cal.com",
+   "free_tier": "1 user, unlimited event types & calendars, email & SMS notifications, 100+ apps, HubSpot/Salesforce sync",
+   "pre_booking_questions": "Custom booking questions; routing forms on free plan (third-party/search snippet)",
+   "reminders": "Email; SMS & WhatsApp workflows on all plans but free users get default templates only; WhatsApp is a fixed default message",
+   "url": "https://cal.com/pricing",
+   "excerpt": "Unlimited event types & calendars ... Email & SMS notifications"
+  },
+  {
+   "name": "Calendly",
+   "free_tier": "One event type, one calendar connection",
+   "pre_booking_questions": "Booking questions on paid; routing forms only on Teams ($16/seat/mo)",
+   "reminders": "Standard ($10/seat/mo) automates reminders; SMS/workflows richer on Teams",
+   "url": "https://calendly.com/pricing",
+   "excerpt": "One event type ... One calendar connection"
+  },
+  {
+   "name": "Google Calendar appointment schedules",
+   "free_tier": "Personal Gmail: one booking page; no automated reminders (third-party); Workspace Business Standard+ for reminders/multiple pages/payments",
+   "pre_booking_questions": "Name, email required; custom fields via 'Add an item'",
+   "reminders": "Up to 5 email reminders, text not editable (premium); Google Meet built in",
+   "url": "https://support.google.com/calendar/answer/10729749",
+   "excerpt": "send up to 5 reminders ... You can't edit the text of the reminder emails"
+  }
+ ],
+ "benchmarks": [
+  {
+   "metric": "Show rate vs booking lead time",
+   "value": "~80.8% show for day-1 bookings, ~75% for first few days, ~60% by day 14 (6,414 meetings, Tito Bohrt via Chili Piper)",
+   "source_quality": "medium (search snippet; not confirmed on fetched page)",
+   "url": "https://www.chilipiper.com/article/improve-your-show-rates",
+   "excerpt": "peaking at 80.79% for day 1 ... declines to around 60% by day 14"
+  },
+  {
+   "metric": "No-show by booking window",
+   "value": "Same day ~7%, next day ~10%, 8+ days >23%",
+   "source_quality": "weak (unattributed '2026 SaaS demo benchmark data')",
+   "url": "https://ziellab.com/post/sales-meeting-no-show-rate-b2b-revops-guide",
+   "excerpt": "Same-day meetings ... roughly a 7% no-show rate ... 8+ days out: climbs past 23%"
+  },
+  {
+   "metric": "Inbound demo no-show",
+   "value": "15-20% (75-85% hold) vs outbound SDR 35-45%",
+   "source_quality": "weak",
+   "url": "https://ziellab.com/post/sales-meeting-no-show-rate-b2b-revops-guide",
+   "excerpt": "Inbound demo requests: 15-20% no-show rate"
+  },
+  {
+   "metric": "Form-to-booking when scheduler shown instantly",
+   "value": "66.7% of qualified submissions book vs ~30% industry average (~4M submissions)",
+   "source_quality": "medium (vendor data, large sample)",
+   "url": "https://www.chilipiper.com/post/form-conversion-rate-benchmark-report",
+   "excerpt": "66.7% of qualified form submissions book a meeting"
+  },
+  {
+   "metric": "Speed to lead",
+   "value": "Responding within 1 hour ~7x more likely to qualify lead (HBR 2011)",
+   "source_quality": "medium (HBR, old; not fetched directly)",
+   "url": "https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+   "excerpt": "nearly seven times more likely to qualify those leads"
+  },
+  {
+   "metric": "Reminders effect on attendance",
+   "value": "Meta-analysis pooled RR 1.11 (~11% higher attendance) for any reminder (healthcare)",
+   "source_quality": "medium (secondhand via search; healthcare context)",
+   "url": "https://notifyre.com/us/blog/appointment-reminders-statistiscs",
+   "excerpt": "pooled risk ratio of 1.11 for attendance with any reminder versus usual care"
+  },
+  {
+   "metric": "WhatsApp reminders RCT India (hypertension)",
+   "value": "21.8% vs 19.6% attendance, not significant (p=0.603)",
+   "source_quality": "strong (RCT) but different context",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11382525/",
+   "excerpt": "2.2 percentage points, p-value = 0.603"
+  },
+  {
+   "metric": "Calendly reminders",
+   "value": "~28% fewer no-shows",
+   "source_quality": "weak (vendor, secondhand)",
+   "url": "https://ziellab.com/post/sales-meeting-no-show-rate-b2b-revops-guide",
+   "excerpt": "Calendly's own sales users cut no-shows by around 28% with automated reminders"
+  },
+  {
+   "metric": "Comment-to-DM open / click",
+   "value": "Opens 85-92%; DM link CTR 12-18%; one coach: 3,200 comments, 15% click, 22 calls booked (~0.7% of commenters)",
+   "source_quality": "weak (vendor blogs, anonymous)",
+   "url": "https://communipass.com/blog/auto-dm-statistics-2026-open-rates-conversion-benchmarks/",
+   "excerpt": "3,200 comments with a 15% DM click rate and 22 discovery calls booked"
+  },
+  {
+   "metric": "Qualified respondent to discovery call",
+   "value": "25-40% of qualifying respondents book",
+   "source_quality": "weak",
+   "url": "https://creatorflow.so/blog/instagram-dm-automation-coaches-consultants-book-calls/",
+   "excerpt": "25–40% of qualifying respondents booking a discovery call"
+  },
+  {
+   "metric": "Chili Piper own outbound no-show",
+   "value": "<5% with day-before and day-of reminders",
+   "source_quality": "weak (vendor self-report)",
+   "url": "https://www.chilipiper.com/post/will-aitken-guide-no-shows",
+   "excerpt": "an outbound no-show rate of less than 5%"
+  }
+ ],
+ "patterns": [
+  {
+   "pattern": "Qualify by message (2-3 button questions), then send booking link; close on the call not in chat",
+   "evidence_url": "https://setsmart.io/blog/instagram-sales-funnel",
+   "excerpt": "qualify, understand the problem, offer the next step, book the call"
+  },
+  {
+   "pattern": "Keep qualifying questions minimal; ask service needed and company/role",
+   "evidence_url": "https://manychat.com/blog/book-more-demos-instagram/",
+   "excerpt": "What service are you looking for? ... What's your company name and your role there?"
+  },
+  {
+   "pattern": "Show the scheduler immediately after qualification; multi-form steps and slow calendars reduce bookings",
+   "evidence_url": "https://www.chilipiper.com/post/form-conversion-rate-benchmark-report",
+   "excerpt": "66.7% of qualified form submissions book a meeting"
+  },
+  {
+   "pattern": "Offer near-term slots (same/next day) and send day-before + day-of reminders",
+   "evidence_url": "https://www.chilipiper.com/post/will-aitken-guide-no-shows",
+   "excerpt": "There's data that shows a direct correlation between show rates going down and the meeting occurring further in the future."
+  },
+  {
+   "pattern": "Founder's assumption (PDF won't work after a product video): NO direct evidence found either way. Inferred: for a high-ticket custom service, a generic PDF adds a step; a small, specific asset (e.g. 'list of 5 automations for your business type' or a 60s WhatsApp demo) can serve as the value-first message while the CTA is the audit. Most coach funnels still lead with value then one qualifier then call offer (weak).",
+   "evidence_url": "https://setsmart.io/blog/instagram-dm-scripts",
+   "excerpt": "value delivery (lead magnet, free resource) followed by one open-ended qualifier ... then transitions to a free strategy call offer"
+  },
+  {
+   "pattern": "Do not follow-gate a B2B audit; policy lists follow-gating as spam",
+   "evidence_url": "https://transparency.meta.com/policies/community-standards/spam/",
+   "excerpt": "Requiring users to engage (in the form of likes, shares, follows ...) to gain access to specific, exclusive content"
+  }
+ ],
+ "log": [
+  {
+   "step": 1,
+   "type": "fetch",
+   "query_or_url": "https://developers.facebook.com/docs/instagram-platform/private-replies/ (WebFetch)",
+   "result": "1 message, 7 days, follow-up after response within 24h",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 2,
+   "type": "search",
+   "query_or_url": "ManyChat pricing India INR Instagram Pro plan 2026",
+   "result": "third-party INR pricing; USD only",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 3,
+   "type": "search",
+   "query_or_url": "SuperProfile Instagram auto DM comment keyword pricing features",
+   "result": "free plan + $29 paid features",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 4,
+   "type": "browser",
+   "query_or_url": "manychat.com/pricing, superprofile.bio/in/auto-dm, superprofile.bio/pricing, linkplease.co/pricing, inro.social/pricing, calendly.com/pricing, cal.com/pricing (Playwright)",
+   "result": "all ERR_CERT_AUTHORITY_INVALID via proxy",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 5,
+   "type": "browser",
+   "query_or_url": "README check + retry cal.com/pricing with proxy option",
+   "result": "still cert error; switched to WebFetch",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 6,
+   "type": "fetch",
+   "query_or_url": "https://manychat.com/pricing (WebFetch)",
+   "result": "403",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 7,
+   "type": "fetch",
+   "query_or_url": "https://superprofile.bio/in/auto-dm (WebFetch)",
+   "result": "429",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 8,
+   "type": "fetch",
+   "query_or_url": "https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/messaging-api/ (WebFetch)",
+   "result": "24h window, user must initiate, disclosure",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 9,
+   "type": "fetch",
+   "query_or_url": "https://developers.facebook.com/docs/messenger-platform/policy/policy-overview/ (WebFetch)",
+   "result": "24h, Human Agent Messenger-only, disclosure",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 10,
+   "type": "search",
+   "query_or_url": "Instagram Graph API messaging rate limit 200 messages per hour",
+   "result": "third-party 200/hr claims",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 11,
+   "type": "search",
+   "query_or_url": "ManyChat follow gate Meta policy",
+   "result": "follow-gate grey area",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 12,
+   "type": "fetch",
+   "query_or_url": "https://developers.facebook.com/docs/graph-api/overview/rate-limiting/ (WebFetch)",
+   "result": "750 private replies/hr",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 13,
+   "type": "fetch",
+   "query_or_url": "https://transparency.meta.com/policies/community-standards/spam/ (WebFetch)",
+   "result": "follow-gating listed",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 14,
+   "type": "fetch",
+   "query_or_url": "superprofile.bio blog manychat-vs-superprofile (WebFetch)",
+   "result": "429",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 15,
+   "type": "fetch",
+   "query_or_url": "curl superprofile.bio/in/auto-dm, manychat.com/pricing, superprofile.bio/pricing",
+   "result": "429/403/SSL error",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 16,
+   "type": "fetch",
+   "query_or_url": "https://creatorlanehq.com/learn/superprofile (WebFetch)",
+   "result": "INR plans, shallow AutoDM",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 17,
+   "type": "fetch",
+   "query_or_url": "https://www.sociahive.com/blog/manychat-pricing-india (WebFetch)",
+   "result": "USD only, GST",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 18,
+   "type": "search",
+   "query_or_url": "help.manychat.com Instagram comments growth tool public reply keyword Free plan",
+   "result": "keyword modes, public reply",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 19,
+   "type": "fetch",
+   "query_or_url": "https://help.manychat.com/hc/en-us/articles/14281409288604-Billing-FAQ (WebFetch)",
+   "result": "403",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 20,
+   "type": "fetch",
+   "query_or_url": "https://help.manychat.com/hc/en-us/articles/14281316989724-Instagram-Post-and-Reel-Comments-trigger (WebFetch)",
+   "result": "403",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 21,
+   "type": "search",
+   "query_or_url": "ManyChat free plan 2026 change 25 contacts Essential plan",
+   "result": "25-contact free tier since 2 Mar 2026",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 22,
+   "type": "fetch",
+   "query_or_url": "https://www.replyrush.com/post/manychat-price-increase-2026 (WebFetch)",
+   "result": "5 tiers",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 23,
+   "type": "search",
+   "query_or_url": "LinkPlease Instagram auto DM India pricing",
+   "result": "Rs 499/mo",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 24,
+   "type": "search",
+   "query_or_url": "Cal.com free plan routing forms workflows WhatsApp SMS",
+   "result": "free routing forms, default WhatsApp",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 25,
+   "type": "fetch",
+   "query_or_url": "https://cal.com/pricing (WebFetch)",
+   "result": "free plan features",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 26,
+   "type": "fetch",
+   "query_or_url": "https://calendly.com/pricing (WebFetch)",
+   "result": "free 1 event type",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 27,
+   "type": "fetch",
+   "query_or_url": "https://support.google.com/calendar/answer/10729749 (WebFetch)",
+   "result": "5 reminders, Meet, custom fields",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 28,
+   "type": "fetch",
+   "query_or_url": "https://cal.com/blog/cal-com-v5-3 (WebFetch)",
+   "result": "no content",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 29,
+   "type": "search",
+   "query_or_url": "Google Calendar appointment schedules free vs Workspace",
+   "result": "one page, no reminders on free",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 30,
+   "type": "search",
+   "query_or_url": "ManyChat Instagram case study comment to DM open rate booked calls",
+   "result": "vendor benchmarks",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 31,
+   "type": "fetch",
+   "query_or_url": "https://creatorflow.so/blog/comment-to-dm-automation-case-studies/ (WebFetch)",
+   "result": "mostly email-capture cases",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 32,
+   "type": "search",
+   "query_or_url": "no-show rate sales meetings same day vs days out Chili Piper",
+   "result": "same-day ~7%",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 33,
+   "type": "search",
+   "query_or_url": "HBR short life of online sales leads",
+   "result": "7x within 1 hour",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 34,
+   "type": "fetch",
+   "query_or_url": "https://ziellab.com/post/sales-meeting-no-show-rate-b2b-revops-guide (WebFetch)",
+   "result": "no-show by window, unattributed",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 35,
+   "type": "fetch",
+   "query_or_url": "https://hbr.org/2011/03/the-short-life-of-online-sales-leads (WebFetch)",
+   "result": "paywall/no body",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 36,
+   "type": "search",
+   "query_or_url": "Chili Piper research no-show rate by days between booking",
+   "result": "6,414 meetings, 80.79% day 1",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 37,
+   "type": "fetch",
+   "query_or_url": "https://www.chilipiper.com/post/will-aitken-guide-no-shows (WebFetch)",
+   "result": "<5% no-show, reminders",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 38,
+   "type": "fetch",
+   "query_or_url": "https://www.chilipiper.com/post/form-conversion-rate-benchmark-report (WebFetch)",
+   "result": "66.7% book",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 39,
+   "type": "search",
+   "query_or_url": "WhatsApp reminder reduce no-show India RCT",
+   "result": "RCT found",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 40,
+   "type": "fetch",
+   "query_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11382525/ (WebFetch)",
+   "result": "no significant effect",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 41,
+   "type": "search",
+   "query_or_url": "comment keyword DM book a call vs lead magnet coaches agency",
+   "result": "value-first then call",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 42,
+   "type": "search",
+   "query_or_url": "ManyChat blog qualify leads book calls Calendly",
+   "result": "2-3 questions then link",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 43,
+   "type": "fetch",
+   "query_or_url": "https://manychat.com/blog/book-more-demos-instagram/ (WebFetch)",
+   "result": "2 questions, Calendly",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 44,
+   "type": "search",
+   "query_or_url": "lead magnet vs book a call high-ticket warm audience",
+   "result": "qualify by msg, close on call",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 45,
+   "type": "fetch",
+   "query_or_url": "https://linkplease.co/ (WebFetch)",
+   "result": "ask for follow, lead collection, 7-day retrigger",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 46,
+   "type": "fetch",
+   "query_or_url": "https://creatorflow.so/vs/superprofile (WebFetch)",
+   "result": "CreatorFlow pricing",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 47,
+   "type": "search",
+   "query_or_url": "Instagram messaging API quick replies user_email user_phone_number",
+   "result": "quick replies doc",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 48,
+   "type": "fetch",
+   "query_or_url": "https://developers.facebook.com/documentation/business-messaging/instagram-messaging/features/quick-replies (WebFetch)",
+   "result": "phone QR pre-fills, hidden if missing; email QR not documented",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 49,
+   "type": "claim",
+   "query_or_url": "https://help.manychat.com/hc/en-us/articles/14281316989724-Instagram-Post-and-Reel-Comments-trigger",
+   "result": "Comments trigger supports public reply + private DM + keyword modes",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 50,
+   "type": "claim",
+   "query_or_url": "https://postengage.ai/blog/manychat-free-plan-2026",
+   "result": "Free plan cut to 25 contacts in March 2026",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 51,
+   "type": "claim",
+   "query_or_url": "https://www.replyrush.com/post/manychat-price-increase-2026",
+   "result": "Five tiers with prices and contact caps",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 52,
+   "type": "claim",
+   "query_or_url": "https://www.replyrush.com/post/manychat-price-increase-2026",
+   "result": "AI features start on Pro",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 53,
+   "type": "claim",
+   "query_or_url": "https://www.sociahive.com/blog/manychat-pricing-india",
+   "result": "India: USD only, needs international card, GST",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 54,
+   "type": "claim",
+   "query_or_url": "https://manychat.com/blog/book-more-demos-instagram/",
+   "result": "Calendly integration for booking inside DM flow; keep questions minimal",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 55,
+   "type": "claim",
+   "query_or_url": "https://superprofile.bio/blog/best-instagram-dm-automation-tools-for-creators-and-brands",
+   "result": "Free plan unlimited comment AutoDM; follow-ask and email capture are paid",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 56,
+   "type": "claim",
+   "query_or_url": "https://creatorlanehq.com/learn/superprofile",
+   "result": "AutoDM is shallow: one trigger per post, no multi-step",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 57,
+   "type": "claim",
+   "query_or_url": "https://creatorflow.so/vs/superprofile",
+   "result": "Competitor states SuperProfile multi-step flows are limited, one IG account per subscription",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 58,
+   "type": "claim",
+   "query_or_url": "https://linkplease.co/",
+   "result": "Comment reply + DM, ask for follow, lead collection",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 59,
+   "type": "claim",
+   "query_or_url": "https://linkplease.co/",
+   "result": "Re-trigger for comments from last 7 days",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 60,
+   "type": "claim",
+   "query_or_url": "https://www.kwikzy.com/blogs/instagram-automation-tools-india-under-1000",
+   "result": "Starts at Rs 499/mo",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 61,
+   "type": "claim",
+   "query_or_url": "https://creatorflow.so/vs/superprofile",
+   "result": "Free 500 DMs/mo; Pro $15/mo",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 62,
+   "type": "claim",
+   "query_or_url": "https://developers.facebook.com/docs/instagram-platform/private-replies/",
+   "result": "Private reply to a comment: only ONE message, within 7 days of the comment",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 63,
+   "type": "claim",
+   "query_or_url": "https://developers.facebook.com/docs/instagram-platform/private-replies/",
+   "result": "Follow-ups only after the user responds, and within 24h of that response",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 64,
+   "type": "claim",
+   "query_or_url": "https://developers.facebook.com/docs/messenger-platform/policy/policy-overview/",
+   "result": "24-hour standard messaging window; Human Agent tag is Messenger-only (not IG Messaging API)",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 65,
+   "type": "claim",
+   "query_or_url": "https://developers.facebook.com/docs/messenger-platform/policy/policy-overview/",
+   "result": "Disclose automation",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 66,
+   "type": "claim",
+   "query_or_url": "https://developers.facebook.com/docs/graph-api/overview/rate-limiting/",
+   "result": "Rate limits: 750 private replies/hour per IG account for posts/reels; Send API 100 calls/s",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 67,
+   "type": "claim",
+   "query_or_url": "https://transparency.meta.com/policies/community-standards/spam/",
+   "result": "Like/follow-gating is listed as spam",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 68,
+   "type": "claim",
+   "query_or_url": "https://developers.facebook.com/documentation/business-messaging/instagram-messaging/features/quick-replies",
+   "result": "Phone capture via quick reply only pre-fills from profile; hidden if profile has no phone; max 13 quick replies x 20 chars",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 69,
+   "type": "claim",
+   "query_or_url": "https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/messaging-api/",
+   "result": "Messaging only after the user initiates; one customer per conversation",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 70,
+   "type": "claim",
+   "query_or_url": "https://www.chilipiper.com/article/improve-your-show-rates",
+   "result": "Show rate vs booking lead time: ~80.8% show for day-1 bookings, ~75% for first few days, ~60% by day 14 (6,414 meetings, Tito Bohrt via Chili Piper)",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 71,
+   "type": "claim",
+   "query_or_url": "https://ziellab.com/post/sales-meeting-no-show-rate-b2b-revops-guide",
+   "result": "No-show by booking window: Same day ~7%, next day ~10%, 8+ days >23%",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 72,
+   "type": "claim",
+   "query_or_url": "https://ziellab.com/post/sales-meeting-no-show-rate-b2b-revops-guide",
+   "result": "Inbound demo no-show: 15-20% (75-85% hold) vs outbound SDR 35-45%",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 73,
+   "type": "claim",
+   "query_or_url": "https://www.chilipiper.com/post/form-conversion-rate-benchmark-report",
+   "result": "Form-to-booking when scheduler shown instantly: 66.7% of qualified submissions book vs ~30% industry average (~4M submissions)",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 74,
+   "type": "claim",
+   "query_or_url": "https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+   "result": "Speed to lead: Responding within 1 hour ~7x more likely to qualify lead (HBR 2011)",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 75,
+   "type": "claim",
+   "query_or_url": "https://notifyre.com/us/blog/appointment-reminders-statistiscs",
+   "result": "Reminders effect on attendance: Meta-analysis pooled RR 1.11 (~11% higher attendance) for any reminder (healthcare)",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 76,
+   "type": "claim",
+   "query_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11382525/",
+   "result": "WhatsApp reminders RCT India (hypertension): 21.8% vs 19.6% attendance, not significant (p=0.603)",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 77,
+   "type": "claim",
+   "query_or_url": "https://ziellab.com/post/sales-meeting-no-show-rate-b2b-revops-guide",
+   "result": "Calendly reminders: ~28% fewer no-shows",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 78,
+   "type": "claim",
+   "query_or_url": "https://communipass.com/blog/auto-dm-statistics-2026-open-rates-conversion-benchmarks/",
+   "result": "Comment-to-DM open / click: Opens 85-92%; DM link CTR 12-18%; one coach: 3,200 comments, 15% click, 22 calls booked (~0.7% of commenters)",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 79,
+   "type": "claim",
+   "query_or_url": "https://creatorflow.so/blog/instagram-dm-automation-coaches-consultants-book-calls/",
+   "result": "Qualified respondent to discovery call: 25-40% of qualifying respondents book",
+   "date": "2026-10-01"
+  },
+  {
+   "step": 80,
+   "type": "claim",
+   "query_or_url": "https://www.chilipiper.com/post/will-aitken-guide-no-shows",
+   "result": "Chili Piper own outbound no-show: <5% with day-before and day-of reminders",
+   "date": "2026-10-01"
+  }
+ ],
+ "needs_login": [
+  {
+   "url": "https://manychat.com/pricing",
+   "platform": "ManyChat",
+   "what_to_check": "Current 2026 tiers, INR display/GST, which tier unlocks Google Sheets, External Request (webhook), Zapier/Make, Calendly, follower condition; page returned 403 to automated fetch"
+  },
+  {
+   "url": "https://app.manychat.com",
+   "platform": "ManyChat",
+   "what_to_check": "Comments trigger: public reply variants, 'Is a Follower' condition, user input blocks for email/phone, Calendly block availability on plan"
+  },
+  {
+   "url": "https://superprofile.bio/in/auto-dm",
+   "platform": "SuperProfile",
+   "what_to_check": "AutoDM monthly price in INR, multi-question flows, webhook/Sheets export, public comment reply; site rate-limited (429)"
+  },
+  {
+   "url": "https://linkplease.co/pricing",
+   "platform": "LinkPlease",
+   "what_to_check": "INR plan prices, lead form fields, integrations (Sheets/webhook)"
+  },
+  {
+   "url": "https://app.cal.com/workflows",
+   "platform": "Cal.com",
+   "what_to_check": "Whether WhatsApp/SMS reminders work to +91 numbers on free plan and text customization"
+  }
+ ],
+ "notes": "Playwright Chromium failed TLS through the agent proxy (ERR_CERT_AUTHORITY_INVALID), so all pages were read via WebFetch/search. ManyChat official pages returned 403, SuperProfile 429, so tool pricing relies on third-party (often competitor) blogs and is marked weak. HBR article body not fetchable. No credible public data on DM-to-booking for AI agencies specifically; vendor benchmarks are marked weak. No evidence found for or against the 'PDF won't work' assumption. ~37 tool calls used."
+}

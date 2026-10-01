@@ -1,0 +1,775 @@
+{
+ "agent": "E",
+ "segment": "Enterprise AI conversation platforms",
+ "date": "2026-10-01",
+ "competitors": [
+  {
+   "name": "Fin (formerly Intercom), now owned by Salesforce",
+   "url": "https://fin.ai",
+   "positioning": "\"Engage every prospect. Grow your sales pipeline.\" (Fin for Sales); Fin AI customer agent \"resolves complex queries end-to-end across every channel\"",
+   "target_customer": "Mid-market and enterprise SaaS/B2B; 30,000+ companies",
+   "market": "Global (US-centric, USD pricing)",
+   "channels": {
+    "whatsapp": true,
+    "instagram_dm": true,
+    "instagram_comments": "unclear",
+    "messenger": true,
+    "email": true,
+    "website_chat": true,
+    "website_forms": "partial (via chat/API)",
+    "sms": true,
+    "voice": true
+   },
+   "unified_inbox": "yes (Intercom helpdesk, $29/seat/month)",
+   "ai_extracts_structured_fields": "yes: contact info and qualification signals synced to CRM (exact field list not published)",
+   "qualification_custom_criteria": "yes: playbook criteria incl. company size, industry, use case/intent, budget fit, region, new vs existing",
+   "lead_scoring_match_score": "no explicit numeric score found (qualify/disqualify outcome)",
+   "built_in_crm": "no (syncs to Salesforce, HubSpot, Marketo)",
+   "routing": "yes: book meeting, route to sales, self-serve trial, disqualify",
+   "pricing": "$0.99 per outcome; $9.99 per lead qualification; $29 per helpdesk seat/month; channel usage fees extra (USD)",
+   "setup_complexity_smb": "Medium: no-code playbook, but needs an external CRM and USD billing; $9.99/qualified lead is steep for Indian SMB lead values (inferred)",
+   "public_signals": "needs_login (LinkedIn)",
+   "closeness": 4,
+   "gap": "Closest functional match for B2B qualification + routing, but no native CRM, no numeric match score published, sales agent pages emphasise Messenger/email/web chat over WhatsApp/IG; per-qualification USD pricing ($9.99 = ~INR 830+) unrealistic for Indian SMBs with high volumes of low-value leads (inferred); now inside Salesforce, so roadmap is enterprise-tilted (inferred).",
+   "evidence": [
+    {
+     "claim": "Lead qualification billed at $9.99 per qualification",
+     "url": "https://fin.ai/pricing",
+     "excerpt": "Qualifications are $9.99 each.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Qualification is against criteria the business defines, then routed",
+     "url": "https://fin.ai/pricing",
+     "excerpt": "Fin matches a prospect to the qualification criteria you defined and routes them accordingly.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Standard outcome price",
+     "url": "https://fin.ai/pricing",
+     "excerpt": "$0.99 per outcome",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Helpdesk seat price",
+     "url": "https://fin.ai/pricing",
+     "excerpt": "$29 per helpdesk seat per month",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Channels listed include Instagram, WhatsApp, Messenger, SMS, Voice, Email",
+     "url": "https://fin.ai/pricing",
+     "excerpt": "\"Voice,\" \"Email,\" \"Messenger,\" \"Slack,\" \"WhatsApp,\" \"SMS,\" \"Instagram,\" \"Facebook Messenger\"",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Configurable qualification criteria include budget and region",
+     "url": "https://fin.ai/sales",
+     "excerpt": "company size/segment, industry, use case/intent, budget fit, region, and customer status (new vs. existing)",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Structured data synced to external CRM",
+     "url": "https://fin.ai/sales",
+     "excerpt": "automatically syncs structured data, from contact info to qualification signals, directly into your CRM",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Sales page lists only Messenger and email explicitly",
+     "url": "https://fin.ai/sales",
+     "excerpt": "Messenger, email, and more",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Salesforce completed acquisition of Fin (formerly Intercom)",
+     "url": "https://www.salesforce.com/news/press-releases/2026/09/10/salesforce-completes-acquisition-of-fin/",
+     "excerpt": "Salesforce ... today announced it has completed its acquisition of Fin, formerly Intercom, an industry-leading customer agent company.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Customer base",
+     "url": "https://www.salesforce.com/news/press-releases/2026/09/10/salesforce-completes-acquisition-of-fin/",
+     "excerpt": "an established global customer base of more than 30,000 companies",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Early-stage program includes free sales qualifications (search snippet)",
+     "url": "https://intercom.com/early-stage",
+     "excerpt": "300 free Fin outcomes, 15 free sales qualifications per month, and the Intercom Helpdesk from $33 per month",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "No built-in CRM; relies on Salesforce/HubSpot",
+     "url": "https://fin.ai/sales",
+     "excerpt": "Salesforce, HubSpot, Marketo, and Chili Piper are listed [as integrations]",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "Zendesk (AI agents, Suite, Sunshine Conversations; Sell CRM retiring)",
+   "url": "https://www.zendesk.com",
+   "positioning": "Customer and employee service; retiring Sell to \"focus even more deeply on what we do best\"",
+   "target_customer": "SMB to enterprise support teams",
+   "market": "Global",
+   "channels": {
+    "whatsapp": true,
+    "instagram_dm": true,
+    "instagram_comments": "unclear",
+    "messenger": true,
+    "email": true,
+    "website_chat": true,
+    "website_forms": true,
+    "sms": "via add-ons",
+    "voice": true
+   },
+   "unified_inbox": "yes (Suite Team and above, omnichannel routing)",
+   "ai_extracts_structured_fields": "partial: intent/entity detection for support; not lead fields out of the box (inferred)",
+   "qualification_custom_criteria": "partial: pre-chat forms and AI agent flows could be built; no dedicated sales qualification product found",
+   "lead_scoring_match_score": "Sell had AI lead scoring on higher tiers, but Sell is being retired",
+   "built_in_crm": "retiring: Zendesk Sell ends 31 Aug 2027; partner Pipedrive recommended",
+   "routing": "yes (omnichannel routing to agents/skills)",
+   "pricing": "Suite Team $55, Suite Professional $115 per agent/month billed yearly (USD); AI automated resolutions $1.50 committed / $2.00 PAYG",
+   "setup_complexity_smb": "Medium; support-ticket mental model, sales qualification needs custom flows + separate CRM (inferred)",
+   "public_signals": "needs_login (LinkedIn)",
+   "closeness": 2,
+   "gap": "Support-not-sales focus; exiting the CRM business (Sell retiring 2027), so no native sales CRM; per-agent USD pricing + per-resolution AI fees.",
+   "evidence": [
+    {
+     "claim": "Zendesk Sell retirement date",
+     "url": "https://support.zendesk.com/hc/en-us/articles/9591462550042-Announcing-the-retiring-of-Zendesk-Sell",
+     "excerpt": "Retirement Date: August 31, 2027",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Reason: focus on service",
+     "url": "https://support.zendesk.com/hc/en-us/articles/9591462550042-Announcing-the-retiring-of-Zendesk-Sell",
+     "excerpt": "This change allows us to focus even more deeply on what we do best - helping businesses like yours deliver exceptional customer and employee service.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Pipedrive recommended as replacement CRM",
+     "url": "https://support.zendesk.com/hc/en-us/articles/9591462550042-Announcing-the-retiring-of-Zendesk-Sell",
+     "excerpt": "a market-leading sales CRM solution with a well-established Zendesk integration",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Suite pricing",
+     "url": "https://www.zendesk.com/pricing/",
+     "excerpt": "Suite Team: $55agent/month paid yearly ... Suite Professional: $115agent/month paid yearly",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AI resolution pricing",
+     "url": "https://www.zendesk.com/pricing/",
+     "excerpt": "Additional ARs: \"$1.50\" per committed resolution or \"$2.00\" pay-as-you-go",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Social and messaging channels included",
+     "url": "https://www.zendesk.com/pricing/",
+     "excerpt": "Facebook, Instagram, and X as well as messaging apps like WhatsApp, Slack, WeChat, LINE",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Lead capture limited to pre-chat forms/proactive messaging",
+     "url": "https://www.zendesk.com/pricing/",
+     "excerpt": "Pre-chat forms to \"ask visitors to answers a series of questions\"",
+     "kind": "verified",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "Salesforce (Agentforce + Sales Cloud + Service Cloud/Contact Center Digital)",
+   "url": "https://www.salesforce.com",
+   "positioning": "\"the world's #1 AI CRM\"",
+   "target_customer": "Mid-market and enterprise",
+   "market": "Global incl. India (USD list prices on India page)",
+   "channels": {
+    "whatsapp": true,
+    "instagram_dm": "unclear in sources found",
+    "instagram_comments": "via Social Studio/partners (unverified)",
+    "messenger": true,
+    "email": true,
+    "website_chat": true,
+    "website_forms": true,
+    "sms": true,
+    "voice": true
+   },
+   "unified_inbox": "yes (Service Console / Contact Center Digital), but separate SKUs",
+   "ai_extracts_structured_fields": "yes, configurable via Agentforce actions/prompt builder (inferred)",
+   "qualification_custom_criteria": "yes, Agentforce SDR / lead nurture agents configurable",
+   "lead_scoring_match_score": "yes, Einstein lead scoring (listed as \"Available for purchase\" on some tiers)",
+   "built_in_crm": "yes (Sales Cloud)",
+   "routing": "yes (Omni-Channel routing, lead assignment rules)",
+   "pricing": "Sales Starter $25, Pro Suite $100, Enterprise/Core $195+ per user/month; Agentforce $2/conversation or $500 per 100k Flex Credits; Agentforce add-ons $125/user/month; Contact Center Digital ~$75/user/month (USD); WhatsApp message credits extra",
+   "setup_complexity_smb": "High: multiple SKUs, admin/consultant implementation typical (inferred)",
+   "public_signals": "needs_login (LinkedIn)",
+   "closeness": 4,
+   "gap": "Can technically do everything (inbox + AI qualification + scoring + CRM + routing) but only by stitching Sales Cloud + messaging SKU + Agentforce credits + integrator; total cost and complexity far beyond an Indian SMB (inferred). Now also owns Fin.",
+   "evidence": [
+    {
+     "claim": "Agentforce consumption pricing",
+     "url": "https://www.salesforce.com/agentforce/pricing/",
+     "excerpt": "\"$500 USD/Per 100k Credits\" ... \"$2 USD/Per conversation\"",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Agentforce add-on per user",
+     "url": "https://www.salesforce.com/agentforce/pricing/",
+     "excerpt": "\"$125 user/month\" providing unmetered employee agent usage",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Agentforce 1 editions",
+     "url": "https://www.salesforce.com/agentforce/pricing/",
+     "excerpt": "\"from $550 user/month\" including add-on access plus 2.5M annual Flex Credits",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Sales Cloud editions on India page in USD",
+     "url": "https://www.salesforce.com/in/sales/pricing/",
+     "excerpt": "\"Starter Suite\" at $25 ... \"Pro Suite\" at $100 ... \"Core\" at $195",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Lead scoring is a paid extra on some tiers",
+     "url": "https://www.salesforce.com/in/sales/pricing/",
+     "excerpt": "Lead scoring is mentioned as \"Available for purchase\"",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Sales pricing page doesn't mention WhatsApp",
+     "url": "https://www.salesforce.com/in/sales/pricing/",
+     "excerpt": "WhatsApp is not mentioned anywhere on this page (fetch summary)",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Messaging SKU price and channels (search snippet)",
+     "url": "https://www.salesforce.com/ap/service/digital-customer-engagement-platform/pricing/",
+     "excerpt": "$75 USD per user per month ... SMS, WhatsApp, Facebook Messenger, Apple Messages for Business, LINE",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "SDR/buyer engagement agent on WhatsApp priced per lead (third-party summary)",
+     "url": "https://www.getmacha.com/blog/agentforce-pricing-explained",
+     "excerpt": "supports web, email, SMS and WhatsApp, with pricing of 400 Flex Credits ($2) per lead engaged",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "Freshworks (Freshchat + Freshsales + Freddy AI)",
+   "url": "https://www.freshworks.com",
+   "positioning": "Freshsales: \"Sell smarter and close deals faster\"",
+   "target_customer": "SMB and mid-market; Indian-origin company",
+   "market": "Global, strong India presence, INR pricing via resellers",
+   "channels": {
+    "whatsapp": true,
+    "instagram_dm": true,
+    "instagram_comments": "unclear",
+    "messenger": true,
+    "email": true,
+    "website_chat": true,
+    "website_forms": true,
+    "sms": true,
+    "voice": "yes (Freshcaller / built-in phone in Freshsales)"
+   },
+   "unified_inbox": "yes for messaging (Freshchat); CRM inbox in Freshsales; two products (partial unification)",
+   "ai_extracts_structured_fields": "partial: Freddy bots \"collect data\" via no-code flows; free-text extraction of budget/location not documented (inferred)",
+   "qualification_custom_criteria": "partial: no-code bot flows to qualify leads",
+   "lead_scoring_match_score": "yes: Freddy AI intent/contact scoring (Pro+)",
+   "built_in_crm": "yes (Freshsales)",
+   "routing": "yes (IntelliAssign, skill-based routing on Enterprise)",
+   "pricing": "Freshsales Growth $9, Pro $39, Enterprise $59 per user/month (annual, USD); India resellers list ₹1,099/₹3,599/₹6,099; Freddy AI Agent $49 per 100 sessions; Freshchat $19-$79/agent/month",
+   "setup_complexity_smb": "Low-medium; but needs Freshchat + Freshsales + Freddy add-on configured together (inferred)",
+   "public_signals": "needs_login (LinkedIn)",
+   "closeness": 4,
+   "gap": "Most India-realistic incumbent and has all building blocks (omnichannel chat, CRM, scoring, routing). Gap: qualification is bot-flow + historical scoring, not LLM reading of free-form conversation into intent/budget/location/timeline with a criteria match score; two products to stitch; Freddy session fees add up (inferred).",
+   "evidence": [
+    {
+     "claim": "Freshsales pricing",
+     "url": "https://www.freshworks.com/crm/pricing/",
+     "excerpt": "Growth: \"$9/user/month, billed annually\" ... Pro: \"$39/user/month\" ... Enterprise: \"$59/user/month\"",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Freddy AI Agent add-on price",
+     "url": "https://www.freshworks.com/crm/pricing/",
+     "excerpt": "$49 /100 sessions",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Contact scoring on Pro+",
+     "url": "https://www.freshworks.com/crm/pricing/",
+     "excerpt": "Everything in Growth, plus: Contact scoring",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Capture/qualify/route leads with Freddy",
+     "url": "https://www.freshworks.com/crm/sales/",
+     "excerpt": "capture, qualify, route, and track them with the power of Freddy AI",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AI intent scores",
+     "url": "https://www.freshworks.com/crm/sales/",
+     "excerpt": "Focus on valuable leads with intent scores from Freddy AI",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "India INR pricing (reseller, search snippet)",
+     "url": "https://www.itforsme.in/pricing/freshsales-india",
+     "excerpt": "Growth at ₹1,099, Pro at ₹3,599, and Enterprise at ₹6,099 per user/month",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Freshchat channels (third-party review, search snippet)",
+     "url": "https://www.getmacha.com/blog/what-is-freshchat",
+     "excerpt": "web chat (embeddable widget), WhatsApp, Instagram DMs, Facebook Messenger, SMS, LINE, Google Business Messages, and email",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "Sprinklr (Service / Conversational AI)",
+   "url": "https://www.sprinklr.com",
+   "positioning": "\"Transform CX with AI at the core of every interaction\"",
+   "target_customer": "Large global enterprises (Samsung, Ford, Hyundai, Deutsche Telekom)",
+   "market": "Global enterprise (India-founded, US-HQ)",
+   "channels": {
+    "whatsapp": true,
+    "instagram_dm": true,
+    "instagram_comments": true,
+    "messenger": true,
+    "email": true,
+    "website_chat": true,
+    "website_forms": "unclear",
+    "sms": true,
+    "voice": true
+   },
+   "unified_inbox": "yes (30+ channels)",
+   "ai_extracts_structured_fields": "yes for intent/context (support); lead fields not marketed",
+   "qualification_custom_criteria": "not marketed",
+   "lead_scoring_match_score": "no evidence",
+   "built_in_crm": "no (case management, not sales CRM)",
+   "routing": "yes (AI routing by intent and skills)",
+   "pricing": "No public pricing; self-serve reportedly discontinued 30 Apr 2026; typical minimums $50k-$100k/yr (third-party)",
+   "setup_complexity_smb": "Very high; enterprise contracts and implementation",
+   "public_signals": "needs_login (LinkedIn)",
+   "closeness": 2,
+   "gap": "Strongest omnichannel (incl. IG comments) but enterprise-only pricing, support/social-care focus, no sales CRM or lead qualification product.",
+   "evidence": [
+    {
+     "claim": "30+ channels",
+     "url": "https://www.sprinklr.com/products/customer-service/",
+     "excerpt": "30+ voice, social and digital channels",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AI routing",
+     "url": "https://www.sprinklr.com/products/customer-service/",
+     "excerpt": "\"AI-powered routing\" matches interactions to \"the best-suited agent\"",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "No lead qualification on service page",
+     "url": "https://www.sprinklr.com/products/customer-service/",
+     "excerpt": "No explicit sales or lead qualification capabilities mentioned (fetch summary)",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Self-serve discontinued (third-party, no official source cited)",
+     "url": "https://chatarmin.com/en/blog/sprinklr-pricing",
+     "excerpt": "Sprinklr discontinued its Self-Serve program on April 30, 2026.",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Minimum contracts (third-party, Vendr-based)",
+     "url": "https://chatarmin.com/en/blog/sprinklr-pricing",
+     "excerpt": "Typical minimum contracts run between $50,000 and $100,000 per year",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "Meta Business Agent / Business AI (WhatsApp Business, Instagram, Messenger, Meta Business Suite)",
+   "url": "https://whatsappbusiness.com/blog/introducing-meta-business-agent-ai/",
+   "positioning": "Built-in AI agent that \"Qualifies incoming leads\" and \"Closes sales\"",
+   "target_customer": "Businesses of all sizes, incl. small businesses on WhatsApp Business app",
+   "market": "Global; tested ~2 years in India and Mexico before June 2026 global launch",
+   "channels": {
+    "whatsapp": true,
+    "instagram_dm": true,
+    "instagram_comments": "auto-replies exist; agent on comments unclear",
+    "messenger": true,
+    "email": false,
+    "website_chat": false,
+    "website_forms": "no (Lead Ads forms only, via Leads Center)",
+    "sms": false,
+    "voice": false
+   },
+   "unified_inbox": "partial (Meta Business Suite inbox covers Meta channels only)",
+   "ai_extracts_structured_fields": "partial: collects budget, requirements, timeline per third-party guides; structured storage not documented",
+   "qualification_custom_criteria": "yes (basic) per Meta; depth of custom criteria not documented",
+   "lead_scoring_match_score": "no evidence",
+   "built_in_crm": "partial: Leads Center (free) tracks Lead Ads leads through stages; not a full CRM",
+   "routing": "partial: hand-off to a team member; no rules-based salesperson routing found",
+   "pricing": "Free to start; moving to paid WhatsApp Business subscription tiers; large businesses pay per tokens",
+   "setup_complexity_smb": "Very low (minutes)",
+   "public_signals": "n/a",
+   "closeness": 3,
+   "gap": "Biggest threat for the qualification step itself (free, native, India-tested), but Meta-channels only: no email, website chat/forms or calls; no match score, no multi-salesperson routing, no real CRM. Meta is also opening a platform for enterprises to connect custom agents to Zendesk/Shopify.",
+   "evidence": [
+    {
+     "claim": "Agent qualifies leads and closes sales",
+     "url": "https://whatsappbusiness.com/blog/introducing-meta-business-agent-ai/",
+     "excerpt": "Qualifies incoming leads ... Closes sales",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Free to start, paid later",
+     "url": "https://whatsappbusiness.com/blog/introducing-meta-business-agent-ai/",
+     "excerpt": "Getting started with the Business Agent is free. In the coming months, businesses will access the agent through our paid subscription offerings",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Human handoff",
+     "url": "https://whatsappbusiness.com/blog/introducing-meta-business-agent-ai/",
+     "excerpt": "lets you decide when a team member steps in to provide additional support",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Connects to external systems",
+     "url": "https://whatsappbusiness.com/blog/introducing-meta-business-agent-ai/",
+     "excerpt": "connect to a growing suite of hundreds of systems like Shopify and Zendesk",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Capabilities incl. qualify sales leads and reroute",
+     "url": "https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/",
+     "excerpt": "answer customer questions, recommend products, book appointments, qualify sales leads, and reroute queries to a person if needed",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Tested in India before global launch",
+     "url": "https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/",
+     "excerpt": "nearly two years testing ... in countries including India and Mexico",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Token-based pricing for large businesses",
+     "url": "https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/",
+     "excerpt": "Large businesses will pay for the agent based on how many tokens they use.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Collects budget/requirements/timeline before routing (search snippet of third-party guide)",
+     "url": "https://www.intelliconcierge.com/blog/what-is-meta-business-agent-the-complete-2026-guide",
+     "excerpt": "collect the information needed to qualify the lead — budget, requirements, timeline — before routing to a sales team member",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Leads Center free with stages (third-party)",
+     "url": "https://leadsync.me/blog/managing-leads-using-the-facebook-lead-ads-center/",
+     "excerpt": "Intake is the default first stage of the Leads Center pipeline ... included free with Meta Business Suite",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "1M+ businesses using agent (search snippet)",
+     "url": "https://www.businesstoday.in/technology/artificial-intelligence/story/meta-unveils-ai-business-agent-platform-for-whatsapp-instagram-and-messenger-534739-2026-06-03",
+     "excerpt": "More than one million businesses are already using a Meta Business Agent on WhatsApp and Messenger",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    }
+   ]
+  }
+ ],
+ "log": [
+  {
+   "step": 1,
+   "type": "search",
+   "query_or_url": "Intercom Fin AI agent lead qualification WhatsApp Instagram pricing per resolution 2026",
+   "result": "Fin $0.99/outcome, $9.99/lead qualification; hint of Salesforce acquisition"
+  },
+  {
+   "step": 2,
+   "type": "search",
+   "query_or_url": "Meta Business AI WhatsApp lead qualification Instagram Messenger 2026",
+   "result": "Meta Business Agent launched 3 Jun 2026, qualifies leads"
+  },
+  {
+   "step": 3,
+   "type": "search",
+   "query_or_url": "Freshworks Freddy AI agent lead qualification WhatsApp Freshsales India pricing INR",
+   "result": "INR reseller prices, Freddy $49/100 sessions"
+  },
+  {
+   "step": 4,
+   "type": "search",
+   "query_or_url": "Agentforce SDR lead qualification WhatsApp messaging pricing flex credits",
+   "result": "$2/conversation, $0.10/action"
+  },
+  {
+   "step": 5,
+   "type": "search",
+   "query_or_url": "Zendesk AI agents lead qualification sales Sell CRM discontinued 2026",
+   "result": "Sell retiring 31 Aug 2027"
+  },
+  {
+   "step": 6,
+   "type": "search",
+   "query_or_url": "Sprinklr conversational AI lead qualification WhatsApp Instagram sales routing",
+   "result": "Sprinklr service only; routing"
+  },
+  {
+   "step": 7,
+   "type": "fetch",
+   "query_or_url": "https://fin.ai/pricing",
+   "result": "$9.99 qualification against defined criteria; channels incl. Instagram"
+  },
+  {
+   "step": 8,
+   "type": "fetch",
+   "query_or_url": "https://whatsappbusiness.com/blog/introducing-meta-business-agent-ai/",
+   "result": "qualifies leads, free to start, handoff"
+  },
+  {
+   "step": 9,
+   "type": "fetch",
+   "query_or_url": "https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/",
+   "result": "India tested, token pricing"
+  },
+  {
+   "step": 10,
+   "type": "search",
+   "query_or_url": "Salesforce acquires Intercom Fin acquisition completed",
+   "result": "Closed 10 Sep 2026, ~$3.6B"
+  },
+  {
+   "step": 11,
+   "type": "search",
+   "query_or_url": "Intercom Fin \"lead qualification\" outcome $9.99 sales agent launch",
+   "result": "Early-stage: 15 free qualifications/month"
+  },
+  {
+   "step": 12,
+   "type": "search",
+   "query_or_url": "WhatsApp Business Premium subscription price India Business AI agent 2026",
+   "result": "Only BSP/API rates found; no Meta agent INR price"
+  },
+  {
+   "step": 13,
+   "type": "fetch",
+   "query_or_url": "https://www.salesforce.com/news/press-releases/2026/09/10/salesforce-completes-acquisition-of-fin/",
+   "result": "Confirmed acquisition, 30k customers"
+  },
+  {
+   "step": 14,
+   "type": "fetch",
+   "query_or_url": "https://support.zendesk.com/hc/en-us/articles/9591462550042-Announcing-the-retiring-of-Zendesk-Sell",
+   "result": "Confirmed retirement + Pipedrive"
+  },
+  {
+   "step": 15,
+   "type": "browser",
+   "query_or_url": "Playwright: freshworks/zendesk/salesforce/sprinklr/intercom pricing pages",
+   "result": "FAILED: ERR_CERT_AUTHORITY_INVALID (proxy CA not trusted by bundled Chromium); did not disable TLS"
+  },
+  {
+   "step": 16,
+   "type": "browser",
+   "query_or_url": "Read /root/.ccr/README.md + retry with explicit proxy",
+   "result": "Still failed; switched to WebFetch"
+  },
+  {
+   "step": 17,
+   "type": "fetch",
+   "query_or_url": "https://www.freshworks.com/crm/pricing/",
+   "result": "$9/$39/$59, Freddy $49/100 sessions, contact scoring Pro+"
+  },
+  {
+   "step": 18,
+   "type": "fetch",
+   "query_or_url": "https://www.sprinklr.com/pricing/",
+   "result": "404"
+  },
+  {
+   "step": 19,
+   "type": "fetch",
+   "query_or_url": "https://www.salesforce.com/agentforce/pricing/",
+   "result": "Flex credits, $2/conversation, $125 add-on"
+  },
+  {
+   "step": 20,
+   "type": "fetch",
+   "query_or_url": "https://www.salesforce.com/in/sales/pricing/",
+   "result": "USD editions $25-$550, lead scoring paid extra"
+  },
+  {
+   "step": 21,
+   "type": "search",
+   "query_or_url": "Salesforce Agentforce Service WhatsApp Instagram Messenger messaging enhanced channels Digital Engagement price",
+   "result": "Contact Center Digital $75/user"
+  },
+  {
+   "step": 22,
+   "type": "search",
+   "query_or_url": "Sprinklr pricing per seat minimum contract SMB review 2026",
+   "result": "Self-serve ended Apr 2026; $50-100k minimums"
+  },
+  {
+   "step": 23,
+   "type": "fetch",
+   "query_or_url": "https://chatarmin.com/en/blog/sprinklr-pricing",
+   "result": "Confirms claims but no official source"
+  },
+  {
+   "step": 24,
+   "type": "fetch",
+   "query_or_url": "https://www.sprinklr.com/products/customer-service/",
+   "result": "30+ channels, AI routing, no lead qualification"
+  },
+  {
+   "step": 25,
+   "type": "fetch",
+   "query_or_url": "https://www.zendesk.com/pricing/",
+   "result": "Suite $55/$115, AR $1.50/$2.00, IG/WhatsApp"
+  },
+  {
+   "step": 26,
+   "type": "search",
+   "query_or_url": "Fin AI agent qualify leads help article qualification criteria route to sales HubSpot Salesforce",
+   "result": "Fin for Sales playbook criteria"
+  },
+  {
+   "step": 27,
+   "type": "search",
+   "query_or_url": "Freshchat Freddy AI Agent Instagram WhatsApp channels pricing Freshworks Customer Service Suite omnichannel 2026",
+   "result": "Freshchat channels + pricing"
+  },
+  {
+   "step": 28,
+   "type": "search",
+   "query_or_url": "Meta Business Suite inbox leads center lead stages Instagram comments AI auto reply qualify",
+   "result": "Leads Center stages, inbox automations"
+  },
+  {
+   "step": 29,
+   "type": "fetch",
+   "query_or_url": "https://fin.ai/sales",
+   "result": "Criteria incl. budget fit, region; syncs to CRM; Messenger/email listed"
+  },
+  {
+   "step": 30,
+   "type": "fetch",
+   "query_or_url": "https://www.deccanherald.com/technology/artificial-intelligence/ai-powered-meta-business-agent-for-whatsapp-business-launched-4026303",
+   "result": "403"
+  },
+  {
+   "step": 31,
+   "type": "search",
+   "query_or_url": "Freshworks Freddy AI Agent sales lead qualification Freshsales chat WhatsApp \"AI agent\" qualify leads 2026",
+   "result": "Freddy bots qualify leads; shared inbox"
+  },
+  {
+   "step": 32,
+   "type": "fetch",
+   "query_or_url": "https://www.freshworks.com/crm/sales/",
+   "result": "capture, qualify, route with Freddy; intent scores"
+  },
+  {
+   "step": 33,
+   "type": "fetch",
+   "query_or_url": "https://blog.omnichat.ai/meta-business-agent-platform-explained-features-pricing-and-what-the-2026-whatsapp-changes-mean-for-your-business/",
+   "result": "Truncated, no usable content"
+  }
+ ],
+ "needs_login": [
+  {
+   "url": "https://www.linkedin.com/company/fin-ai/",
+   "platform": "linkedin",
+   "what_to_check": "Post-acquisition messaging on Fin for Sales, India hiring/customers"
+  },
+  {
+   "url": "https://www.linkedin.com/company/freshworks-inc/",
+   "platform": "linkedin",
+   "what_to_check": "Any Freddy AI sales-qualification agent launch for WhatsApp/Instagram, India SMB campaigns"
+  },
+  {
+   "url": "https://www.instagram.com/whatsappbusiness/",
+   "platform": "instagram",
+   "what_to_check": "Business Agent India rollout, Hindi/regional language, pricing in INR"
+  },
+  {
+   "url": "https://www.linkedin.com/company/salesforce/",
+   "platform": "linkedin",
+   "what_to_check": "Agentforce SMB/India bundles incl. WhatsApp"
+  },
+  {
+   "url": "https://www.linkedin.com/company/sprinklr/",
+   "platform": "linkedin",
+   "what_to_check": "Any sales/lead-qualification product or SMB offer"
+  },
+  {
+   "url": "https://www.zendesk.com/demo/",
+   "platform": "other",
+   "what_to_check": "Suite Enterprise pricing (gated), AI agent lead qualification flows"
+  },
+  {
+   "url": "https://business.facebook.com/latest/inbox",
+   "platform": "other",
+   "what_to_check": "Hands-on: does Business Agent store budget/timeline fields, score leads, assign to teammates; India pricing"
+  }
+ ],
+ "verdict_on_claim": "Partly wrong, partly right. Wrong as stated: the capability set is already a product at the top end. Fin (now Salesforce) sells conversational qualification against business-defined criteria (incl. budget fit, region) across chat/WhatsApp/Instagram/email/SMS/voice with routing, billed $9.99 per qualification; Salesforce can do inbox+AI qualification+scoring+CRM+routing via Sales Cloud + messaging SKU + Agentforce; Freshworks has omnichannel chat + Freshsales CRM + Freddy scoring/routing; Meta's own free Business Agent now qualifies leads on WhatsApp/IG/Messenger. Right in the narrow sense: none found packages ALL of (WhatsApp + IG DMs/comments + website forms + email + calls) + LLM extraction of intent/budget/location/timeline + a per-lead match score + built-in CRM + salesperson routing as one SMB-priced, India-fit product. Incumbent gaps: Fin has no CRM and USD per-qualification pricing; Salesforce is a multi-SKU enterprise build; Zendesk is exiting CRM (Sell retires 31 Aug 2027); Sprinklr is enterprise-only ($50k+); Meta covers only Meta channels with no scoring/CRM. Positioning should be 'affordable, India-first, all-in-one' rather than 'nobody does this'. Biggest risks: Freshworks bundling an LLM qualifier, and Meta's free agent commoditising WhatsApp qualification.",
+ "notes": "Headless Chromium could not trust the egress proxy CA (ERR_CERT_AUTHORITY_INVALID); I did not disable TLS, so all page reads used WebFetch (which returns model-summarised text, so excerpts are near-verbatim). Sprinklr pricing page 404; Deccan Herald 403; Omnichat truncated. Items marked inferred come from third-party summaries or search snippets. Not verified: Salesforce Instagram DM support, Meta agent INR price, whether Meta agent writes structured fields. All dates 2026-10-01."
+}

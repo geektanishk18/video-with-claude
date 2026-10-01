@@ -1,0 +1,210 @@
+[
+{
+"t": "2026-10-01T15:14:31.832Z",
+"kind": "browser",
+"label": "https://www.interakt.shop/pricing/",
+"host": "interakt.shop"
+},
+{
+"t": "2026-10-01T15:14:31.832Z",
+"kind": "browser",
+"label": "https://www.interakt.shop/",
+"host": "interakt.shop"
+},
+{
+"t": "2026-10-01T15:14:31.832Z",
+"kind": "browser",
+"label": "https://www.wati.io/pricing/",
+"host": "wati.io"
+},
+{
+"t": "2026-10-01T15:14:31.832Z",
+"kind": "browser",
+"label": "https://www.wati.io/",
+"host": "wati.io"
+},
+{
+"t": "2026-10-01T15:14:31.832Z",
+"kind": "browser",
+"label": "https://aisensy.com/pricing",
+"host": "aisensy.com"
+},
+{
+"t": "2026-10-01T15:14:31.832Z",
+"kind": "browser",
+"label": "https://aisensy.com/",
+"host": "aisensy.com"
+},
+{
+"t": "2026-10-01T15:14:39.968Z",
+"kind": "browser",
+"label": "headless Chromium run"
+},
+{
+"t": "2026-10-01T15:14:56.247Z",
+"kind": "browser",
+"label": "http://127.0.0.1:44411",
+"host": "127.0.0.1:44411"
+},
+{
+"t": "2026-10-01T15:15:45.239Z",
+"kind": "browser",
+"label": "https://www.interakt.shop/",
+"host": "interakt.shop"
+},
+{
+"t": "2026-10-01T15:15:45.239Z",
+"kind": "browser",
+"label": "https://gallabox.com/",
+"host": "gallabox.com"
+},
+{
+"t": "2026-10-01T15:15:45.239Z",
+"kind": "browser",
+"label": "https://www.wati.io/",
+"host": "wati.io"
+},
+{
+"t": "2026-10-01T15:15:45.239Z",
+"kind": "browser",
+"label": "https://www.limechat.ai/",
+"host": "limechat.ai"
+},
+{
+"t": "2026-10-01T15:15:45.239Z",
+"kind": "browser",
+"label": "https://www.gupshup.io/",
+"host": "gupshup.io"
+},
+{
+"t": "2026-10-01T15:15:45.239Z",
+"kind": "browser",
+"label": "https://yellow.ai/",
+"host": "yellow.ai"
+},
+{
+"t": "2026-10-01T15:16:13.613Z",
+"kind": "browser",
+"label": "https://www.interakt.shop/sales-crm/",
+"host": "interakt.shop"
+},
+{
+"t": "2026-10-01T15:16:13.613Z",
+"kind": "browser",
+"label": "https://www.interakt.shop/whatsapp-ai-agents/",
+"host": "interakt.shop"
+},
+{
+"t": "2026-10-01T15:16:13.613Z",
+"kind": "browser",
+"label": "https://www.interakt.shop/instagram-automation/",
+"host": "interakt.shop"
+},
+{
+"t": "2026-10-01T15:16:13.613Z",
+"kind": "browser",
+"label": "https://www.wati.io/products/astra/",
+"host": "wati.io"
+},
+{
+"t": "2026-10-01T15:16:13.613Z",
+"kind": "browser",
+"label": "https://www.wati.io/instagram-automation/",
+"host": "wati.io"
+},
+{
+"t": "2026-10-01T15:16:13.613Z",
+"kind": "browser",
+"label": "https://www.wati.io/zoho-crm",
+"host": "wati.io"
+},
+{
+"t": "2026-10-01T15:17:07.289Z",
+"kind": "search",
+"label": "Interakt pricing INR per month Starter Growth Advanced 2026"
+},
+{
+"t": "2026-10-01T15:17:07.789Z",
+"kind": "search",
+"label": "Gallabox funding raised Series A 2025 2026"
+},
+{
+"t": "2026-10-01T15:17:08.491Z",
+"kind": "search",
+"label": "Wati funding Tiger Global Sequoia revenue 2025; AiSensy funding Info Edge 2025"
+},
+{
+"t": "2026-10-01T15:17:08.883Z",
+"kind": "search",
+"label": "Gallabox AI agent lead scoring data extraction lead pipeline help docs"
+},
+{
+"t": "2026-10-01T15:17:19.205Z",
+"kind": "fetch",
+"label": "https://codingclave.com/blog/interakt-pricing-india-2026",
+"host": "codingclave.com"
+},
+{
+"t": "2026-10-01T15:17:19.802Z",
+"kind": "search",
+"label": "LimeChat funding raised; Gupshup valuation funding 2025; Yellow.ai funding layoffs 2025"
+},
+{
+"t": "2026-10-01T15:17:20.357Z",
+"kind": "search",
+"label": "Gallabox docs AI agent \"data extraction\" outcome evaluation webhook"
+},
+{
+"t": "2026-10-01T15:17:20.730Z",
+"kind": "search",
+"label": "Wati pricing India INR Growth Pro Business plan per month"
+},
+{
+"t": "2026-10-01T15:17:31.324Z",
+"kind": "fetch",
+"label": "https://docs.gallabox.com/chat-ai-agent/overview",
+"host": "docs.gallabox.com"
+},
+{
+"t": "2026-10-01T15:17:32.167Z",
+"kind": "fetch",
+"label": "https://www.heltar.com/blogs/wati-pricing-in-india-explained-comprehensive-breakdown-2025",
+"host": "heltar.com"
+},
+{
+"t": "2026-10-01T15:19:29.390Z",
+"kind": "shell",
+"label": "https://gallabox.com/",
+"host": "gallabox.com"
+},
+{
+"t": "2026-10-01T15:19:29.390Z",
+"kind": "shell",
+"label": "https://gallabox.com/",
+"host": "gallabox.com"
+},
+{
+"t": "2026-10-01T15:19:29.390Z",
+"kind": "shell",
+"label": "https://gallabox.com/",
+"host": "gallabox.com"
+},
+{
+"t": "2026-10-01T15:19:29.390Z",
+"kind": "shell",
+"label": "https://gallabox.com/",
+"host": "gallabox.com"
+},
+{
+"t": "2026-10-01T15:19:29.390Z",
+"kind": "shell",
+"label": "https://gallabox.com/pricing",
+"host": "gallabox.com"
+},
+{
+"t": "2026-10-01T15:19:29.390Z",
+"kind": "shell",
+"label": "https://gallabox.com/pricing",
+"host": "gallabox.com"
+}
+]

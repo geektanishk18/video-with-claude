@@ -1,0 +1,8 @@
+# Rules for every research agent (local session)
+
+- **Do not re-research** anything already in `../data/agent_C.json`, `agent_D.json`, `agent_E.json` or `agent_F.json`: Gallabox, Wati, Interakt, AiSensy, LimeChat, Gupshup, Yellow.ai, BotPenguin, Kapture, Vapi, Retell, Bland, Synthflow, Qualified Piper, Conversica, 11x, Artisan, Exotel, Haptik, Fin/Intercom, Zendesk, Salesforce, Freshworks, Sprinklr, Meta Business Agent, ManyChat, SuperProfile, LinkPlease, Cal.com, Calendly.
+- **Real browser, manual login.** Use the user's local Google Chrome (the Claude-in-Chrome connection or the local browser tool). When a page needs a login (Instagram, LinkedIn, product dashboards, gated pricing or demo pages), **stop and ask the user**: "Please log in to <site> in Chrome, then say 'done'." Never type credentials, never ask for passwords or cookies, and never sign up, comment, follow, message or submit forms on the user's behalf.
+- **Read only.** Logged-in pages are only for reading public business facts: follower counts, post cadence, comment-to-DM CTAs, pricing, feature lists, employee counts.
+- **Evidence.** Every claim needs a source URL, an excerpt of 30 words or fewer, the date, and `verified` or `inferred`. Never invent numbers.
+- **Output.** Write `../data/agent_<X>.json` in the same schema as agent_C.json. Each competitor needs a numeric `closeness` (0–5) and a `gap`. Include `log` (every search and URL) and `needs_login` (anything the user chose to skip).
+- **Graph.** After writing results, export the step log to `../data/steps_<X>.json` as a list of `{"t": iso_time, "kind": "search|fetch|browser", "label": query_or_url, "host": domain}`. Then run `python ../graph/build.py` and open `../graph/index.html`.

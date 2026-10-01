@@ -1,0 +1,1074 @@
+{
+ "agent": "C",
+ "segment": "India WhatsApp-first platforms",
+ "date": "2026-10-01",
+ "competitors": [
+  {
+   "name": "Gallabox",
+   "url": "https://gallabox.com/",
+   "positioning": "Deploy AI agents on multiple channels that capture, qualify and move leads toward more bookings.",
+   "target_customer": "SMB and mid-market sales/revenue teams (real estate, education, services, D2C) in India and 40 countries",
+   "market": "India-HQ (Bengaluru), global SMB",
+   "channels": {
+    "whatsapp": "yes",
+    "instagram_dm": "yes",
+    "instagram_comments": "yes (AI comment automation)",
+    "facebook_messenger": "not listed on pricing",
+    "email": "no (not listed as a channel)",
+    "website_chat_forms": "yes (web widget + web AI agent; WhatsApp forms)",
+    "sms": "no",
+    "voice_calls": "yes (WhatsApp calling, AI voice on WhatsApp + phone via telephony)"
+   },
+   "unified_inbox": "yes (WhatsApp + Instagram + web widget + calls); no email",
+   "ai_extracts_fields": "yes - agent collects details into the inbox; 'Data extraction webhooks' on Advanced; fields are business-defined in instructions (e.g. company size, budget)",
+   "lead_qualification_custom_criteria": "yes - natural-language instructions with fit rules (e.g. 5+ users, budget over $500/month)",
+   "lead_scoring": "yes - AI 'scoring intent in real time'; voice agent shares 'lead score before handoff'; outcome evaluations with custom rules (AI)",
+   "builtin_crm": "partial-yes - 'Lead Pipeline' (leads to opportunities to won deals) on Advanced (₹13,599/mo); plus bi-directional HubSpot/Zoho/LeadSquared/Salesforce integrations",
+   "routing": "yes - round-robin within teams, @assignTo handoff from AI agent, call routing",
+   "pricing": "Annual billing: Basic ₹2,399/mo (3 users, 500 AI credits, web AI agent only); Essential ₹5,599/mo (6 users, 2,000 credits, AI agents on WA+IG); Advanced ₹13,599/mo (10 users, 8,000 credits, AI voice, lead pipeline, data extraction webhooks); Enterprise custom. AI credits top-up ₹1,000 per 5,000. AI Solutions Engineer ₹41,500 one-time. WhatsApp conversation fees billed separately at 'discounted markup'; AI voice minutes pass-through.",
+   "traction_funding": "~$8.26M total across 3 seed rounds; $3.5M seed Jan 2025 led by FUSE with Prime Venture Partners, Neon Fund (third-party aggregator figures)",
+   "social_signals": "instagram.com/gallabox linked from site; needs_login for follower/engagement check",
+   "closeness": 4,
+   "gap": "No email channel; scoring is per-agent 'intent'/goal outcome, not an explicit business-configurable match score + priority-sorted queue across all channels; pipeline only on ₹13.6k/mo tier; CRM is lightweight vs integrations-first.",
+   "evidence": [
+    {
+     "claim": "Positioning: multi-channel AI agents that capture and qualify leads",
+     "url": "https://gallabox.com/",
+     "excerpt": "Deploy AI agents on multiple channels that capture, qualify and move leads toward more bookings.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AI scores intent in real time",
+     "url": "https://gallabox.com/",
+     "excerpt": "AI agents qualify in natural conversation, asking the right questions and scoring intent in real time.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Voice AI gives lead score before handoff",
+     "url": "https://gallabox.com/",
+     "excerpt": "An AI agent calls the lead, qualifies in natural speech, and shares a full transcript and lead score before handoff.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Basic plan INR price and channels",
+     "url": "https://gallabox.com/pricing",
+     "excerpt": "₹2,399 per month, billed annually ... capture and respond to inbound leads across WhatsApp, Instagram and web.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Essential and Advanced INR prices",
+     "url": "https://gallabox.com/pricing",
+     "excerpt": "Essential ... ₹5,599 ... Advanced ... ₹13,599 10 users",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Lead pipeline built in on Advanced",
+     "url": "https://gallabox.com/pricing",
+     "excerpt": "Lead Pipeline Track leads to opportunities to won deals",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Data extraction webhooks + outcome evaluations with custom rules",
+     "url": "https://gallabox.com/pricing",
+     "excerpt": "Outcome evaluations Yes + custom rules Data extraction webhooks",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Instagram DMs and comments in shared inbox",
+     "url": "https://gallabox.com/pricing",
+     "excerpt": "Manage Instagram DMs and comments inside your shared inbox.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AI credit top-up price",
+     "url": "https://gallabox.com/pricing",
+     "excerpt": "AI Credit ₹ 1,000 / per 5,000 credits",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Round-robin routing",
+     "url": "https://gallabox.com/pricing",
+     "excerpt": "Round-robin assignment Within teams",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Qualification against custom criteria in agent instructions",
+     "url": "https://docs.gallabox.com/chat-ai-agent/overview",
+     "excerpt": "If they fit (5+ users, budget over $500/month), offer to book a demo.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AI hands off via assignment",
+     "url": "https://docs.gallabox.com/chat-ai-agent/overview",
+     "excerpt": "@assignTo in instructions when you want that handoff",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Seed funding $3.5M Jan 2025",
+     "url": "https://yourstory.com/2025/01/conversational-commerce-platform-gallabox-seed-funding-fuse",
+     "excerpt": "Gallabox raised $3.5 million in seed funding led by FUSE (search-result summary)",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "No email channel offered",
+     "url": "https://gallabox.com/pricing",
+     "excerpt": "Channel types listed: WhatsApp, Instagram, Web widget and Phone",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "Wati",
+   "url": "https://www.wati.io/",
+   "positioning": "Omnichannel AI that engages customers across all your channels, 24/7, at scale",
+   "target_customer": "SMBs and growth/demand-gen teams; e-commerce (Shopify)",
+   "market": "HQ Hong Kong / large India team; 190+ countries; strong India base",
+   "channels": {
+    "whatsapp": "yes",
+    "instagram_dm": "yes",
+    "instagram_comments": "yes (comment automations)",
+    "facebook_messenger": "yes",
+    "email": "no (not in listed inbox channels)",
+    "website_chat_forms": "yes (widget, AI agent on web)",
+    "sms": "SMS fallback beta (Business)",
+    "voice_calls": "yes (WhatsApp Business Calling; Astra voice agents)"
+   },
+   "unified_inbox": "yes - 'Omnichannel inbox: Whatsapp Messages, Whatsapp Business Calling, Facebook, Instagram, Tik-Tok, widget'",
+   "ai_extracts_fields": "partial - Astra 'converts conversations into qualified leads'; homepage demo shows 'QUALIFIED: WHOLESALE' and 'SAVED TO CRM' (specific field schema not documented publicly)",
+   "lead_qualification_custom_criteria": "yes - Astra agents prompted e.g. 'qualifies leads for my solar business'",
+   "lead_scoring": "partial - homepage demo labels 'HIGH INTENT'; no documented numeric score (inferred)",
+   "builtin_crm": "no native pipeline found - integrations (HubSpot on Pro, Salesforce on Business, Zoho, LeadSquared); Astra 'updates CRMs'",
+   "routing": "yes - auto routing (Pro), round-robin (Business)",
+   "pricing": "Billed annually (USD shown to non-India IP): Growth $59/mo (3 users), Pro $119/mo (5 users, +$39/user), Business $279/mo (+$89/user). Astra AI Agents 'priced separately'. AI Co-pilot credits 1,000 for $30/mo. Messages per WATI rate card. Third-party INR: Growth ₹2,499, Pro ₹5,999, Business ₹16,999 (unverified on official page).",
+   "traction_funding": "$23M Series B (Oct 2022) led by Tiger Global & Shopify, Sequoia participating; >$35M total; '16,000+ businesses' and '12B+ messages'",
+   "social_signals": "instagram.com/wati_io; needs_login",
+   "closeness": 4,
+   "gap": "No email channel; CRM is integration-dependent (no native pipeline); no published configurable match score or priority-sorted lead queue; Astra AI is a separately priced add-on.",
+   "evidence": [
+    {
+     "claim": "Omnichannel positioning",
+     "url": "https://www.wati.io/",
+     "excerpt": "Omnichannel AI that engages customers across all your channels, 24/7, at scale, at warp speed.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "One inbox claim",
+     "url": "https://www.wati.io/",
+     "excerpt": "Social, chats, calls, and web: Wati pulls every channel into one inbox",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Inbox channels on Growth plan",
+     "url": "https://www.wati.io/pricing/",
+     "excerpt": "Omnichannel inbox: Whatsapp Messages, Whatsapp Business Calling, Facebook, Instagram, Tik-Tok, widget, wa.me",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Pro plan AI qualifies leads",
+     "url": "https://www.wati.io/pricing/",
+     "excerpt": "AI qualify leads, nurtures them, and built-in analytics show you what's driving revenue. $119 month billed annually",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Astra priced separately",
+     "url": "https://www.wati.io/pricing/",
+     "excerpt": "Astra AI Agents: Create and deploy AI Agents to web, WhatsApp and voice (Astra add-on, priced separately)",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Routing",
+     "url": "https://www.wati.io/pricing/",
+     "excerpt": "Advanced team inbox: Teams, auto routing, and operator reports",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "CRM via integrations",
+     "url": "https://www.wati.io/pricing/",
+     "excerpt": "5 integrations incl. Hubspot ... Unlimited integrations incl. Salesforce",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Astra lead qualification + CRM updates",
+     "url": "https://www.wati.io/products/astra/",
+     "excerpt": "Astra books meetings, updates CRMs, and triggers workflows through your connected tools.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Homepage demo shows intent label and CRM save",
+     "url": "https://www.wati.io/",
+     "excerpt": "HIGH INTENT · CAFÉ BUYER, QUALIFIED ... SAVED TO CRM",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Series B",
+     "url": "https://techcrunch.com/2022/10/25/wati-a-crm-tool-built-for-whatsapp-raises-23m-led-by-tiger-global/",
+     "excerpt": "WATI, a CRM tool built for WhatsApp, raises $23M led by Tiger Global (headline)",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "INR prices (third-party)",
+     "url": "https://www.heltar.com/blogs/wati-pricing-in-india-explained-comprehensive-breakdown-2025",
+     "excerpt": "Growth at ₹2,499/mo, Pro at ₹5,999/mo, and Business at ₹16,999/mo (search-result summary; page returned 502)",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "Interakt (by Jio Haptik)",
+   "url": "https://www.interakt.shop/",
+   "positioning": "Meet your AI Business Team. on WhatsApp, Instagram and RCS!",
+   "target_customer": "Indian SMBs, D2C/Shopify sellers, solo founders",
+   "market": "India-first; also Singapore, Indonesia, Brazil, UAE, Philippines, Africa",
+   "channels": {
+    "whatsapp": "yes",
+    "instagram_dm": "yes",
+    "instagram_comments": "yes",
+    "facebook_messenger": "no (not listed)",
+    "email": "no",
+    "website_chat_forms": "WhatsApp Forms only; no web chat found",
+    "sms": "RCS fallback (Enterprise)",
+    "voice_calls": "WhatsApp voice calling / outbound calling from inbox"
+   },
+   "unified_inbox": "partial - WhatsApp + Instagram only",
+   "ai_extracts_fields": "partial - Lead Qualification AI Agent captures name, phone, email + custom qualification answers",
+   "lead_qualification_custom_criteria": "yes - 'Ask custom qualification questions'",
+   "lead_scoring": "no documented score; 'identify hot prospects' via workflows (rules)",
+   "builtin_crm": "yes - WhatsApp-first Sales CRM with visual pipeline, auto-assigned owners and statuses",
+   "routing": "yes - chat auto-assignment (Advanced), auto-assigned lead owners",
+   "pricing": "Official page (USD to our IP): Starter $69/qtr, Growth $149/qtr, Advanced $189/qtr; WhatsApp AI Agents add-on $74.99 for Growth & Advanced. Third-party INR: Starter ₹3,499/qtr, Growth ₹7,699/qtr, Advanced ₹10,499/qtr; Instagram-only plan ₹999/mo. Meta template charges extra.",
+   "traction_funding": "Owned by Jio Haptik Technologies (Reliance Jio); '100,000+ businesses'",
+   "social_signals": "instagram.com/heyinterakt; needs_login",
+   "closeness": 3,
+   "gap": "No email or website chat; no numeric AI match score or priority sort; AI agent mainly scripted qualification Q&A; CRM is WhatsApp-centric.",
+   "evidence": [
+    {
+     "claim": "Positioning",
+     "url": "https://www.interakt.shop/",
+     "excerpt": "Meet your AI Business Team. on WhatsApp, Instagram and RCS!",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Built-in Sales CRM",
+     "url": "https://www.interakt.shop/",
+     "excerpt": "Centralize leads from WhatsApp, workflows, API, Shopify, or manual entry in a Sales CRM with auto-assigned owners and statuses",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Visual pipeline",
+     "url": "https://www.interakt.shop/sales-crm/",
+     "excerpt": "Move deals faster with a visual sales pipeline, role-based access, and task management",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Qualification via workflows (rules)",
+     "url": "https://www.interakt.shop/sales-crm/",
+     "excerpt": "Engage leads instantly with automated WhatsApp workflows, and personalized messaging to identify hot prospects",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Lead Qualification AI Agent with custom questions",
+     "url": "https://www.interakt.shop/whatsapp-ai-agents/",
+     "excerpt": "Lead Qualification AI Agent 1. Ask custom qualification questions 2. Capture details like name, phone & email",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Inbox = WhatsApp + Instagram",
+     "url": "https://www.interakt.shop/instagram-automation/",
+     "excerpt": "Interakt’s Omnichannel Inbox unifies conversations from WhatsApp and Instagram comments, story reactions, and DMs",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Instagram plan INR",
+     "url": "https://www.interakt.shop/instagram-automation/",
+     "excerpt": "Omnichannel Inbox (IG + WhatsApp) ₹999 /mo (+taxes)",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AI agent add-on price",
+     "url": "https://www.interakt.shop/pricing/",
+     "excerpt": "ADD ON: WHATSAPP AI AGENTS @$74.99 FOR GROWTH & ADVANCE PLAN",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Quarterly plan prices (USD view)",
+     "url": "https://www.interakt.shop/pricing/",
+     "excerpt": "Starter $69 /qtr ... Growth $149 /qtr ... Advanced $189 /qtr",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "INR quarterly prices (third-party)",
+     "url": "https://codingclave.com/blog/interakt-pricing-india-2026",
+     "excerpt": "₹3,499/quarter ... ₹7,699/quarter ... ₹10,499/quarter",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Traction",
+     "url": "https://www.interakt.shop/",
+     "excerpt": "Trusted by 100,000+ businesses across the globe",
+     "kind": "verified",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "AiSensy",
+   "url": "https://aisensy.com/",
+   "positioning": "AI-Powered WhatsApp Marketing Platform",
+   "target_customer": "Startups and growing SMBs, marketers running CTWA ads",
+   "market": "India (Gurugram); 68+ countries",
+   "channels": {
+    "whatsapp": "yes",
+    "instagram_dm": "not prominent (ads to WhatsApp; no IG inbox found)",
+    "instagram_comments": "no evidence",
+    "facebook_messenger": "no evidence",
+    "email": "no",
+    "website_chat_forms": "WhatsApp Forms; no web chat found",
+    "sms": "no",
+    "voice_calls": "no evidence"
+   },
+   "unified_inbox": "no - WhatsApp shared team inbox only",
+   "ai_extracts_fields": "partial - AI agent 'update customer records' via API/CRM tool calling",
+   "lead_qualification_custom_criteria": "yes (claimed) - 'Qualifies leads intelligently using AI'",
+   "lead_scoring": "no documented score; tags/segments like 'Hot Leads' (manual/rules)",
+   "builtin_crm": "no - tags/attributes + marketplace integrations (LeadSquared etc.)",
+   "routing": "yes - Smart Agent Chat Routing; intent-based AI Routing to workflows",
+   "pricing": "Free Forever ₹0; Basic ₹1,500/mo; Pro ₹3,200/mo; higher tiers ₹9,100/mo and ₹45,000/mo (monthly billing). AI Chat Agent add-on ₹1,350/mo per 1,000 AI messages; Chatbot Flows ₹2,500/mo; extra agent ₹750/seat. Meta (India, from 1 Oct 2026): Marketing ₹1.09, Utility ₹0.145, Auth ₹0.145, Service ₹0.145 after 1,000 free/month.",
+   "traction_funding": "'210,000+ Businesses'; Latka estimates $8.9M revenue 2025 (unverified); investors per Tracxn include BlueLotus Ventures, Dream Green Capital, Mars Shot Ventures",
+   "social_signals": "instagram.com/aisensy_official; needs_login",
+   "closeness": 2,
+   "gap": "WhatsApp-only marketing/broadcast tool; no IG/email/web inbox, no CRM pipeline, no match score.",
+   "evidence": [
+    {
+     "claim": "Positioning and traction",
+     "url": "https://aisensy.com/",
+     "excerpt": "AI-Powered WhatsApp Marketing Platform ... Trusted by 210,000+ Businesses across 68+ Countries",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Basic INR price",
+     "url": "https://aisensy.com/pricing",
+     "excerpt": "Basic ... ₹1,500 / month Billed monthly",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AI agent add-on INR",
+     "url": "https://aisensy.com/pricing",
+     "excerpt": "Costs ₹1,350/month for 1,000 AI messages. For more AI messages, separate charges apply.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Meta per-message rates India",
+     "url": "https://aisensy.com/pricing",
+     "excerpt": "Marketing ₹1.09 Utility ₹0.145 Authentication ₹0.145",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Service message charge from Oct 2026",
+     "url": "https://aisensy.com/pricing",
+     "excerpt": "After that, each service message costs ₹0.145 for Indian users (from 1 October 2026).",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AI lead qualification claim",
+     "url": "https://aisensy.com/features/ai-agents-on-whatsapp",
+     "excerpt": "Lead Qualification Qualifies leads intelligently using AI",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AI routing by intent",
+     "url": "https://aisensy.com/features/ai-agents-on-whatsapp",
+     "excerpt": "AI Routing understands intent and automatically directs every conversation to the right knowledge, workflow, or business action.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Hot Leads via segments (manual)",
+     "url": "https://aisensy.com/pricing",
+     "excerpt": "create segments of your audience, like \"Customers in India\", \"Customers in USA\" or \"Hot Leads\"",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Revenue estimate",
+     "url": "https://getlatka.com/companies/aisensy",
+     "excerpt": "AiSensy Revenue 2025: $8.9M ARR (page title)",
+     "kind": "inferred",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "LimeChat",
+   "url": "https://www.limechat.ai/",
+   "positioning": "AI Agents for Chat + Voice.",
+   "target_customer": "Fast-scaling D2C brands and digital-first enterprises (also BFSI)",
+   "market": "India; 300+ brands",
+   "channels": {
+    "whatsapp": "yes",
+    "instagram_dm": "yes (IG Suite add-on)",
+    "instagram_comments": "yes (IG Suite add-on)",
+    "facebook_messenger": "yes (Omnichannel CRM)",
+    "email": "yes (Omnichannel CRM add-on)",
+    "website_chat_forms": "yes (live chat)",
+    "sms": "yes",
+    "voice_calls": "yes (AI voice agent, phone)"
+   },
+   "unified_inbox": "yes (as add-on 'Omnichannel CRM': email, chat, SMS, phone, FB, IG, reviews)",
+   "ai_extracts_fields": "not documented publicly",
+   "lead_qualification_custom_criteria": "yes - 'Growth AI Agent (Lead gen and qualification...)' with brand SOPs",
+   "lead_scoring": "no evidence",
+   "builtin_crm": "support-style 'Omnichannel CRM' (helpdesk timeline), not a sales pipeline",
+   "routing": "smart agent handoff",
+   "pricing": "No public prices - 'Get Personalized Pricing'; based on suite, conversation volume, AI tier (Tier 2/3/4). Meta charges extra.",
+   "traction_funding": "$4.2M seed led by Stellaris, pi Ventures; total ~$6M (Tracxn/Inc42 aggregated)",
+   "social_signals": "instagram.com/limechat.ai; needs_login",
+   "closeness": 3,
+   "gap": "Support/e-commerce focus for enterprises; omnichannel CRM is a helpdesk, no lead match score, opaque enterprise pricing - not built for SMB sales teams.",
+   "evidence": [
+    {
+     "claim": "Positioning",
+     "url": "https://www.limechat.ai/",
+     "excerpt": "AI Agents for Chat + Voice.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Omnichannel CRM inbox incl. email",
+     "url": "https://www.limechat.ai/support/omnichannel-crm",
+     "excerpt": "Manage emails, live chat, SMS, phone, Facebook, Instagram, and reviews from one inbox.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Growth AI agent qualifies leads",
+     "url": "https://www.limechat.ai/pricing",
+     "excerpt": "Growth AI Agent (Lead gen and qualification, onboarding, sales assist)",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Omnichannel CRM and IG Suite are add-ons",
+     "url": "https://www.limechat.ai/pricing",
+     "excerpt": "Enhance your experience with Add-Ons Omnichannel CRM ... IG Suite",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "No public price",
+     "url": "https://www.limechat.ai/pricing",
+     "excerpt": "Our pricing is based on your selected suite (Marketing or Support), conversation volume, and your AI automation tier.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Seed funding",
+     "url": "https://inc42.com/buzz/limechat-raises-4-2-mn-funding-to-help-d2c-brands-leverage-conversational-marketing/",
+     "excerpt": "LimeChat Raises $4.2 Mn Funding (headline)",
+     "kind": "verified",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "Gupshup",
+   "url": "https://www.gupshup.io/",
+   "positioning": "conversational AI platform for marketing, commerce, and support automation",
+   "target_customer": "Enterprises and large brands (BFSI, auto, retail)",
+   "market": "India-HQ/global; 130+ countries",
+   "channels": {
+    "whatsapp": "yes",
+    "instagram_dm": "yes",
+    "instagram_comments": "not verified",
+    "facebook_messenger": "likely (inferred)",
+    "email": "not verified",
+    "website_chat_forms": "not verified",
+    "sms": "yes",
+    "voice_calls": "not verified"
+   },
+   "unified_inbox": "partial - agent console via products; enterprise CPaaS (inferred)",
+   "ai_extracts_fields": "yes (use-case claim) - qualifies on budget, location, intent",
+   "lead_qualification_custom_criteria": "yes (use-case claim)",
+   "lead_scoring": "partial - credit-score-based prequalification in BFSI use cases",
+   "builtin_crm": "no - integrations",
+   "routing": "yes (use-case claim) - 'assigns leads'",
+   "pricing": "No public plan prices found in this pass; enterprise sales",
+   "traction_funding": "~$544M total raised; >$60M equity+debt July 2025; valuation marked down to ~$486-500M",
+   "social_signals": "instagram.com/gupshup.ai; needs_login",
+   "closeness": 3,
+   "gap": "Enterprise CPaaS/agent toolkit sold via sales; describes FiguredOutAI's exact use case ('budget, location and intent') but as custom deployments, not an SMB self-serve inbox+CRM.",
+   "evidence": [
+    {
+     "claim": "Exact use case: qualify and assign by budget/location/intent",
+     "url": "https://www.gupshup.io/ai-agent-use-cases",
+     "excerpt": "Qualifies and assigns leads based on budget, location and intent",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Channels",
+     "url": "https://www.gupshup.io/",
+     "excerpt": "omnichannel conversations across over multiple channels, including WhatsApp, Instagram, SMS and RCS.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Traction",
+     "url": "https://www.gupshup.io/",
+     "excerpt": "Trusted by 50,000+ customers in 130+ countries ... handles 120 Billion+ messages annually.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "2025 funding",
+     "url": "https://techcrunch.com/2025/07/22/gupshup-raises-60m-in-equity-and-debt-leaves-unicorn-status-hanging",
+     "excerpt": "Gupshup raises $60M in equity and debt, leaves unicorn status hanging (headline)",
+     "kind": "verified",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "Yellow.ai",
+   "url": "https://yellow.ai/",
+   "positioning": "Enterprise-grade Agentic AI Platform",
+   "target_customer": "Large enterprises (CX and employee experience)",
+   "market": "India-founded, global enterprise",
+   "channels": {
+    "whatsapp": "yes (inferred, omnichannel)",
+    "instagram_dm": "not verified",
+    "instagram_comments": "not verified",
+    "facebook_messenger": "not verified",
+    "email": "yes",
+    "website_chat_forms": "yes",
+    "sms": "yes",
+    "voice_calls": "yes"
+   },
+   "unified_inbox": "partial - omnichannel orchestration; agent assist (inferred)",
+   "ai_extracts_fields": "yes in enterprise deployments (Sony case: 'collects, records and analyzes user information')",
+   "lead_qualification_custom_criteria": "possible via custom agents, not productized for SMB sales",
+   "lead_scoring": "no evidence",
+   "builtin_crm": "no - integrates with enterprise CRMs",
+   "routing": "yes (agent assist / handoff)",
+   "pricing": "Usage-based; e.g. Intelligent Email Agents '500/month included, then $0.99 per resolution'; enterprise contracts",
+   "traction_funding": "$102.2M raised; '650+ global brands'; laid off 100+ staff in Dec 2025 (second round in 2025)",
+   "social_signals": "instagram.com/yellowdotai; needs_login",
+   "closeness": 1,
+   "gap": "Enterprise CX/support automation, not an SMB sales lead inbox with CRM or match scoring.",
+   "evidence": [
+    {
+     "claim": "Positioning",
+     "url": "https://yellow.ai/",
+     "excerpt": "Enterprise-grade Agentic AI Platform",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Channels voice/chat/email",
+     "url": "https://yellow.ai/",
+     "excerpt": "Human-like conversations via voice, chat & email",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Per-resolution pricing",
+     "url": "https://yellow.ai/pricing/",
+     "excerpt": "Intelligent Email Agents 500/month included, then $0.99 per resolution",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Layoffs",
+     "url": "https://inc42.com/buzz/exclusive-yellow-ai-lays-off-over-100-employees-amid-automation-push/",
+     "excerpt": "Yellow.ai Lays Off Over 100 Employees Amid Automation Push (headline)",
+     "kind": "verified",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "BotPenguin",
+   "url": "https://botpenguin.com/",
+   "positioning": "no-code platform for building AI agents, chatbots, and voice agents that automate lead generation, sales, marketing, and customer support",
+   "target_customer": "SMBs, agencies (white-label)",
+   "market": "India-HQ, global; '80,000+' businesses",
+   "channels": {
+    "whatsapp": "yes",
+    "instagram_dm": "yes",
+    "instagram_comments": "not verified",
+    "facebook_messenger": "yes",
+    "email": "lead notification only",
+    "website_chat_forms": "yes",
+    "sms": "no",
+    "voice_calls": "yes (AI voice agents)"
+   },
+   "unified_inbox": "yes - 'Unified inbox'",
+   "ai_extracts_fields": "partial - lead capture into attributes (inferred)",
+   "lead_qualification_custom_criteria": "partial (chat flows + LLM)",
+   "lead_scoring": "no evidence",
+   "builtin_crm": "no - Zoho CRM and 80+ integrations",
+   "routing": "yes - intent based chat routing, Smart Department Routing",
+   "pricing": "Baby Free; Little $29/mo; King $99/mo; Emperor from $990/mo; AI messages add-on $15 per 1,000; no Meta markup",
+   "traction_funding": "'Used by 80,000+' (site claim); funding not checked",
+   "social_signals": "needs_login",
+   "closeness": 2,
+   "gap": "Chatbot builder with inbox; no CRM pipeline, no match score/priority sorting.",
+   "evidence": [
+    {
+     "claim": "Positioning and channels",
+     "url": "https://botpenguin.com/",
+     "excerpt": "capture leads, book appointments, and support customers on WhatsApp, Instagram, Facebook, Telegram, phone calls, and your website.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Unified inbox and routing in plans",
+     "url": "https://botpenguin.com/pricing",
+     "excerpt": "Intent based chat routing Popular Unified inbox",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Plan prices",
+     "url": "https://botpenguin.com/pricing",
+     "excerpt": "Little Plan $29 /month ... King Plan $99 /month",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "AI messages add-on",
+     "url": "https://botpenguin.com/pricing",
+     "excerpt": "1,000 AI messages $15 /month",
+     "kind": "verified",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "Kapture CX",
+   "url": "https://www.kapture.cx/",
+   "positioning": "The Agentic Operating System for the Enterprise",
+   "target_customer": "Enterprises (BFSI, retail) - CX ticketing",
+   "market": "India-HQ, enterprise",
+   "channels": {
+    "whatsapp": "inferred yes",
+    "instagram_dm": "social (unspecified)",
+    "instagram_comments": "not verified",
+    "facebook_messenger": "not verified",
+    "email": "yes",
+    "website_chat_forms": "yes (chat)",
+    "sms": "not verified",
+    "voice_calls": "yes"
+   },
+   "unified_inbox": "yes for support ('single data spine')",
+   "ai_extracts_fields": "yes in enterprise workflows (document verification)",
+   "lead_qualification_custom_criteria": "yes (claimed: 'Research, qualify, outreach, follow-up and book')",
+   "lead_scoring": "risk scoring in lending; no SMB lead match score",
+   "builtin_crm": "no - integrates with Salesforce, SAP, homegrown CRM",
+   "routing": "yes (ticketing)",
+   "pricing": "No public pricing in this pass",
+   "traction_funding": "not checked",
+   "social_signals": "needs_login",
+   "closeness": 1,
+   "gap": "Enterprise CX/helpdesk OS; not SMB sales inbox + CRM.",
+   "evidence": [
+    {
+     "claim": "Positioning",
+     "url": "https://www.kapture.cx/",
+     "excerpt": "The Agentic Operating System for the Enterprise",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Channels",
+     "url": "https://www.kapture.cx/",
+     "excerpt": "Build agents for voice, chat, email, and social.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Lead agent claim",
+     "url": "https://www.kapture.cx/",
+     "excerpt": "Research, qualify, outreach, follow-up and book, all without a human in the loop until it counts.",
+     "kind": "verified",
+     "date": "2026-10-01"
+    },
+    {
+     "claim": "Integrates external CRMs",
+     "url": "https://www.kapture.cx/",
+     "excerpt": "Whether you’re on Salesforce, SAP, or a homegrown CRM — Kapture fits in",
+     "kind": "verified",
+     "date": "2026-10-01"
+    }
+   ]
+  }
+ ],
+ "log": [
+  {
+   "step": 1,
+   "type": "browser",
+   "query_or_url": "Playwright batch 1 (14 pages: interakt, wati, aisensy, gallabox, limechat, gupshup, yellow, botpenguin, kapture)",
+   "result": "ERR_CERT_AUTHORITY_INVALID on all (proxy CA not trusted by headless Chromium)"
+  },
+  {
+   "step": 2,
+   "type": "fetch",
+   "query_or_url": "/root/.ccr/README.md",
+   "result": "Read proxy guidance"
+  },
+  {
+   "step": 3,
+   "type": "browser",
+   "query_or_url": "Playwright batch 1 retry with channel chromium",
+   "result": "Same cert error"
+  },
+  {
+   "step": 4,
+   "type": "fetch",
+   "query_or_url": "env / NSS check",
+   "result": "Confirmed NODE_EXTRA_CA_CERTS set; routed browser traffic via Playwright route.fetch (Node TLS verification kept)"
+  },
+  {
+   "step": 5,
+   "type": "browser",
+   "query_or_url": "https://www.interakt.shop/pricing/",
+   "result": "Loaded; text saved (interakt_pricing)"
+  },
+  {
+   "step": 6,
+   "type": "browser",
+   "query_or_url": "https://www.interakt.shop/",
+   "result": "Loaded; text saved (interakt_home)"
+  },
+  {
+   "step": 7,
+   "type": "browser",
+   "query_or_url": "https://www.wati.io/pricing/",
+   "result": "Loaded; text saved (wati_pricing)"
+  },
+  {
+   "step": 8,
+   "type": "browser",
+   "query_or_url": "https://www.wati.io/",
+   "result": "Loaded; text saved (wati_home)"
+  },
+  {
+   "step": 9,
+   "type": "browser",
+   "query_or_url": "https://aisensy.com/pricing",
+   "result": "Loaded; text saved (aisensy_pricing)"
+  },
+  {
+   "step": 10,
+   "type": "browser",
+   "query_or_url": "https://aisensy.com/",
+   "result": "Loaded; text saved (aisensy_home)"
+  },
+  {
+   "step": 11,
+   "type": "browser",
+   "query_or_url": "https://gallabox.com/",
+   "result": "Loaded; text saved (gallabox_home)"
+  },
+  {
+   "step": 12,
+   "type": "browser",
+   "query_or_url": "https://gallabox.com/pricing",
+   "result": "Loaded; text saved (gallabox_pricing (empty first time))"
+  },
+  {
+   "step": 13,
+   "type": "browser",
+   "query_or_url": "https://www.limechat.ai/",
+   "result": "Loaded; text saved (limechat_home)"
+  },
+  {
+   "step": 14,
+   "type": "browser",
+   "query_or_url": "https://www.limechat.ai/pricing",
+   "result": "Loaded; text saved (limechat_pricing)"
+  },
+  {
+   "step": 15,
+   "type": "browser",
+   "query_or_url": "https://www.gupshup.io/",
+   "result": "Loaded; text saved (gupshup_home)"
+  },
+  {
+   "step": 16,
+   "type": "browser",
+   "query_or_url": "https://yellow.ai/",
+   "result": "Loaded; text saved (yellow_home)"
+  },
+  {
+   "step": 17,
+   "type": "browser",
+   "query_or_url": "https://botpenguin.com/pricing",
+   "result": "Loaded; text saved (botpenguin_pricing)"
+  },
+  {
+   "step": 18,
+   "type": "browser",
+   "query_or_url": "https://www.kapture.cx/",
+   "result": "Loaded; text saved (kapture_home)"
+  },
+  {
+   "step": 19,
+   "type": "browser",
+   "query_or_url": "Link discovery on 7 home pages",
+   "result": "Found CRM/AI/IG subpage URLs"
+  },
+  {
+   "step": 20,
+   "type": "browser",
+   "query_or_url": "https://www.interakt.shop/sales-crm/",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 21,
+   "type": "browser",
+   "query_or_url": "https://www.interakt.shop/whatsapp-ai-agents/",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 22,
+   "type": "browser",
+   "query_or_url": "https://www.interakt.shop/instagram-automation/",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 23,
+   "type": "browser",
+   "query_or_url": "https://www.wati.io/products/astra/",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 24,
+   "type": "browser",
+   "query_or_url": "https://www.wati.io/instagram-automation/",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 25,
+   "type": "browser",
+   "query_or_url": "https://www.wati.io/zoho-crm",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 26,
+   "type": "browser",
+   "query_or_url": "https://aisensy.com/features/ai-agents-on-whatsapp",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 27,
+   "type": "browser",
+   "query_or_url": "https://gallabox.com/pricing",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 28,
+   "type": "browser",
+   "query_or_url": "https://gallabox.com/whatsapp-shared-inbox",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 29,
+   "type": "browser",
+   "query_or_url": "https://www.limechat.ai/support/omnichannel-crm",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 30,
+   "type": "browser",
+   "query_or_url": "https://yellow.ai/pricing/",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 31,
+   "type": "browser",
+   "query_or_url": "https://www.gupshup.io/ai-agent-use-cases",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 32,
+   "type": "browser",
+   "query_or_url": "https://botpenguin.com/",
+   "result": "Loaded; text saved"
+  },
+  {
+   "step": 33,
+   "type": "search",
+   "query_or_url": "Interakt pricing INR per month Starter Growth Advanced 2026",
+   "result": "Third-party INR prices (codingclave, landinchat)"
+  },
+  {
+   "step": 34,
+   "type": "search",
+   "query_or_url": "Gallabox funding raised Series A 2025 2026",
+   "result": "$3.5M seed Jan 2025; ~$8.26M total"
+  },
+  {
+   "step": 35,
+   "type": "search",
+   "query_or_url": "Wati funding Tiger Global Sequoia revenue 2025; AiSensy funding Info Edge 2025",
+   "result": "Wati $23M Series B 2022; AiSensy Latka est."
+  },
+  {
+   "step": 36,
+   "type": "search",
+   "query_or_url": "Gallabox AI agent lead scoring data extraction lead pipeline help docs",
+   "result": "Found docs.gallabox.com"
+  },
+  {
+   "step": 37,
+   "type": "fetch",
+   "query_or_url": "https://codingclave.com/blog/interakt-pricing-india-2026",
+   "result": "INR quarterly prices; AI agent ~₹10,000/mo claim (third-party)"
+  },
+  {
+   "step": 38,
+   "type": "search",
+   "query_or_url": "LimeChat funding raised; Gupshup valuation funding 2025; Yellow.ai funding layoffs 2025",
+   "result": "LimeChat $4.2M seed; Gupshup $60M Jul 2025; Yellow.ai layoffs"
+  },
+  {
+   "step": 39,
+   "type": "search",
+   "query_or_url": "Gallabox docs AI agent data extraction outcome evaluation webhook",
+   "result": "docs.gallabox.com/chat-ai-agent/overview"
+  },
+  {
+   "step": 40,
+   "type": "search",
+   "query_or_url": "Wati pricing India INR Growth Pro Business plan per month",
+   "result": "Third-party INR prices"
+  },
+  {
+   "step": 41,
+   "type": "fetch",
+   "query_or_url": "https://docs.gallabox.com/chat-ai-agent/overview",
+   "result": "Custom fit criteria + @assignTo handoff confirmed"
+  },
+  {
+   "step": 42,
+   "type": "fetch",
+   "query_or_url": "https://www.heltar.com/blogs/wati-pricing-in-india-explained-comprehensive-breakdown-2025",
+   "result": "502 Bad Gateway"
+  }
+ ],
+ "needs_login": [
+  {
+   "url": "https://www.instagram.com/gallabox",
+   "platform": "instagram",
+   "what_to_check": "Follower count, posting cadence, whether reels pitch AI lead qualification/CRM, comment sentiment"
+  },
+  {
+   "url": "https://www.instagram.com/wati_io/",
+   "platform": "instagram",
+   "what_to_check": "Follower count, posting cadence, whether reels pitch AI lead qualification/CRM, comment sentiment"
+  },
+  {
+   "url": "https://www.instagram.com/heyinterakt/",
+   "platform": "instagram",
+   "what_to_check": "Follower count, posting cadence, whether reels pitch AI lead qualification/CRM, comment sentiment"
+  },
+  {
+   "url": "https://www.instagram.com/aisensy_official/",
+   "platform": "instagram",
+   "what_to_check": "Follower count, posting cadence, whether reels pitch AI lead qualification/CRM, comment sentiment"
+  },
+  {
+   "url": "https://www.instagram.com/limechat.ai/",
+   "platform": "instagram",
+   "what_to_check": "Follower count, posting cadence, whether reels pitch AI lead qualification/CRM, comment sentiment"
+  },
+  {
+   "url": "https://www.instagram.com/gupshup.ai/",
+   "platform": "instagram",
+   "what_to_check": "Follower count, posting cadence, whether reels pitch AI lead qualification/CRM, comment sentiment"
+  },
+  {
+   "url": "https://www.instagram.com/yellowdotai/",
+   "platform": "instagram",
+   "what_to_check": "Follower count, posting cadence, whether reels pitch AI lead qualification/CRM, comment sentiment"
+  },
+  {
+   "url": "https://www.linkedin.com/company/gallabox/",
+   "platform": "linkedin",
+   "what_to_check": "Headcount trend, recent posts about AI lead scoring / Lead Pipeline launch"
+  },
+  {
+   "url": "https://www.linkedin.com/company/wati-io/",
+   "platform": "linkedin",
+   "what_to_check": "Headcount, Astra launch posts, India team size"
+  },
+  {
+   "url": "https://www.linkedin.com/company/interakt/",
+   "platform": "linkedin",
+   "what_to_check": "Headcount, Sales CRM/AI agent roadmap posts"
+  },
+  {
+   "url": "https://app.gallabox.com",
+   "platform": "other",
+   "what_to_check": "Free trial (500 AI credits): does AI agent output a numeric score and structured fields (budget, location, timeline) into contact fields; does Lead Pipeline auto-sort by score"
+  },
+  {
+   "url": "https://www.wati.io/pricing/",
+   "platform": "other",
+   "what_to_check": "INR prices (page served USD to our non-India IP) and Astra add-on price"
+  },
+  {
+   "url": "https://www.interakt.shop/pricing/",
+   "platform": "other",
+   "what_to_check": "Official INR prices from an Indian IP"
+  },
+  {
+   "url": "https://www.limechat.ai/pricing",
+   "platform": "other",
+   "what_to_check": "Gated personalised pricing (demo form - do not submit without user)"
+  }
+ ],
+ "verdict_on_claim": "Claim is mostly FALSE as stated for this segment. Gallabox already sells, with public INR self-serve pricing, a shared inbox across WhatsApp, Instagram DMs+comments, web widget and calls, AI agents that qualify leads against custom criteria written in instructions (docs: 'If they fit (5+ users, budget over $500/month)...'), 'scoring intent in real time', AI voice 'lead score before handoff', data-extraction webhooks, round-robin routing and a built-in Lead Pipeline (Advanced, ₹13,599/mo). Wati markets 'one inbox · every channel' with Astra agents that qualify and route leads (CRM via integrations). Interakt has a built-in WhatsApp Sales CRM with pipeline and a Lead Qualification AI agent. Gupshup's AI agent catalogue literally lists 'Qualifies and assigns leads based on budget, location and intent'. What is still genuinely open: (1) email as a first-class channel next to WhatsApp/IG/web/calls in an SMB product (only LimeChat's support CRM add-on and enterprise Yellow/Kapture cover email); (2) a transparent, business-configurable match score with priority-sorted queue across all channels as the core UX rather than an agent side-feature; (3) a real sales CRM natively unified with that inbox at SMB price - most rely on HubSpot/Zoho/LeadSquared integrations. FiguredOutAI should reposition from 'nobody does this' to 'the lead-prioritisation-first inbox (all channels incl. email) with a native CRM', and benchmark directly against Gallabox.",
+ "notes": "Headless Chromium rejected the proxy CA; worked around by routing page requests through Playwright route.fetch (Node, TLS verified with NODE_EXTRA_CA_CERTS). Wati and Interakt pricing pages served USD to our (non-India) IP; INR figures for those two come from third-party blogs and are marked inferred. LimeChat, Gupshup, Yellow.ai, Kapture have no public SMB price lists. Funding numbers come from search-result summaries of Inc42/TechCrunch/Tracxn, not fetched articles. Did not verify inside products (no login/trial). Gupshup and Kapture channel details only partially verified."
+}
